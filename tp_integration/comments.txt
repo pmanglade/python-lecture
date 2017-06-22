@@ -1,0 +1,27 @@
+séance 7
+========
+
+Cours
+-----
+
+Intégration
+|-> integrale sur papier (a*x2)
+|-> Méthode des rectangles/trapèzes (jouer avec le pas)
+`-> Rappel math
+
+
+Exemple
+-------
+
+|-> Utiliser une liste
+(|-> Méthode de simpson ou plus)
+
+
+Exercice
+--------
+
+
+|-> Calculer l'intégrale de ****
+|-> Calcul l'erreur avec le calcul exact
+|-> Calculer l'intégrale d'une fonction compliqué
+(|-> Estimer l'erreur avec une méthode numérique)

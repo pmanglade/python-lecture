@@ -1,0 +1,28 @@
+séance 5&6 :
+============
+
+Cours
+-----
+
+Dev. Limité
+|-> ecrire dans un fichier d'output des résultats
+|-> structurer le code en main et fonctions (interaction user dans le main)
+`-> rappel math DL
+
+Exemple
+-------
+
+|-> boucle.py, for.py e, etc...
+|-> tracer le DL ordre 1, ordre 3 (sin(x))
+|-> tracer l'ecart entre le DL et le sin(x)
+(|-> object liste)
+
+
+Exercice
+--------
+
+|-> DL à l'ordre 1 du sin(x)
+|-> DL à l'ordre 3 du sin(x)
+|-> DL à l'ordre x du sin(x)
+|-> Tracer le DL vs le sin(x)
+(|-> object liste)

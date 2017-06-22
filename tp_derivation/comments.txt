@@ -1,0 +1,27 @@
+séance 4
+========
+
+Cours
+-----
+
+Dérivation
+|-> derivé sur papier (a*x2)
+|-> dev de Taylor
+`-> Rappel math
+
+
+Exemple
+-------
+
+|-> Lecture d'un fichier de points (x,y)
+|-> calcul de la dérivé avec 2 points dans une fonction
+|-> Boucle sur la fonction
+
+Exercice
+--------
+
+
+|-> Calcul de dérivé sur une série de point
+|-> Tracer le fichier et la dérivé
+|-> Faire le calcul de la dérivé sur une fonction + estimation de l'erreur
+(|-> Méthode ordre + élevé)

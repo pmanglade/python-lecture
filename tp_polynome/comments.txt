@@ -1,0 +1,51 @@
+séance 1 :
+==========
+
+Cours
+-----
+* aide à naviguer dans l'arborescence
+* emacs
+* python interactif
+|-> variable (type, entier, réel, chaine de caractères)
+|-> opérateur d'affectation (a=2)
+|-> opérateur simple (a+b)
+|-> affichage (print)
+|-> prise en compte de la modif. d'une variable déjà utilisée
+(séquentialité des actions)
+a=2
+b=a
+a=3
+print b ?
+|-> condition (if, else, elif) ===> indentation
+|-> script (shabang)
+|-> Entrée/Sortie (raw_input/print)
+|-> import des lib.(import math)
+`-> rappel math
+
+import
+|-> module time
+
+
+|-> le commentaire du code
+|-> if debug: print("INFO : blablabla")
+|-> mot clefcd
+
+
+
+
+Exemple
+--------
+
+|-> note de commande shell
+|-> exemple d'utilisation de variable (type(), +,-, /)
+
+(|-> tracer le polynome)(|->matplotlib)
+
+Exercice
+--------
+
+|-> affichage de calculs élémentaires (1 divisé par 2 )
+|-> test pair/impair
+|-> test positif/négatif
+|-> Polynome ordre 2 (a*x²+b*x+c = 0)
+`-> Echange de valeurs dans les variables
