@@ -1,0 +1,85 @@
+\newcommand{cf}[1]{({\sc cf. :}{\tt #1.})}
+\section{Derivation}
+Il arrive que la dérivation analytique d'une fonction ne soit pas facilement
+calculabe. Ce TP survol les méthodes de dérivation numérique.
+\subsection{Précision}
+Cet exercice vise à étudier les erreurs commises lors de l'emploi
+d'un méthode de dérivation numérique.
+\begin{enumerate}
+\item Écrire un fonction capable de calculer la dérivée 
+d'une fonction (de $\R & \longrightarrow & \R$)  en 
+un point $x$ quelconque en utilisant la formule : 
+$$f'(x)= \frac{f(x+h)-f(x-h)}{2h}\,;$$
+où $h$ est un paramètre qui pourra être choisi lors de l'appel de cette fonction
+\cf{function.py}.
+\item Utiliser cette fonction pour calculer $\frac{d\cos(x)}{dx}$ 
+sur mille points répartis homogènements sur $[0\,;\,\,2\pi]$
+\cf{mesh.py}.
+Ensuite tracer la fonction $\cos(x)$ et les points calculés sur
+un graphique
+\cf{plot.py}.
+\item Sur les mille points, calculer la moyenne de la valeur
+ absolue de la différence
+\cf{loop.py}.
+\item Sur une échelle log/log, tracer l'évolution de cette différence 
+en fonction de $h$. Les valeurs choisies pour $h$ suivront une suite 
+géométrique de raison $2^\frac{1}{2}$ et de valeur initiale $10^{-6}$ \cf{loop.py}. 
+On utilisera les 25 premières valeurs.
+Qu'observe-t-on ? 
+Comment choisir la meilleur valeur de $h$ pour dériver numériquement ? 
+\item Tracer la dérivée numérique et la dérivée 
+analytique sur un même graphique. Peut-on observer facilement la différence ? 
+\item Tracer la différence ente dérivée numérique et calcul exact. 
+\item Comparer la forme de la fonction obtenue avec 
+$-\alpha \sin(x)$ en choisissant de manière appropriée $\alpha$.
+Expliquer ce qui est observé. 
+\end{enumerate}
+
+\subsection{Algorithmes de dérivation}
+De nombreux algorithmes de dérivation numérique existent. Cette section vise à
+en programmer quelques-uns et à les comparer.
+\begin{enumerate}
+\item Programmer les fonctions de dérivation utilisant les formules : 
+$$f'(x)= \frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}\,;$$ 
+$$f'(x)= \frac{f(x+3h)-9f(x+2h)+45f(x+h)-45f(x-h)+9f(x-2h)-f(x-3h)}{60h}.$$
+Les coefficients de ces fonctions sont calculés de manière à annuler de plus en
+plus de termes du développement limité de la fonction $f$.
+\item Des formules non-symétriques existent également. En voici quelques-unes :
+ $$f'(x) = \frac{f(x+h)-f(x)}{h}\,;$$
+$$f'(x)=\frac{-3f(x)+4f(x+h) -f(x+2h){2h}\,;$$
+$$f'(x)=\frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}\,;$$
+ Programmer les fonctions de dérivation correspondantes. Ces fonctions peuvent être utilisées avec $h>0$ ou $h<0$.
+\item À nombre d'évaluation de la fonction $f$ égale, comparer la précision moyenne de
+chacune de ces méthodes sur un graphique (pour des valeurs de $h$ comprises entre $0,001$ et $1$).
+\end{enumerate}
+
+
+
+\subsection{Ordres supérieurs}
+Il est possible d'obtenir des dérivées d'ordre supérieur par la même méthode (seconde, troisième\ldots).
+\begin{enumerate}
+\item Programmer une fonction calculant la dérivée à l'ordre 2 d'une fonction en 
+utilisant l'algorithme $f'(x)= \frac{f(x+h)-f(x-h)}{2h}\,;$ pour obtenir 
+des dérivées première, puis calculant la dérivée seconde à partir de deux points ainsi obtenus. 
+\item Programmer une fonction calculant la dérivée seconde à l'aide de la formule :
+$$f'(x)= \frac{f(x+h)+f(x-h)-2f(x)}{h^2}.$$
+Comparer l'évolution de l'erreur de ces deux méthodes en fonction de $h$. Puis réaliser
+une comparaison \og{} sur papier \fg{} des deux méthodes. 
+\end{enumerate}
+
+\subsection{Dérivées de série de points régulière}
+Ces méthodes de dérivation numérique peuvent être utiles pour dériver des fonctions 
+dont la forme analytique est complexe et pour lesquelles on dispose juste 
+d'une série de points. À titre d'exercice nous allons générer une telle série 
+de points dans un fichier, puis calculer la dérivée.
+
+\begin{enumerate}
+\item Écrire un programme générant un fichier contenant deux colonnes \cf{file.py}. Dans la première
+on trouvera les valeurs de $x$ et dans la seconde celles de $f(x)$ ; où $f$ sera une fonction de votre choix. Générer 100 points sur un intervalle $[a\,;\,b]$ de votre choix. 
+\item Écrire un programme capable de relire ce fichier.
+\item Combien de valeurs de la dérivée peut-on calculer avec une formule de dérivation centrée ? 
+\item Écrire une fonction capable de calculer la dérivée de la fonction échantillonnée dans le fichier pour chacun des points.
+\end{enumerate}
+
+\subsection{Dérivées de séries de points irrégulière}
+Reproduire le même travail, mais cette fois avec une série de points distribuées de manière irrégulière sur l'intervalle $[a\,;\,b]$. Il faudra donc calculer à chaque fois de nouveaux coefficients pour la dérivation. 
