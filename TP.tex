@@ -1,0 +1,140 @@
+%\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,landscape,11pt]{report}
+\documentclass[a4paper,11pt]{article}
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[french]{babel}
+\usepackage{calc}
+%\usepackage{caption}
+\usepackage[hang]{caption}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{eepicemu}
+\usepackage{epsfig}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+\usepackage[dvips]{geometry}
+\usepackage{graphicx}
+\usepackage{import} % To use \subimport and import stuff 
+\usepackage[utf8]{inputenc}
+%\usepackage{kpfonts}
+\usepackage{lastpage}
+\usepackage{lmodern}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{setspace}
+%\usepackage{subfigure} %% deprecated ?
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{dsfont}
+\usepackage{gensymb}
+
+
+
+
+
+
+
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
+
+%\newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
+\newcounter{toto}
+\newcommand{\pn}{\par\noindent}
+\newcommand{\vs}{\vskip 0.5 \baselineskip}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+%
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\bm}{\boldmath}
+\newcommand{\um}{\unboldmath}
+\newcommand{\hm}{\fontfamily{phv}\fontseries{m}\selectfont}
+\newcommand{\hb}{\fontfamily{phv}\fontseries{b}\selectfont}
+\newcommand{\cf}[1]{{\tt (cf. : #1)} }
+%
+\def\div{\mathop{\rm div}\nolimits}
+\def\grad{\mathop{\overrightarrow{\rm grad}}\nolimits}
+\def\rot{\mathop{\overrightarrow{\rm rot}}\nolimits}
+\def\u{\mathop{\vec u}\nolimits}
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%\renewcommand{\chaptername}{Lecture}
+\addto\captionsfrench{\renewcommand{\chaptername}{Partie}}
+
+\linespread{1.1}
+\begin{document}
+%
+\thispagestyle{empty}
+\renewcommand{\headrulewidth}{0.0pt}
+%
+
+\setlength{\columnsep}{30pt}
+\setlength{\columnseprule}{1pt}
+%\begin{multicols}{2}
+\noindent
+%\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
+~\\[-2ex]
+% \includegraphics[width=1.8cm]{/home/spetit/Administration/Logos/logo-sciences-couleur-texte_new}
+\includegraphics[scale=0.7]{unicaen_logo_rvb_noir_V1}
+
+\end{minipage}
+%\begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{0.50\textwidth}
+\flushleft{
+\footnotesize{UFR des sciences} \\
+%\tiny{~}\\
+\footnotesize{Licence PCI -- seconde année} \\
+%\tiny{~}\\
+\footnotesize{Initiation aux méthodes numériques}
+}
+\end{minipage}
+%\hfill
+\begin{minipage}[t]{0.12\textwidth}
+\flushleft
+{
+\footnotesize{2017-2018}}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\centerline{\sc\Large Travaux pratiques de programmation}
+{\let\clearpage\relax \section*{Introduction}}
+Les travaux pratiques qui suivent vise à vous aider à mieux appréhender 
+les méthodes de raisonnements et les outils de programmation. 
+Ceux-ci étant largement indispensable à la pratique des sciences à
+haut niveau, dans laquelle il est souvent indispensable
+de créer ses propres outils. 
+
+Pour des raisons d'accessibilités la programmation sera faite en Python ;
+ce langage étant pratiqué au lycée. Le langage lui-même ne sera pas enseigné,
+vous serez amenés à en développer une connaissance empirique par vous mêmes. 
+Un fort niveau d'engagement personnel est donc nécessaire en séance. 
+
+Chaque TP aborde des notions simples de mathématique à aborder avec 
+les éléments les plus simples de Python. Le tout est conçu pour vous
+permettre de vous concentrer sur l'aspect essentiel de ces TP :
+l'algorithmique.
+
+% 1 séances 2 exercices
+%\newcommand{cf}[1]{({\sc cf. :}{\tt #1.})}
+\subimport{./tp_derivation/exercices/}{enonce.tex}
+%\include{tp_derivation/exercices/enonce.tex}
+%\input{tp_derivation/exercices/enonce.tex}
+
+
+
+
+\end{document}
+
+
