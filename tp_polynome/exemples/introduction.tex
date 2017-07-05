@@ -1,0 +1,196 @@
+\section{Une (trop) courte introduction \`a Python}
+
+\subsection{Qu'est ce q'un langage de programmation ?}
+
+Un langage informatique est un langage destin\'e \`a d\'ecrire l'ensemble des actions cons\'ecutives qu'un ordinateur doit ex\'ecuter.
+Ce langage se doit d'\^etre compr\'ehensible par l'homme.
+Toutefois, le langage utilis\'e par l'ordinateur est appel\'e langage machine.
+Il s'agit d'une suite de 0 et de 1 (\textit{binaire}).
+Il est donc n\'ecessaire de transformer le langage de programmation en langage
+machine exploitable par le processeur.
+
+Les langages de programmation peuvent \^etre s\'epar\'es en deux grandes cat\'egories : compil\'es ou interpr\'et\'es.
+\begin{description}
+\item[Langage interpr\'et\'e] Un programme \'ecrit dans un langage interpr\'et\'e a besoin d'un programme auxiliaire,
+  \textit{l'interpr\'eteur} pour traduire au fur et \`a mesure les instructions du programme.
+  La cons\'equence est qu'un langage interpr\'et\'e est en moins rapide qu'un langage compil\'e.
+
+
+\item[Langage compil\'e] Un programme  dit 'compil\'e' va \^etre traduit en fichier \textit{binaire} une fois pour toutes
+  par un autre programme, \textit{le compilateur}.
+  Le fichier g\'en\'er\'e est \textit{\'ex\'ecutable}, c'est \`a dire qu'il n'aura plus besoin d'un programme autre
+  que lui pour s'ex\'ecuter (par exemple, le langage C++).
+  La cons\'equence est que le programme doit est compil\'e \`a chaque modification du code.
+\end{description}
+
+Python est un langage interpr\'et\'e, c'est-\`a-dire que chaque ligne de code
+est lue puis interpr\'et\'ee afin d'\^etre ex\'ecut\'ee par l'ordinateur.
+
+
+\subsection{\`A savoir sur Python}
+
+
+Python est un langage de programmation, dont la première version,
+créé par Guido van Rossum, est sortie en 1991.
+La Python Software Foundation est une organisation à but
+non lucratif particulièrement dévouée créée en 2001.
+Ce langage a \'et\'e baptis\'e ainsi en hommage \`a la troupe de
+comiques les \textit{Monty Python}.
+
+Ce langage, facile \`a apprendre, dispose d'une large communaut\'e d'utilisateur.
+Vous trouverez de nombreux exemples mis \`a disposition en ligne ainsi que de multiples
+fonctionnalit\'es pr\^etes \`a l'usage.
+
+Lors de la cr\'eation de la Python Software Foundation, en 2001, le langage Python est pass\'e par une suite de versions
+que l'on a englob\'ees dans l'appellation Python 2.x (2.3, 2.5, 2.6).
+Depuis le 13 f\'evrier 2009, la version 3.0.1 est disponible.
+Cette version casse la compatibilit\'e ascendante qui pr\'evalait lors des derni\`eres versions.
+
+Pour cela, durant ce cours, nous pr\'eciserons, autant que possible, la compatibilit\'e des fonctionalit\'es entre les version 2.x et 3.0.
+
+\subsection{Pourquoi Python ? }
+
+Pour tout un tas de raisons que vous découvrirez un langage simple et clair :
+\begin{itemize}
+\item[$\bullet$] code facile à lire et intuitif,
+\item[$\bullet$] visuellement épuré,
+\item[$\bullet$] syntaxe minimaliste facile à apprendre,
+\item[$\bullet$] moins de lignes de code, moins de bugs, plus facile à entretenir.
+\end{itemize}
+
+De plus, techniquement :
+\begin{itemize}
+\item[$\bullet$] pas besoin de définir le type de variables, les arguments de
+  fonction ou les types de retour.
+\item[$\bullet$] pas besoin d’allouer et de désallouer
+explicitement la mémoire pour les variables et les tableaux de données. Pas de
+bugs de fuite de mémoire.
+\item[$\bullet$] Pas besoin de compiler le code. L’interpréteur Python lit et
+exécute directement le code python.
+\end{itemize}
+
+Le principal avantage est la facilité de programmation, minimisant le temps
+nécessaire pour développer, déboguer et maintenir le code.
+De plus la programmation modulaire et orientée objet favorise la réutilisation du code.
+Une vaste bibliothèque standard et une grande collection de modules
+complémentaires, scientifiques et autres sont partagées.
+
+Toutefois, le langage de programmation interprété et typé dynamiquement (comme Python)
+est plus lent par rapport aux langages de programmation compilés (comme le C/C++).
+
+
+\subsection{Installation}
+
+La plupart du temps, Python est install\'e par d\'efaut sur le syst\`eme d'exploitation que vous utiliserez.
+Toutefois, vous trouverez l'ensemble des indications sur le site officiel de Python\footnote{https://www.python.org/}.
+
+\begin{description}
+\item [Linux/Ubuntu] https://www.python.org/downloads/source\\
+  sudo apt-get install python3
+
+\item [MacOS] https://www.python.org/downloads/mac-osx/\\
+
+\item[Windows] https://www.python.org/downloads/windows\\
+  http://www.formation-django.fr/python/comment-installer-python.html
+\end{description}
+
+
+
+\subsection{Quelques liens à connaitres}
+
+\begin{itemize}
+\item[] https://openclassrooms.com/courses/apprenez-a-programmer-en-python
+\item[] https://github.com/jakevdp/PythonDataScienceHandbook
+\end{itemize}
+
+\subsection{Vos premi\`eres lignes de Python}
+
+
+Pour commencer, il vous faudra d\'emarrer l'interpr\'eteur de commande Python dans un terminal.
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{Terminal}
+\begin{verbatim}
+  dupont@scssvr:~\$ python
+  Python 2.7.12 (default, Nov 19 2016, 06:48:10)
+  GCC 5.4.0 20160609 on linux2
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>>
+\end{verbatim}
+
+  \end{myterminalbox}
+\end{center}
+
+Le triple chevron $>>>$ est l'invite de commande de Python, cela signifie que l'interpr\'eteur attend une commande.
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{Terminal}
+\begin{verbatim}
+>>> print("Hello World!")
+Hello World!
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+
+
+Pour sortir, faire \fbox{\tt ~Ctrl~+~d}.
+
+
+Ouvrez de nouveau l'interpr\'eteur et, cette fois, tentez votre premier calcul :
+\vskip 2pt
+\begin{center}
+    \begin{myterminalbox}[colback=gray!10]{Terminal}
+\begin{verbatim}
+  >>> 6*7
+  42
+  >>>
+\end{verbatim}
+
+    \end{myterminalbox}
+\end{center}
+
+
+Ainsi utilis\'e, l'interpr\'eteur est un programme interactif dans lequel vous entrer des commandes qui seront ex\'ecut\'ees
+\`a chaque validation lorsque vous tapez sur \fbox{\tt ~Entr\'ee}.
+
+Bien s\^ur, l'interpr\'eteur pr\'esente vite des limites lorsque vous souhaitez effectuer une s\'erie d'instruction plus complexe.
+Vous pourrez alors enregistrer ces instructions dans un fichier portant l'extension \textit{.py}.
+Chaque ligne correspond \`a une instruction. L'ordinateur va \'ex\'ecuter ces instructions ligne par ligne.
+Vous trouverez un exemple ci-dessous : (\`A noter le \#! est appel\'e le sha-bang)
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{test\_0.py}
+\begin{verbatim}
+  #!/usr/bin/python
+
+  # Lemiere Yves
+  # 22/08/2016
+  # Ceci est un commentaire inutile
+
+  print("Hello World !")  # ceci affiche une chaine de characteres
+  print(6*7)              # ceci affiche le resultat de l'operation
+\end{verbatim}
+
+  \end{myterminalbox}
+\end{center}
+
+\subsection{Les mots clefs}
+
+Vous devez garder à l'esprit que certains mots sont absolument réservés avec python.
+
+\begin{center}
+\begin{tabular}{ccccc}
+and    & assert  & break & class & continue\\
+def    & del 	 & elif  & else  & except\\
+exec   & finally & for 	 & from  & global\\
+if     & import  & in    & is 	 & lambda\\
+not    & or 	 & pass  & print & raise\\
+return & try 	 & while & yield &       \\
+\end{tabular}
+\end{center}
+
+\vfill
