@@ -1,4 +1,3 @@
-\newcommand{cf}[1]{({\sc cf. :}{\tt #1.})}
 \section{Derivation}
 Il arrive que la dérivation analytique d'une fonction ne soit pas facilement
 calculabe. Ce TP survol les méthodes de dérivation numérique.
@@ -7,7 +6,7 @@ Cet exercice vise à étudier les erreurs commises lors de l'emploi
 d'un méthode de dérivation numérique.
 \begin{enumerate}
 \item Écrire un fonction capable de calculer la dérivée 
-d'une fonction (de $\R & \longrightarrow & \R$)  en 
+d'une fonction (de $\mathbb{R}  \longrightarrow  \mathbb{R}$)  en 
 un point $x$ quelconque en utilisant la formule : 
 $$f'(x)= \frac{f(x+h)-f(x-h)}{2h}\,;$$
 où $h$ est un paramètre qui pourra être choisi lors de l'appel de cette fonction
@@ -46,7 +45,7 @@ Les coefficients de ces fonctions sont calculés de manière à annuler de plus 
 plus de termes du développement limité de la fonction $f$.
 \item Des formules non-symétriques existent également. En voici quelques-unes :
  $$f'(x) = \frac{f(x+h)-f(x)}{h}\,;$$
-$$f'(x)=\frac{-3f(x)+4f(x+h) -f(x+2h){2h}\,;$$
+$$f'(x)=\frac{-3f(x)+4f(x+h) -f(x+2h)}{2h}\,;$$
 $$f'(x)=\frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}\,;$$
  Programmer les fonctions de dérivation correspondantes. Ces fonctions peuvent être utilisées avec $h>0$ ou $h<0$.
 \item À nombre d'évaluation de la fonction $f$ égale, comparer la précision moyenne de
