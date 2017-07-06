@@ -6,29 +6,30 @@ Cours
 * aide à naviguer dans l'arborescence
 * emacs
 * python interactif
-|-> variable (type, entier, réel, chaine de caractères)
-|-> opérateur d'affectation (a=2)
-|-> opérateur simple (a+b)
-|-> affichage (print)
-|-> prise en compte de la modif. d'une variable déjà utilisée
-(séquentialité des actions)
-a=2
-b=a
-a=3
-print b ?
-|-> condition (if, else, elif) ===> indentation
-|-> script (shabang)
-|-> Entrée/Sortie (raw_input/print)
-|-> import des lib.(import math)
+OK |-> variable (type, entier, réel, chaine de caractères)
+OK |-> opérateur d'affectation (a=2)
+OK |-> opérateur simple (a+b)
+OK |-> affichage (print)
+OK |-> prise en compte de la modif. d'une variable déjà utilisée
+       (séquentialité des actions)
+       a=2
+       b=a
+       a=3
+       print b ?
+OK |-> script (shabang)
+OK |-> Entrée/Sortie (raw_input/print)
+
+OK |-> condition (if, else, elif) ===> indentation
+OK |-> import des lib.(import math)
 `-> rappel math
 
-import
-|-> module time
+
+OK |-> module time, random, math
 
 
 |-> le commentaire du code
 |-> if debug: print("INFO : blablabla")
-|-> mot clefcd
+|-> mot clef
 
 
 
