@@ -49,3 +49,5 @@ Exercice
 |-> test positif/négatif
 |-> Polynome ordre 2 (a*x²+b*x+c = 0)
 `-> Echange de valeurs dans les variables
+
+(=> calcul de Pi par la methode de Wallis Pi= 2*Produit(4n²)/(4n²-1)

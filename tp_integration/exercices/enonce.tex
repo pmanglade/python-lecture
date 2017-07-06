@@ -1,0 +1,134 @@
+\section{Intégration}
+À plus forte raison que les dérivées, il est parfois compliqué de calculer
+des intégrales analytiques. Dans ce TP nous écrirons des programmes
+calculant numériquement des approximations d'intégrales.
+
+La méthode utilisée est basée sur le théorème fondamental de l'analyse.
+Celui-ci faisant le lien entre primitive et intégrale au sens de Riemann :
+\begin{equation}
+\begin{split}
+\int_a^b f(x)dx &= F(b)-F(a) \\
+&= \lim_{n\rightarrow\infty} \sum_{i=0}^{n-1}\frac{(b-a)}{n} f(a+i\frac{(b-a)}{n})\\
+&= \lim_{n\rightarrow\infty} \sum_{i=0}^{n-1} h_n f(x_i)
+\end{split}
+\end{equation}
+Où $dF = f(x)dx$, $h_n=\frac{(b-a)}{n}$, et $x_i=a+ i\frac{(b-a)}{n} = a+ih_n$.
+
+\subsection{Méthode des rectangles}
+\begin{enumerate}
+\item À partir de la formule ci-avant, 
+écrire une fonction capable de calculer $\int_a^b f(x)dx$
+pour toute fonction $f(x)$ définie sur l'intervalle $[a\,;\,b]$. 
+La fonction d'intégration aura pour arguments $f$, $a$, $b$, et $n$ \cf{function.py}.
+\item Écrire la même fonction mais prenant cette fois pour argument la 
+valeur de $h$. La fonction commencera par adapter au plus juste 
+cette valeur à l'intervalle $[a\,;\,b]$ reçu.
+\item Écrire une fonction utilisant la précédente
+ pour calculer $N$ intégrales de $a$ à $x$, où les valeurs de $x$
+seront uniformément répartie entre $a$ et $b$ \cf{mesh.py et loop.py}. 
+Cette fonction
+aura donc pour arguments $f$, $a$, $b$, $N$, et $h$ ; elle retournera
+deux listes \cf{returnList.py}. 
+Celle des valeurs de $x$ et celle de l'intégrale correspondante
+$\int_a^xf(t)dt$.
+
+
+Tester 
+cette fonction 
+en prenant $f=\cos$, $a=0$, $b=\pi$, $N=100$, et $h=0.01$. 
+\item Tracer la fonction ainsi obtenue en même temps que $\sin$ \cf{plot.py}.
+\item Calculer l'écart moyen entre cette fonction et $\sin(x)$ \cf{loop.py}.
+\item Tracer l'évolution de cet écart en fonction de $h$ sur un 
+graphique loglog. Aux mêmes points tracer $f(x)=x$, puis comparer. Utiliser des 
+valeurs de $h$ appartenant à une suite géomètrique de raison 4 et de valeur initiale $10^{-4}$. Faire le tracé pour des valeurs de $h$ allant jusqu'à $10^{-2}$.
+\end{enumerate}
+
+\subsection{Intervalle de confiance}
+Pour une fonction strictement croissante sur un intervalle, le calcul précédent
+est une minoration de l'intégrale. Inversement pour une fonction strictement décroissante. À partir de cette constatation, il est possible d'écrire un programme donnant un encadrement de l'intégrale d'une fonction. 
+\begin{enumerate}
+\item  Écrire une fonction calculant 
+ $$\sum_{i=1}^n h_n f(x_i),$$
+puis comparer les intégrations réalisés avec cette fonction à celles réalisées avec 
+$$\sum_{i=0}^{n-1}h_n f(x_i).$$
+Ces méthodes sont appelés méthodes des rectangles à droite et à gauche respectivement.
+\item Vérifier sur quelques exemples que pour des portions de fonctions monotones, l'une des intégrations donne une majoration de l'intégrale alors que l'autre donne une minoration. 
+\item Écrire une fonction calculant simultanément 
+une majoration et une minoration approximative de 
+l'intégrale \cf{if.py}. L'algorithme sera le suivant : 
+Pour chaque sous-intervalle de largeur $h$, 
+la valeur de la fonction à droite sera comparée à celle à gauche. 
+La plus grande valeur du produit $hf$ servira à la majoration, 
+la plus petite à la minoration.
+\end{enumerate}
+
+\subsection{Méthodes d'ordre plus élevé}
+Bien entendu, l'intégrale d'une fonction peut être approximée par des méthodes plus efficaces. 
+\begin{enumerate}
+\item La première consiste à calculer non pas l'air des rectangles 
+sous/sur la courbe,
+mais celle des trapèzes. 
+\begin{equation}
+\begin{split}
+\int_a^b f(x)dx &\simeq \sum_{i=0}^{n-1} h_n \frac{(f(x_i)+f(x_{i+1})}{2}\\
+                &\simeq \frac{h_n}{2} \left(f(a)+f(b)
++ 2\sum_{i=1}^{n-1} f(x_i) \right).
+\end{split}
+\end{equation}
+Programmer cette méthode et comparer sur un graphique loglog 
+sa précision à nombre d'évaluation égales
+de la fonction intégrée à celle des méthodes des rectangles. 
+
+Pour cela calculer l'écart entre l'intégrale exacte et son calcul approximatif en fonction des valeurs de $h$ pour une seule intégrale. Par exemple $\int_{\sqrt{2}}^{\sqrt{7}} \exp(x) dx$.
+\item La méthode d'ordre directement supérieur est appelée méthode de Simpson composite.
+Elle consiste à calculer l'aire sous chaque intervalle comme l'aire de la parabole passant par les deux points aux extrémités et le point du milieu : 
+\begin{equation}
+\int_a^b f(x)dx \simeq  \frac{h}{6}\sum_{i=0}^{n-1} f(x_i) + 4 f(x_{i+1/2}) + f(x_{i+1}) .
+\end{equation}
+
+Programmer cette méthode et comparer sa précision en fonction du nombre d'évaluation de la fonction à celle des autres. 
+\item En utilisant la même méthode de manière à minimiser les évaluations de la fonction à intégrer on obtient la formule :
+ \begin{equation}
+\begin{split}
+\int_a^b f(x)dx \simeq \frac{h}{48} &\biggl[17f(a) + 59f(a+h)+ 43f(a+2h)+ 49f(a+3h)\biggr.\\
+&+48\sum_{i=4}^{n-4}f(x_i)\\
+&\biggl.+49f(b-3h)+43f(b-2h)+59f(b-h)+17f(b)\biggr]
+\end{split}
+ \end{equation}
+Ajouter cette formulation à votre comparatif ; en faisant attention à ce qu'elle ne 
+peut être utilisée pour $n<8$.
+\item Les quadratures de Gauss-Legendre 
+consistent à approximer la fonction à intégrer 
+par un polynôme de Legendre. Il en existe de divers degrés $m$, où $m$ 
+est aussi le nombre d'évaluation de la fonction sur l'intervalle d'intégration.
+ Elles sont
+exactes pour l'intégration de polynômes de degrés $2m+1$. Pour réussir un tel 
+exploit, il faut choisir des points bien particuliers où évaluer la fonction :
+\begin{center}
+\begin{tabular}{ccc}
+Ordre $m$& Points $p_j$ &Pondération $w_j$\\
+\hline\hline
+\strut$1$ & $0$ & $2$ \\\hline
+\strut$2$ & $\pm \sqrt{1/3}$ & 1\\\hline
+\multirow{2}{*}{$3$} &  $0$              & $8/9$\\
+                     & $\pm\sqrt{3/5}$   & $5/9$\\\hline
+\multirow{2}{*}{$4$} &  $\pm\sqrt{\frac{3}{7}-\frac{2}{7}\sqrt{\frac{6}{5}}}$              & $\frac{18+\sqrt{30}}{36}$\\
+                     &  $\pm\sqrt{\frac{3}{7}+\frac{2}{7}\sqrt{\frac{6}{5}}}$              & $\frac{18-\sqrt{30}}{36}$\\\hline
+\multirow{3}{*}{$5$} & $0$ & $\frac{128}{225}$\\
+                     &  $\pm\frac{1}{3}\sqrt{5-2\sqrt{\frac{10}{7}}}$ & $\frac{322+13\sqrt{70}}{900}$\\
+                     &  $\pm\frac{1}{3}\sqrt{5+2\sqrt{\frac{10}{7}}}$ & $\frac{322-13\sqrt{70}}{900}$\\
+
+\end{tabular}
+\end{center}
+Ces approximations sont plutôt déstinées à être employées pour calculer une intégrale sans subdiviser l'intervalle d'intégration. Nonobstant en opérant la subdivision 
+on obtient la formule : 
+\begin{equation}
+\int_a^b f(x)dx \simeq \sum_{i=0}^{n-1} \sum_{j=0}^{m-1} w_j f(x_i+\frac{h}{2}(1+p_j))
+\end{equation}
+Comparer ces quadratures aux autres intégrateurs déjà programmés \cf{listElement.py  et listOfList.py}.
+
+ 
+
+
+
+\end{enumerate}
