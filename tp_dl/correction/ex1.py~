@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def at2 (x) : 
+   return x - x**3/3.
+
+def at3 (x) :
+   return x - x**3/3. + x**5/5.
+def at4 (x) :
+   return x - x**3/3. + x**5/5. -x**7/7.
+def at5(x) :
+   return x - x**3/3. + x**5/5. -x**7/7. +x**9/9.
+
+x = np.atan(-1,1,0.05);
+y1 = [at2(v) for v in x]
+y2 = [at3(v) for v in x]
+y3 = [at4(v) for v in x]
+y4 = [at5(v) for v in x]
+y5 = [arctan(v) for v in x]
+plt.plot(x,y1,label="at2")
+plt.plot(x,y2,label="at3")
+plt.plot(x,y3,label="at4")
+plt.plot(x,y4,label="at5")
+plt.plot(x,y5,label="arctan")
+plt.legend()
+plt.show()
+

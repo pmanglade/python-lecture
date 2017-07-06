@@ -12,7 +12,7 @@
 \usepackage{cite}
 \usepackage{color}
 \usepackage{enumerate}
-\usepackage{epic}
+\usepackage{epic} 
 \usepackage{eepic}
 \usepackage{eepicemu}
 \usepackage{epsfig}
@@ -28,6 +28,7 @@
 \usepackage{lastpage}
 \usepackage{lmodern}
 \usepackage{multicol}
+\usepackage{multirow} % Allow multirow in tabular env
 \usepackage{rotating}
 \usepackage{setspace}
 %\usepackage{subfigure} %% deprecated ?
@@ -56,7 +57,7 @@
 \newcommand{\um}{\unboldmath}
 \newcommand{\hm}{\fontfamily{phv}\fontseries{m}\selectfont}
 \newcommand{\hb}{\fontfamily{phv}\fontseries{b}\selectfont}
-\newcommand{\cf}[1]{{\tt (cf. : #1)} }
+\newcommand{\cf}[1]{{\tt (cf. : #1)}}
 %
 \def\div{\mathop{\rm div}\nolimits}
 \def\grad{\mathop{\overrightarrow{\rm grad}}\nolimits}
@@ -129,6 +130,11 @@ l'algorithmique.
 % 1 séances 2 exercices
 %\newcommand{cf}[1]{({\sc cf. :}{\tt #1.})}
 \subimport{./tp_derivation/exercices/}{enonce.tex}
+\subimport{./tp_integration/exercices/}{enonce.tex}
+\subimport{./tp_dl/exercices/}{enonce.tex}
+\subimport{./tp_zero/exercices/}{enonce.tex}
+
+
 %\include{tp_derivation/exercices/enonce.tex}
 %\input{tp_derivation/exercices/enonce.tex}
 
