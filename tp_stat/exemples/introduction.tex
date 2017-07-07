@@ -1,0 +1,144 @@
+\section{Python niveau 2!}
+
+
+\subsection{Lire ou écrire dans un fichier}
+
+\subsubsection{Écrire dans un fichier}
+
+Écrire dans un fichier est ABSOLUMENT nécessaire pour pérenniser des données.
+Python a l'avantage que c'est extrêmement simple à réaliser.
+
+
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{write.py}
+\begin{verbatim}
+f = open('file.txt', 'w')
+f.write(a_value)
+f.close()
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+\subsubsection{Lire un fichier }
+
+Lire un fichier est tout aussi simple toutefois, il existe plusieurs manière de lire un fichier.
+Vous pouvez :
+\begin{itemize}
+\item Lire l'ensemble du fichier en une action \texttt{read()} pour remplir une variable de type \texttt{str}
+\item Lire le fichier ligne à ligne \texttt{readline()} pour remplir plusieurs chaîne de charactère.\\
+  Le retour chariot (\texttt{$\backslash$n}) délimite une ligne.
+\item Lire l'ensemble du fichier pour remplir une liste de chaîne de charactère.
+\end{itemize}
+
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{read.py}
+\begin{verbatim}
+f = open('file.txt', 'r')
+my_text = f.read()
+f.close()
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{read.py}
+\begin{verbatim}
+f = open('file.txt', 'r')
+a_line = f.readline()
+f.close()
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{read.py}
+\begin{verbatim}
+f = open('file.txt', 'r')
+list_of_line = f.readlines()
+f.close()
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+
+\subsubsection{Les modes d'ouvertures des fichiers}
+
+
+\begin{description}
+\item[w] ouverture en mode création du fichier puis écrire
+\item[a] ouverture en mode écrire dans un fichier existant
+\item[r] ouverture en mode lecture uniquement
+\item[r+] ouverture en mode lecture/écriture
+\end{description}
+
+
+
+
+
+
+
+\subsection{Les boucles}
+
+Assez rapidement, on doit se rendre compte qu'il est absolument nécessaire de répeter des tâches.
+
+
+\subsubsection{For}
+
+Il y a aussi en langage Python une structure \texttt{for} permettant de parcourir un nombre
+fini d'éléments.
+La structure générale de la boucle \texttt{for} est la suivante :
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{test\_0.py}
+\begin{verbatim}
+for element in tableau :
+    bloc instructions
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+Le bloc d'instructions sera exécuté autant de fois qu'il y a de
+valeur dans le tableau, chaque valeur étant placée tour à tour dans la
+variable élément.
+Les mots \texttt{for} et \texttt{in} sont les deux mots réservés utilisés dans cette structure.
+
+
+
+
+
+
+
+\subsubsection{While}
+
+Il est possible d’exécuter un même bloc d’instructions tant qu’une condition est
+vérifiée grâce à la structure while dont voici la syntaxe :
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{test\_0.py}
+\begin{verbatim}
+while condition :
+    bloc_instructions
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+la condition est d’abord évaluée et si elle vraie, le bloc
+d’instructions est exécuté.
+Après exécution du bloc d’instruction, la
+condition est évaluée de nouveau et le bloc d’instructions est ré-exécuté tant que la
+condition est vrai. Quand la condition devient fausse, le contrôle du programme passe
+à l’instruction suivant le bloc while.
+
+À noter qu'il est préférable que l'ensemble des instructions du bloc conditionné influent
+sur la condition auquel, le programme se trouverait dans une \textit{boucle infinie}.
+
+
+
+  \end{myterminalbox}
+\end{center}
