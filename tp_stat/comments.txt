@@ -5,8 +5,8 @@ Cours
 -----
 
 |-> boucle for, while (range[10])
-|-> Liste
-|-> Lecture/Ecriture d'un fichier
+OK |-> Liste
+OK |-> Lecture/Ecriture d'un fichier
 |-> Moyenne/Écart type
 `-> Rappel math (max/min/tri)
 
