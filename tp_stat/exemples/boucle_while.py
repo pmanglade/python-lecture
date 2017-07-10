@@ -13,6 +13,7 @@ print("***************************\n")
 N = None
 iterator = 0
 
+# Tant que l'utilisateur ne rentre pas la valeur '42', le question sera posée de nouveau
 while N != "42":
     N = input("Enter the answer to life, the universe and everything")
     iterator=iterator+1

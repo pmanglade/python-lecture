@@ -3,36 +3,36 @@
  # Lemiere Yves
  # Juillet 2017
 
+debug = True
 
+if debug:
+    print("************************")
+    print("* Welcome in read_file *")
+    print("************************\n")
+    
 
-print("************************")
-print("* Welcome in read_file *")
-print("************************\n")
-
-
-#first method 
-my_file = open('quote_file.dat', 'r')
+# First method 
 # Open the file in read mode
+my_file = open('quote_file.dat', 'r')
 
 text = my_file.read()
 
+# Close the file
 my_file.close()
-#Close the file
-
 
 print ("First method : \n")
 print (text)
 print ("\n")
 
-#second method 
-my_file = open('quote_file.dat', 'r')
+# Second method 
 # Open the file in read mode
+my_file = open('quote_file.dat', 'r')
 
 first_line = my_file.readline()
 second_line = my_file.readline()
 
-my_file.close()
 #Close the file
+my_file.close()
 
 
 print ("Second method : \n")
@@ -42,14 +42,14 @@ print ("\n")
 
 
 
-#third method 
-my_file = open('quote_file.dat', 'r')
+# third method 
 # Open the file in read mode
+my_file = open('quote_file.dat', 'r')
 
 lines = my_file.readlines()
 
-my_file.close()
 #Close the file
+my_file.close()
 
 
 print ("Third method : \n")
