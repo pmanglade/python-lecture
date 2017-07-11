@@ -7,24 +7,19 @@ from numpy import *
 #import numpy as np
 
 
-def main():
-    print("***************************")
-    print("* Welcome in scientifique *")
-    print("***************************\n")
-    
-    debug = True
 
-    my_value      = -1024
-    my_abs_value  = fabs(my_value)
-    my_sqrt_value = sqrt(my_abs_value)
-    
-    
-    
-    if debug == True:
-        print ("My initial value  is    : %d" % my_value)
-        print ("My square root value is : %d" % my_sqrt_value)
+print("***************************")
+print("* Welcome in scientifique *")
+print("***************************\n")
 
-    return
+debug = True
+
+my_value      = -1024
+my_abs_value  = fabs(my_value)
+my_sqrt_value = sqrt(my_abs_value)
 
 
-main()
+
+if debug == True:
+    print ("My initial value  is    : %d" % my_value)
+    print ("My square root value is : %d" % my_sqrt_value)

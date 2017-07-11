@@ -17,28 +17,20 @@ def ecart(f,df,h,n):
       sumDif+=abs(d-a)      
    return sumDif/n
 
+h = 1e-6;
+listeError=[]
+listeh=[]
+for i in range(25) :
+   listeError.append(ecart(cos,msin,h,1000))
+   listeh.append(h)
+   h *= 2**(1./2)
 
-def main():
+print(listeh,listeError)
+plt.loglog(listeh, listeError)
+plt.show()
 
-   h = 1e-6;
-   listeError=[]
-   listeh=[]
-   for i in range(25) :
-      input_function = cos
-      deriv_function = msin
-      
-      listeError.append(ecart(cos,msin,h,1000))
-      listeh.append(h)
-      h *= 2**(1./2)
-   
-   print(listeh,listeError)
-   plt.loglog(listeh, listeError)
-   plt.show()
-   
-   plt.plot(listeh, listeError)
-   
-   plt.show()
-   return
+plt.plot(listeh, listeError)
 
-main()
+plt.show()
+
 
