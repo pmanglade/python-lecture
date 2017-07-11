@@ -3,10 +3,8 @@
  # Lemiere Yves
  # Juillet 2017
 
-from math import *
-#import math as my_mathematics
-#import matplotlib.pyplot as plt
-#from time import *
+from numpy import *
+#import numpy as np
 
 
 def main():
