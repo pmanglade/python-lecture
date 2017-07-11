@@ -1,0 +1,54 @@
+séance 1 :
+==========
+
+Cours
+-----
+* aide à naviguer dans l'arborescence
+* emacs
+* python interactif
+OK |-> variable (type, entier, réel, chaine de caractères)
+OK |-> opérateur d'affectation (a=2)
+OK |-> opérateur simple (a+b)
+OK |-> affichage (print)
+OK |-> prise en compte de la modif. d'une variable déjà utilisée
+       (séquentialité des actions)
+       a=2
+       b=a
+       a=3
+       print b ?
+OK |-> script (shabang)
+OK |-> Entrée/Sortie (raw_input/print)
+
+OK |-> condition (if, else, elif) ===> indentation
+OK |-> import des lib.(import math)
+`-> rappel math
+
+
+OK |-> module time, random, math
+
+
+|-> le commentaire du code
+|-> if debug: print("INFO : blablabla")
+|-> mot clef
+
+
+
+
+Exemple
+--------
+
+|-> note de commande shell
+|-> exemple d'utilisation de variable (type(), +,-, /)
+
+(|-> tracer le polynome)(|->matplotlib)
+
+Exercice
+--------
+
+|-> affichage de calculs élémentaires (1 divisé par 2 )
+|-> test pair/impair
+|-> test positif/négatif
+|-> Polynome ordre 2 (a*x²+b*x+c = 0)
+`-> Echange de valeurs dans les variables
+
+(=> calcul de Pi par la methode de Wallis Pi= 2*Produit(4n²)/(4n²-1)
