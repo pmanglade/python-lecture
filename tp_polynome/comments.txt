@@ -1,6 +1,9 @@
 séance 1 :
 ==========
 
+Status : Fini mais on peut ajouter des exemples
+
+
 Cours
 -----
 * aide à naviguer dans l'arborescence
