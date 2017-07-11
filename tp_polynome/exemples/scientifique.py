@@ -9,19 +9,24 @@ from math import *
 #from time import *
 
 
+def main():
+    print("***************************")
+    print("* Welcome in scientifique *")
+    print("***************************\n")
+    
+    debug = True
 
-print("***************************")
-print("* Welcome in scientifique *")
-print("***************************\n")
+    my_value      = -1024
+    my_abs_value  = fabs(my_value)
+    my_sqrt_value = sqrt(my_abs_value)
+    
+    
+    
+    if debug == True:
+        print ("My initial value  is    : %d" % my_value)
+        print ("My square root value is : %d" % my_sqrt_value)
 
-debug = True
-
-my_value      = -1024
-my_abs_value  = fabs(my_value)
-my_sqrt_value = sqrt(my_abs_value)
+    return
 
 
-
-if debug == True:
-    print ("My initial value  is    : %d" % my_value)
-    print ("My square root value is : %d" % my_sqrt_value)
+main()
