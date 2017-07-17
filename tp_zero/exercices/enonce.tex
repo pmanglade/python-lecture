@@ -13,7 +13,7 @@ Pour rechercher les zéros d'une
 fonction $f$ de $\mathbb{R}  \longrightarrow  \mathbb{R}$, 
 la première chose à faire est  de localiser un intervalle contenant 
 au moins un zéro. Dans ce qui suit, on admettra qu'un intervalle $[a\,;\,b]$
-est connu, sur lequel la fonction étudiée est continue voire continument dérivable, et $\exist x_0 \in  [a\,;\,b], \, f(x_0)=0$.
+est connu, sur lequel la fonction étudiée est continue voire continument dérivable, et $\exists x_0 \in  [a\,;\,b], \, f(x_0)=0$.
 
 \subsection{Dichotomie}
 Cette méthode consiste à découper l'intervalle dans lequel 
@@ -21,7 +21,7 @@ un zéro est recherché jusqu'à obtenir la solution. À chaque iteration
 la valeur de $f$ au milieu de l'intervalle est comparée avec celle aux extrémités. On en déduit un nouvelle intervalle moitié plus petit dans lequel est localisé la solution. 
 \begin{enumerate}
 \item Programmer deux fonctions : 
-$f(x) = e(x-a)(x-b)(x-c)(x-d)$ avec $a=1$, $b=3$, $c=-5$, $d=9$, et $e=0.003$ ;
+$f(x) = p(x-a)(x-b)(x-c)(x-d)$ avec $a=1$, $b=3$, $c=-5$, $d=9$, et $p=0.003$ ;
 puis $g(x) = e^{\cos (x) + 0.5} - 2 e^{\sin(x/2)}+x\sin(x)$.
 \item Sur l'intervalle $[-6\,;\,6]$ tracer ces deux fonctions ainsi 
 que $h(x)=0$. Combien de zéros présentent $f$ et $g$ ? Les positions exactes 
@@ -57,7 +57,7 @@ de la fonction pour pouvoir employer cette formule. De surcroît,
 comme la formule n'est qu'un développement au premier ordre, elle n'est souvent pas
 exacte. Et il faudra calculer itérativement pour trouver une solution. 
 \begin{enumerate}
-\item Programmer une fonction en recevant en argument, $f$,$f'$, $x$, et $\varepsilon$. Cette fonction utilisera l'algorithme de Newton pour 
+\item Programmer une fonction recevant en argument, $f$, $f'$, $x$, et $\varepsilon$. Cette fonction utilisera l'algorithme de Newton pour 
 déterminer une valeur $x_0$ telle que $|f(x_0)| < \varepsilon$.
 \item En utilisant la fonction $h(x) = e^x\log(x)-x^2$ comparer les rythmes de convergence de la méthode de Newton, et de la dichotomie. 
 \end{enumerate}
@@ -83,3 +83,6 @@ aux algorithmes programmés précédemment.
 %\subsection{Gauss-Newton}
 %\subsection{Levenberg-Marquardt}
 \subsection{Du zéro à l'extremum}
+Adapter l'un des algorithmes précédemment programmé pour rechercher non plus 
+le zéro d'une fonction mais un extremum. Pour cela, remarquer que quand
+ $f'(x)=0$, alors $f(x)$ est un extrema sauf si $f"(x) = 0$. 

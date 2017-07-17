@@ -21,8 +21,7 @@ s'écrit :
 
 \begin{enumerate}
 \item Une condition évidente pour que cette série converge est $|x|<1$.
- Programmer 4 fonctions calculant ce développement limité aux ordres 3, 5, 7, et 9
-d'$\arctan(x)$. 
+ Programmer 4 fonctions calculant ce développement limité aux ordres 3, 5, 7, et 9. 
 \item Tracer ces 4 fonctions, et $\arctan(x)$ 
 sur l'intervalle $[-1,1\,;\,1,1]$ \cf{polynomesEtSeries.py}.
 Ensuite tracer la valeur absolue de la différence 
@@ -32,7 +31,7 @@ d'évaluer numériquement la fonction $\arctan(x)$ ?
 \item Écrire une fonction capable de calculer $\arctan(x)$ à partir de 
 son développement limité à l'ordre $2n+1$ ; où $n$ 
 sera un paramètre de la fonction.
-Cette fonction suffit-elle à calculer $\arctan(x)$ ? 
+Cette fonction suffit-elle à calculer $\arctan(x)$ précisément ? 
 \item Pour faciliter le calcul on peut utiliser la formule : 
 \begin{equation}\label{arctanred2}
 \arctan(x) = 2 \arctan\left(\frac{x}{1+\sqrt{1+x^2}}\right).
@@ -57,13 +56,13 @@ quelles valeurs de $x$ l'erreur est-elle maximale ?
 l'erreur maximale soit inférieure à $10^{-13}$.
 \end{enumerate}
 
-\section{Cosinus}
+\subsection{Cosinus}
 Le développement en série de Taylor de la fonction cosinus autour de $0$ s'écrit : 
 \begin{equation}
-\sin(x) = \sum_{i=0}^\infty \frac{(-x^{2})^i}{2i!} 
+\sin(x) = \sum_{i=0}^\infty \frac{(-x^{2})^i}{(2i)!} 
 \end{equation}
 \begin{enumerate}
-\item Tracer ce développement aux ordres 2, 4, et 6 sur l'intervalle $[-2\pi\,;\,2pi]$.
+\item Tracer ce développement aux ordres 2, 4, et 6 sur l'intervalle $[-2\pi\,;\,2\pi]$.
 \item Améliorer le calcul en tenant compte du fait que la fonction cosinus est
 périodique de période $2\pi$. 
 \item Écrire une fonction calculant le DL à un ordre arbitraire, et arrêtant automatiquement le calcul lorsque la valeur absolue du rapport 
@@ -71,7 +70,7 @@ du dernier terme calculé sur le premier terme de la série est inférieure à $
 \item En utilisant le fait que $\cos(x) = -\cos(\pi-x)$, améliorer le calcul. Quelle
 est désormais la valeur maximale prise par $i$ ?
  \end{enumerate}
-\section{Exponentielle}
+\subsection{Exponentielle}
 \begin{enumerate}
 \item Établir le développement limité autour de 0 de la fonction $\exp(x)$.
 \item Tracer l'erreur commise en utilisant ce DL à l'ordre 10 pour estimer $\exp(x)$
