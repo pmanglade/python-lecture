@@ -1,6 +1,6 @@
 \section{Derivation}
 Il arrive que la dérivation analytique d'une fonction ne soit pas facilement
-calculabe. Ce TP survol les méthodes de dérivation numérique.
+calculabe. Ce TP survol des méthodes élémentaires de dérivation numérique.
 \subsection{Précision}
 Cet exercice vise à étudier les erreurs commises lors de l'emploi
 d'un méthode de dérivation numérique.
@@ -12,26 +12,28 @@ $$f'(x)= \frac{f(x+h)-f(x-h)}{2h}\,;$$
 où $h$ est un paramètre qui pourra être choisi lors de l'appel de cette fonction
 \cf{function.py}.
 \item Utiliser cette fonction pour calculer $\frac{d\cos(x)}{dx}$ 
-sur mille points répartis homogènements sur $[0\,;\,\,2\pi]$
+sur cent points répartis homogènements sur $[0\,;\,\,2\pi]$
 \cf{mesh.py}.
 Ensuite tracer la fonction $\cos(x)$ et les points calculés sur
 un graphique
 \cf{plot.py}.
-\item Sur les mille points, calculer la moyenne de la valeur
- absolue de la différence
+\item Sur les cent points, calculer la moyenne de la valeur
+ absolue de la différence entre dérivée numérique et fonction analytique
 \cf{loop.py}.
-\item Sur une échelle log/log, tracer l'évolution de cette différence 
+\item Avec une échelle log/log, tracer l'évolution de cette différence 
 en fonction de $h$. Les valeurs choisies pour $h$ suivront une suite 
 géométrique de raison $2^\frac{1}{2}$ et de valeur initiale $10^{-6}$ \cf{loop.py}. 
 On utilisera les 25 premières valeurs.
 Qu'observe-t-on ? 
-Comment choisir la meilleur valeur de $h$ pour dériver numériquement ? 
-\item Tracer la dérivée numérique et la dérivée 
+Comment choisir la meilleure valeur de $h$ pour dériver numériquement ? 
+\item Tracer la dérivée numérique (pour une valeur de $h$ choisie arbitrairement)
+ et la dérivée 
 analytique sur un même graphique. Peut-on observer facilement la différence ? 
-\item Tracer la différence ente dérivée numérique et calcul exact. 
+\item Tracer la différence ente dérivée numérique et calcul analytique. 
 \item Comparer la forme de la fonction obtenue avec 
 $-\alpha \sin(x)$ en choisissant de manière appropriée $\alpha$.
-Expliquer ce qui est observé. 
+Expliquer ce qui est observé à partir du développement limité de $\cos(x)$ 
+autour de $0$.. 
 \end{enumerate}
 
 \subsection{Algorithmes de dérivation}
@@ -81,4 +83,4 @@ on trouvera les valeurs de $x$ et dans la seconde celles de $f(x)$ ; où $f$ ser
 \end{enumerate}
 
 \subsection{Dérivées de séries de points irrégulière}
-Reproduire le même travail, mais cette fois avec une série de points distribuées de manière irrégulière sur l'intervalle $[a\,;\,b]$. Il faudra donc calculer à chaque fois de nouveaux coefficients pour la dérivation. 
+Reproduire le même travail, mais cette fois avec une série de points distribués de manière irrégulière sur l'intervalle $[a\,;\,b]$. Il faudra donc calculer à chaque fois de nouveaux coefficients pour la dérivation. 

@@ -25,7 +25,7 @@ valeur de $h$. La fonction commencera par adapter au plus juste
 cette valeur à l'intervalle $[a\,;\,b]$ reçu.
 \item Écrire une fonction utilisant la précédente
  pour calculer $N$ intégrales de $a$ à $x$, où les valeurs de $x$
-seront uniformément répartie entre $a$ et $b$ \cf{mesh.py et loop.py}. 
+seront uniformément réparties entre $a$ et $b$ \cf{mesh.py et loop.py}. 
 Cette fonction
 aura donc pour arguments $f$, $a$, $b$, $N$, et $h$ ; elle retournera
 deux listes \cf{returnList.py}. 
@@ -39,7 +39,7 @@ en prenant $f=\cos$, $a=0$, $b=\pi$, $N=100$, et $h=0.01$.
 \item Tracer la fonction ainsi obtenue en même temps que $\sin$ \cf{plot.py}.
 \item Calculer l'écart moyen entre cette fonction et $\sin(x)$ \cf{loop.py}.
 \item Tracer l'évolution de cet écart en fonction de $h$ sur un 
-graphique loglog. Aux mêmes points tracer $f(x)=x$, puis comparer. Utiliser des 
+graphique log/log. Aux mêmes points tracer $f(x)=x$, puis comparer. Utiliser des 
 valeurs de $h$ appartenant à une suite géomètrique de raison 4 et de valeur initiale $10^{-4}$. Faire le tracé pour des valeurs de $h$ allant jusqu'à $10^{-2}$.
 \end{enumerate}
 
@@ -51,7 +51,7 @@ est une minoration de l'intégrale. Inversement pour une fonction strictement d�
  $$\sum_{i=1}^n h_n f(x_i),$$
 puis comparer les intégrations réalisés avec cette fonction à celles réalisées avec 
 $$\sum_{i=0}^{n-1}h_n f(x_i).$$
-Ces méthodes sont appelés méthodes des rectangles à droite et à gauche respectivement.
+Ces méthodes sont appelées méthodes des rectangles à droite et à gauche respectivement.
 \item Vérifier sur quelques exemples que pour des portions de fonctions monotones, l'une des intégrations donne une majoration de l'intégrale alors que l'autre donne une minoration. 
 \item Écrire une fonction calculant simultanément 
 une majoration et une minoration approximative de 
