@@ -1,4 +1,4 @@
-\section{Exemples}
+%%\section{Exemples}
 
 \subsection{Découverte de l'interpréteur python}
 
@@ -45,7 +45,7 @@ Pour cette série de commande, vous commencerez par ouvrir l'interpréteur de co
 
 \item Que donne la somme des variables \texttt{f} et \texttt{e} ?
 
-\item Proposez une méthode pour échanger le contenu des varialbes \texttt{a} et \texttt{b} (sans utilisez de langage de programmation).
+\item Proposez une méthode pour échanger le contenu des variables \texttt{a} et \texttt{b} (sans utilisez de langage de programmation).
   Ensuite réalisez cette méthode en utilisant les commandes python que vous connaissez.
 
 \end{enumerate}
@@ -84,21 +84,25 @@ sera donc pas executée
 
 
 Assez rapidement, vous chercherez à proposer vos programmes à des utilisateurs.
-Il sera donc nécessaire que l'utilisateur puisse interagir avec une interface sans avoir à intervenir
+Nous allons donc introduite la notion de fonction principale \texttt{main()} que vous trouverez dans l'exemple
+\texttt{conditions.py}.
+De plus, il sera nécessaire que l'utilisateur puisse interagir avec une interface sans avoir à intervenir
 dans les algorithmes que vous aurez mis en place.
 
 
 \begin{enumerate}
 \item Éxecuter votre programme en passant dans le terminal la commande \texttt{python conditions.py} puis commentez.
 
+\item Repérez le début du programme principale et son utilisation par \texttt{main()}.
+
 \item Détaillez la fonctionnalité de la fonction \texttt{input()}
 
 \item De quel type sont les variables \texttt{name} et \texttt{number} ?
 
-\item Votre première condition et donc premier bloc d'instruction se trouve entre les lignes 32 et 37.\\
+\item Votre première condition et donc premier bloc d'instruction se trouve entre les lignes 28 et 33.\\
   Expliquez la différence entre \texttt{if}, \texttt{elif} et \texttt{else}.
 
-\item Entre les lignes 40 et 47, découvrez les mots cléfs \texttt{and}, \texttt{or} et \texttt{not}.\\
+\item Entre les lignes 36 et 43, découvrez les mots cléfs \texttt{and}, \texttt{or} et \texttt{not}.\\
   Proposez une solution pour améliorer ce bloc d'instruction et ainsi prendre en
   compte le dernier cas, ignoré jusqu'à maintenant.
 
@@ -111,19 +115,24 @@ dans les algorithmes que vous aurez mis en place.
 \item Calculez la racine carrée de la valeur absolue de -1024.
   Comment feriez vous en utilisant python ?
 
-\item Il \textit{suffit} d'importer le module \texttt{math} et d'utiliser ensuite
+\item Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
   toutes les fonctions définies dans ce module.
   Pour simplifier, un module est un bout de code que l'on trouve dans un fichier
   mettant à disposition un ensemble de fonctionnalité autour d'un thème commun.
   Pour connaitre l'ensemble des possibilités du module \texttt{math}, il faut taper la commande
-  \texttt{help("math")} dans l'interpréteur de commande python.
+  \texttt{help("numpy")} dans l'interpréteur de commande python.
 
 
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
-  La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{math}
+  La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}
 
 \item Ce qui fait la force du langage python est, entre autre, le nombre important de module.
   Découvrez les modules \texttt{time} ou \texttt{random}.
 
 
 \end{enumerate}
+
+
+
+
+\subsection{Manipuler les chaînes de caractères}
