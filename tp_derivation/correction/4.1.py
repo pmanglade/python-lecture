@@ -29,7 +29,9 @@ def myf(x):
 
 wf = open("function.dat","w")
 for x in np.arange(0.1,5,0.01):
-   wf.write(str(x)+" "+str(myf(x))+"\n")
+   wf.write(str(x)+" "+str(myf(x))+"\n")     ## deprecated mostly
+   ##wf.write('{} {}\n'.format(x,myf(x)))    ## more 'modern'
+
 wf.close()
 
 rf = open("function.dat","r")

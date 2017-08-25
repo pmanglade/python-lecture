@@ -18,10 +18,9 @@ def main():
     author = "Yoda"
 
 
-    
     my_file = open('quote_file.dat', 'w')       # Open the file in write mode
 
-    my_file.write("1 ")                         # write string 1
+    my_file.write("1 ")                         # write in file the string '1'
     my_file.write(advice)                       # write string contain in advice 
     my_file.write("\n")                         # write a newline in the text at this point
     my_file.write(author)                       # write string contain in author

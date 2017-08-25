@@ -13,6 +13,7 @@ def write_data():
    wf = open("exp.dat","w")                   #open the file "exp.dat" in writing mode
    for i in range(len(x)):                    #let's loop over as much element as there is in x
       wf.write("%f %f \n" % (x[i],y[i]))      #write must receive only a single "string" argument
+      ##wf.write('{} {}\n'.format(x[i],y[i])) #more modern
    wf.close()                                 #close the file "exp.dat" associated with the object wf
       
       #alternatively the same data could have been generated and written this way

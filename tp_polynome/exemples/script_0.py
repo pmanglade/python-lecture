@@ -25,7 +25,7 @@ print ("\n\n")
 
 print ("Value a is equal to  %d"%a)
 print ("Value b is equal to  %d"%b)  # Pour afficher un nombre reel, utilisez %f
-print ("Sentence from The Hitchhiker's Guide to the Galaxy : \n%s"%c)
+print ("Sentence from The Hitchhiker's Guide to the Galaxy : \n %s" %c)
 
 
 

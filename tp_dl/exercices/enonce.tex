@@ -1,12 +1,12 @@
-\section{Évaluation de fonctions}
-L'évaluation de fonctions transcendantes
-comme ($\sin $, $\tan^{-1}$, $\exp $\ldots) et même de
-certaines autres fonctions ($\sqrt{\strut}$, $x^y$\ldots) 
-en fonction de leurs arguments n'est
-pas immédiat à la main. Les ordinateurs et autres 
-calculatrices rendent ces calculs accessibles. Dans ce
-TP nous nous proposons d'explorer l'évaluation de ces 
-fonctions à l'aide de leur développement en série de Taylor.
+
+L'évaluation  de  fonctions transcendantes\footnote{Une  fonction  est
+  dite  transcendante  si  elle  n'est  pas  solution  d'une  équation
+  polynomiale} comme ($\sin $, $\tan^{-1}$,  $\exp $\ldots) et même de
+certaines autres fonctions  ($\sqrt{\strut}$, $x^y$\ldots) en fonction
+de leurs  arguments n'est pas immédiat  à la main. Les  ordinateurs et
+autres calculatrices rendent ces calculs accessibles. Dans ce TP, nous
+proposons d'explorer  l'évaluation de ces  fonctions à l'aide  de leur
+développement en série de Taylor.
 
 
 
@@ -20,32 +20,43 @@ s'écrit :
 \end{equation}
 
 \begin{enumerate}
-\item Une condition évidente pour que cette série converge est $|x|<1$.
- Programmer 4 fonctions calculant ce développement limité aux ordres 3, 5, 7, et 9. 
-\item Tracer ces 4 fonctions, et $\arctan(x)$ 
-sur l'intervalle $[-1,1\,;\,1,1]$ \cf{polynomesEtSeries.py}.
-Ensuite tracer la valeur absolue de la différence 
-de chacune de ces fonctions avec $\arctan(x)$. 
-Pour quelles valeur de $x$ semble-t-il facile 
-d'évaluer numériquement la fonction $\arctan(x)$ ? 
-\item Écrire une fonction capable de calculer $\arctan(x)$ à partir de 
-son développement limité à l'ordre $2n+1$ ; où $n$ 
-sera un paramètre de la fonction.
-Cette fonction suffit-elle à calculer $\arctan(x)$ précisément ? 
-\item Pour faciliter le calcul on peut utiliser la formule : 
-\begin{equation}\label{arctanred2}
-\arctan(x) = 2 \arctan\left(\frac{x}{1+\sqrt{1+x^2}}\right).
-\end{equation}
-Pour quelles valeurs de $x$, cette formule peut-elle faciliter le calcul ? 
-\item Programmer une fonction faisant usage 
-deux fois successivement de la formule~\ref{arctanred2} 
-avant de calculer $\arctan(x)$ en utilisant 
-un développement d'ordre $2n+1$. 
+  %%
+\item  Une  condition  évidente  pour que  cette  série  converge  est
+  $|x|<1$.  Programmer  4 fonctions calculant ce  développement limité
+  aux ordres 3, 5, 7, et 9.
+  %%
+\item  Tracer   ces  4   fonctions,  et   $\arctan(x)$  pour   $x  \in
+  [-1:1]$.\\ \cf{polynomesEtSeries.py}.
+  %%
+\item   Ensuite   tracer   la   valeur  absolue   de   la   différence
+  ($\varepsilon_3$,$\varepsilon_5$, \dots) de chacune de ces fonctions
+  avec $\arctan(x)$.
+  %%
+\item Pour quelle gamme de valeurs de $x$ semble-t-il facile d'évaluer
+  numériquement la fonction $\arctan(x)$ ?
+  %%
+\item Écrire une fonction capable de calculer $\arctan(x)$ à partir de
+  son développement limité à l'ordre  $2n+1$ ($n$ sera un paramètre de
+  la fonction).   Cette fonction  suffit-elle à  calculer $\arctan(x)$
+  précisément ?
+  %%
+\item Pour faciliter le calcul, on peut utiliser la formule :
+  \begin{equation}\label{arctanred2}
+    \arctan(x) = 2 \arctan\left(\frac{x}{1+\sqrt{1+x^2}}\right).
+  \end{equation}
+  Pour quelles valeurs de $x$, cette formule facilite-t-elle le calcul
+  ?
+  %%
+\item Programmer  une fonction faisant usage  deux fois successivement
+  de  la formule~\ref{arctanred2}  avant de  calculer $\arctan(x)$  en
+  utilisant un développement d'ordre $2n+1$.
+  %%
 \item Évaluer le bon fonctionnement de cette fonction sur 
-l'intervalle $[-7,\,;\,7]$. Notre fonction pourra-t-elle effectivement 
-caculer $\arctan(x) \,\, \forall x \in [-\infty\,;\,\infty]$ ?
+  l'intervalle $[-7,\,;\,7]$. Notre fonction pourra-t-elle effectivement 
+  calculer $\arctan(x) \,\, \forall x \in [-\infty\,;\,\infty]$ ?
+  %%
 \item Il est facile d'améliorer encore les résultats précédents 
-grâce à la formule : 
+  grâce à la formule : 
 \begin{equation}
 \arctan(x) = \frac{|x|\pi}{x2}-\arctan(1/x) 
 \end{equation}
@@ -57,31 +68,51 @@ l'erreur maximale soit inférieure à $10^{-13}$.
 \end{enumerate}
 
 \subsection{Cosinus}
-Le développement en série de Taylor de la fonction cosinus autour de $0$ s'écrit : 
+Le développement en  série de Taylor de la fonction  cosinus autour de
+$0$ s'écrit :
 \begin{equation}
-\sin(x) = \sum_{i=0}^\infty \frac{(-x^{2})^i}{(2i)!} 
+\sin(x) = \sum_{i=0}^\infty \frac{(-x^{2})^i}{(2i)!}
 \end{equation}
 \begin{enumerate}
-\item Tracer ce développement aux ordres 2, 4, et 6 sur l'intervalle $[-2\pi\,;\,2\pi]$.
-\item Améliorer le calcul en tenant compte du fait que la fonction cosinus est
-périodique de période $2\pi$. 
-\item Écrire une fonction calculant le DL à un ordre arbitraire, et arrêtant automatiquement le calcul lorsque la valeur absolue du rapport 
-du dernier terme calculé sur le premier terme de la série est inférieure à $10^{-16}$. Tester toujours sur le même intervalle. Quelle est la valeur maximale de $i$ utiliseée ? 
-\item En utilisant le fait que $\cos(x) = -\cos(\pi-x)$, améliorer le calcul. Quelle
-est désormais la valeur maximale prise par $i$ ?
+  %%
+\item Tracer ce  développement aux ordres 2, 4, et  6 sur l'intervalle
+  $[-2\pi\,;\,2\pi]$.
+  %%
+\item Améliorer  le calcul en  tenant compte  du fait que  la fonction
+  cosinus est périodique de période $2\pi$.
+  %%
+\item  Écrire une  fonction calculant  le  DL à  un ordre  arbitraire.
+  Arrêter  automatiquement  le calcul  lorsque  la  valeur absolue  du
+  rapport du  dernier terme calculé sur  le premier terme de  la série
+  est  inférieure   à  $10^{-16}$.\\  Tester  toujours   sur  le  même
+  intervalle. Quelle est la valeur maximale de $i$ utiliseée ?
+  %%
+\item En utilisant le fait  que $\cos(x) = -\cos(\pi-x)$, améliorer le
+  calcul. Quelle est désormais la valeur maximale prise par $i$ ?
  \end{enumerate}
+
+
 \subsection{Exponentielle}
 \begin{enumerate}
-\item Établir le développement limité autour de 0 de la fonction $\exp(x)$.
-\item Tracer l'erreur commise en utilisant ce DL à l'ordre 10 pour estimer $\exp(x)$
-pour des valeurs de $x \in [-4\,;\,4]$.
-\item Expliquer la dissymétrie observée entre 
-valeurs de $x$ positives et négatives. 
-\item Améliorer la fonction en utilisant le fait que $\exp(x) = 1/\exp(-x)$.
-\item Faciliter encore le calcul en utilisant la formule $\exp^n(x/n) = \exp(x)$. 
-Pour ce faire, on écrira une fonction puissance 
-récursive \cf{recursion.py} capable
-de calculer la puissance $n^\textrm{ième}$ d'un nombre, et la valeur de $n$ 
-sera choisie de sorte que $x/n$ soit inférieure à $1$. 
+  %%
+\item  Établir le  développement limité  autour  de 0  de la  fonction
+  $\exp(x)$.
+  %%
+\item Tracer  l'erreur commise en  utilisant ce  DL à l'ordre  10 pour
+  estimer $\exp(x)$ pour des valeurs de $x \in [-4\,;\,4]$.
+  %%
+\item Expliquer la dissymétrie observée entre valeurs de $x$ positives
+  et négatives.
+  %%
+\item  Améliorer la  fonction  en  utilisant le  fait  que $\exp(x)  =
+  1/\exp(-x)$.
+  %%
+\item Faciliter encore le calcul  en utilisant la formule $\exp^n(x/n)
+  =  \exp(x)$.   Pour  ce  faire, on  écrira  une  fonction  puissance
+  récursive   capable  de  calculer   la  puissance
+  $n^\textrm{ième}$ d'un nombre,  et la valeur de $n$  sera choisie de
+  sorte que $x/n$ soit inférieure à $1$.\\
+  \cf{recursion.py}  
+
 \end{enumerate}
 

@@ -29,9 +29,9 @@ if __name__ == "__main__":
       param_a = 1
       param_b = 2
       param_c = 3
-      x_value = 0
       
-      y_result = calculate_polynome(param_a,param_b,param_c,x_value,debug)
+      x_value = 0
+            y_result = calculate_polynome(param_a,param_b,param_c,x_value,debug)
       print("f(%d) = %f"%(x_value,y_result))
             
             
