@@ -1,0 +1,54 @@
+\subsection{Le mouvement brownien}
+
+Le  mouvement brownien  correspond  à la  description mathématique  du
+mouvement  aléatoire d'une  particule immergé  dans un  fluide soumise
+uniquement      aux     chocs      avec      les     molècules      du
+fluide\footnote{https://fr.wikipedia.org/wiki/Mouvement\_brownien}.
+
+
+Pour  faire simple,  vous déplacerez  aléatoirement un  point dans  un
+espace discret et infini à deux dimensions.
+
+
+\begin{enumerate}
+  %%
+\item Créez les fonctions suivantes :
+  \begin{description}
+  \item[choose\_direction]  Pour choisir  aléatoirement une  direction
+    dans la liste suivante : Ouest, Sud, Est, Nord
+  \item[prepare\_mouvement]     Pour      produire     les     valeurs
+    (delta\_x,delta\_y)  à partir  d'une direction  (Ouest, Sud,  Est,
+    Nord)\\ Ex : Pour une direction Nord $\rightarrow$ delta\_x = 0 et
+    delta\_y = +1
+  \item[move] Pour renvoyer  les nouvelles coordonnées (new\_x,new\_y)
+    à partir  d'un mouvement (delta\_x,delta\_y) à  appliquer au point
+    (x,y).
+  \item[simulate]  Pour effectuer  $N$ fois  les opérations  suivantes
+    (appelé  par  la  suivante   \textit{itérations})  :  choisir  une
+    direction, preparer le mouvement dans  un espace à deux dimensions
+    puis  effectuer  le  mouvement.   Puis  renvoyer  les  listes  des
+    positions (x,y) calculées lors des $N$ mouvements
+  \item[distance] Pour calculer la  distance entre deux points (x1,y1)
+    et (x2,y2)
+  \end{description}
+  %%
+\item Dans le programme  principal, effectuez les opérations suivantes
+  :
+  \begin{itemize}
+  \item[$\ast$] Générez les coordonnées \texttt{x\_init} et \texttt{y\_init}
+    d'une particule au point (0,0).
+  \item[$\ast$]  Effectuez une simulation complète  de $N$ itérations. Au terme
+    de cette  simulation, calculez la  distance $d$ entre  la position
+    initiale et la dernière position.
+  \item[$\ast$]   Réalisez $M$  fois  l'étape précédente,  calculez la  moyenne
+    $\bar{d}$  des distances  $d$  et tracez  la  distribution de  ces
+    distances.
+  \item[$\ast$]   Réalisez plusieurs  fois l'étape  précédente et  comparez les
+    distributions obtenues.
+  \end{itemize}
+
+
+\end{enumerate}
+
+
+%%\subsection{La marche au hasard}

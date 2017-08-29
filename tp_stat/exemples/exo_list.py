@@ -32,8 +32,11 @@ def main():
         
         for heros in my_list_of_character:
             print ("my current heros is %s" % heros)
-            
-            
+
+
+
+        my_second_list_of_character = ["Adèle Blanc-Sec","Maya l'abeille","Yakari"]
+        my_list_of_character.extend(my_second_list_of_character)
         print("Finished...")
         return
 

@@ -1,6 +1,122 @@
-\section{Exemples}
+\subsection{Même chance pour tous}
 
-\subsection{}
+Le programme \texttt{random\_0.py}  contient deux fonctions distinctes
+permettant de tirer des nombres aléatoires entiers ou réels.
 
+\begin{enumerate}
+\item Modifiez le programme afin  de sauvegardez dans un fichier texte
+  l'ensemble des valeurs générées.
+
+\item Après  plusieurs exécutions  du programme, comparez  les données
+  produites  et mettez  en \oe  uvre  une solution  pour améliorer  le
+  caractère aléatoire du programme.
+  
+\item Tracez  un histogramme de  distribution des valeurs  entières et
+  des valeurs réelles produites.
+
+\item  Calculez  la  valeur  moyenne de  la  distribution  de  valeurs
+  entières  générées puis  comparez  à la  valeur  moyenne attendue  à
+  partir des paramètres entrés par l'utilisateur.
+
+\item Notez  $\varepsilon$ l'écart  entre les deux  moyennes calculées
+  précédemment puis tracez l'évolution de $\varepsilon$ en fonction du
+  nombre de valeurs générées.
+
+\end{enumerate}
 %%
+
+\subsection{Description du tirage aléatoire}
+
+Sur  la base  du programme  \texttt{random\_and\_stat.py}, vous  allez
+étudier les caractéristiques d'un tirage aléatoire uniforme.
+
+
+\begin{enumerate}
+\item  Calculez la  valeur moyenne  des valeurs  entières générées  et
+  comparez à la valeur attendue.
+
+\item  Calculez  $\varepsilon_1$  la  différence  entre  les  moyennes
+  calculées à la question précédente.
+
+\item Écrivez une fonction pour accueillir l'algorithme que vous venez
+  d'écrire.
+
+  
+\item Tracez $\varepsilon_1$  en fonction du nombre  de valeurs tirées
+  aléatoirement $N$ avec $N \in [10:10^5]$.
+  
+\item Calculez la quantité de nombres tirés par valeur (nombre de $a$,
+  $a+1$, \dots,  $b-1$, $b$)  et comparez à  la valeur  attendue. Pour
+  chaque  valeur  calculez l'écart  entre  valeur  attendue et  valeur
+  obtenue ($\varepsilon_2$).
+
+\item Tracer l'histogramme de  distribution de l'écart $\varepsilon_2$
+  pour chaque valeur.
+
+\end{enumerate}
+
+
+\subsection{L'aléatoire à la base de la simulation Monte-Carlo}
+
+Bien que  la simulation en  physique n'ait rien  à voir avec  les jeux
+pratiqués   dans   la   ville   éponyme,  vous   allez   utilisés   le
+\textit{hasard}   pour  introduire   une  approche   statistique  d'un
+problème.  Nous verrons dans cet exemple une méthode simple pour faire
+un choix équiprobable dans une liste de particules élémentaires.  Pour
+cela vous utiliserez l'exemple \texttt{random\_a\_list.py}.
+
+\begin{enumerate}
+\item Proposez à l'utilisateur de mélanger la liste de particules puis
+  utilisez la méthode adéquat en cas de réponse positive.  %%
+\item Affichez  la liste produite  après mélange puis vérifiez  que la
+  liste a bien été mélangée.  %%
+\item  Proposez  à  l'utilisateur de  sélectionner  aléatoirement  une
+  particule dans la liste. Répétez cette étape $N$ fois.  %%
+\item   Vérifiez  que   pour   $N$  \textit{grand},   le  tirage   est
+  équiprobable.  %%
+\item Proposez  une méthode pour tirer  aléatoirement deux particules
+  distinctes.  %%
+\end{enumerate}
+
+
+\subsection{Tout est question de distribution}
+
+Jusqu'à  maintenant, vous  avez étudiez  des distributions  aléatoires
+uniformes, cela signifie que chaque valeur tirée a la même probabilité
+d'exister.  Utilisez les  exemples \texttt{random\_distribution.py} et
+\texttt{random\_2D.py} pour écrire votre  propre programme et répondre
+aux questions suivantes.
+
+
+\begin{enumerate}
+\item Comparez  et commentez  les différentes  distributions (uniform,
+  triangular, gauss).  Calculez les  moyennes, écart type et extremum.
+  %%
+\item Évaluez les  temps d'exécution des différentes  méthodes pour le
+  même nombre de tirage.  %%
+\item Écrivez votre propre programme pour :
+  \begin{itemize}
+  \item[$\ast$] Tirer  aléatoirement selon deux distributions  ($x$ et
+    $y$) uniformes $N_{tot} \times N_{tot}$ valeurs comprises entre -1
+    et 1.
+  \item[$\ast$] Pour un couple $(x,y)$, calculer la valeur $r$ tel que
+    $r^2 = x^2+y^2$
+  \item[$\ast$] Stocker dans  uniquement les valeurs de $x$  et de $y$
+    pour lesquels $r \inf 1$ et  affichez le nombre de valeurs gardées
+    ($N_{sel}$).
+  \item[$\ast$] Calculer  le rapport de $N_{sel}/N_{tot}$  et comparer
+    cette valeur à $\frac{\Pi}{4}$
+  \item[$\ast$] Évaluer l'écart entre ces  deux valeurs en fonction du
+    nombre de tirage effectués.
+  \end{itemize}
+  %%
+\item Sans  nécessairement écrire l'algorithme, proposez  une solution
+  alternative pour tirer une distribution  de points dans un cercle de
+  rayon 1.
+
+
+  
+\end{enumerate}
+
+
 \vfill
