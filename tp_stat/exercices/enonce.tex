@@ -2,6 +2,25 @@
 
 %%\section{Exercices}
 
+
+\subsection{Construire un histogramme}
+
+Dans cet exercice, à partir d'une série de points que vous lirez d'un fichier texte, vous construirez un histogramme de distribution.
+Typiquement un histogramme vous permettra d'étudier la répartition d'une variable.
+Néanmoins, il est nécessaire de définir trois paramètres : les valeurs minimal et maximal de la gamme des données à étudier et
+le nombre de classes.
+\begin{enumerate}
+\item Demandez à un utilisateur d'entrée les valeurs min, max et nombre de classe ($min$, $max$ et $nb\_bin$).
+\item Créez une liste $histo\_bins$  contenant $nb\_bin$ cases dont la valeur est égale à 0.
+\item Calculez la largeur de répartition des classes ($bin\_witdh = (max - min) / nb\_bin$).
+\item Lisez le fichier \texttt{data.dat} lingne à ligne.
+\item Pour chaque valeur lue, trouvez à quelle classe appartient la valeur.
+\item Lorsque valeur appartient à la $i^{eme}$~classe, ajoutez $+1$ à la  $i^{eme}$~case de la liste  $histo\_bins$
+\item Tracez $histo\_bins$ en fonction de $i$ et comparez les résultats en fonction de la valeur  $nb\_bin$ entrée.
+\end{enumerate}
+
+
+
 \subsection{Statistiques élémentaires sur un fichier de données}
 
 L'objectif de cet exercice est d'étudier les données fournies par la station météo-france
