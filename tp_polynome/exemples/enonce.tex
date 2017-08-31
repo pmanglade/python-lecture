@@ -59,7 +59,7 @@ l'interpréteur de commande python.
 \item Que donne la somme des variables \texttt{f} et \texttt{e} ?
 
 \item  Proposez une  méthode pour  échanger le  contenu des  variables
-  \texttt{a}   et   \texttt{b}   (sans    utilisez   de   langage   de
+  \texttt{a}   et   \texttt{b}   (n'utilisez   pas   de   langage   de
   programmation).   Ensuite réalisez  cette méthode  en utilisant  les
   commandes python que vous connaissez.
 
@@ -72,8 +72,9 @@ Afin d'exécuter  une suite  d'instructions plus complexes,  comme tout
 langage  informatique, on  peut enregistrer  ces instructions  dans un
 fichier (programme).
 
-Gardez à l'esprit  que toute ligne commençant par \#  est une ligne de
-commentaire qui ne sera donc pas exécutée
+Gardez à l'esprit  que toute séquence de caractères sur un ligne 
+commençant par \#  est interprétée comme un commentaire 
+et ne sera donc pas exécutée.
 
 \begin{enumerate}
 \item Exécutez  le programme \texttt{script\_0.py} en  passant dans le
@@ -85,7 +86,7 @@ commentaire qui ne sera donc pas exécutée
 \item La première ligne de  votre script (version très simplifiée d'un
   programme) est, ce que l'on nomme, le shebang (ou shabang).
 
-\item Que  se passe  t'il après  avoir supprimé  la première  ligne du
+\item Que  se passe-t-il après  avoir supprimé  la première  ligne du
   programme ?
 
 \item Décryptez la ligne \#12 du programme \texttt{script\_0.py}.
@@ -98,11 +99,15 @@ commentaire qui ne sera donc pas exécutée
 
 
 \end{enumerate}
+\lstinputlisting[language=Python]{script_0.py}
+
 
 
 \subsection{Un peu d'interaction avec votre programme}
 
 
+% Je ne prends pas la liberté de modifier. Mais il me semble que
+% ce qui suit est faux. 
 Rapidement,  vous   mettrez  à   disposition  vos  programmes   à  des
 utilisateurs.   Nous  allons donc  introduire  la  notion de  fonction
 principale   \texttt{main()}  que   vous   trouverez  dans   l'exemple
@@ -113,7 +118,7 @@ aurez mis en place.
 
 \begin{enumerate}
 
-\item  Ouvrez avec  \texttt{emacs} le  programme \texttt{condition.py}
+\item  Ouvrez avec  \texttt{emacs} le  programme \texttt{conditions.py}
   puis repérez le début du programme principale et son utilisation par
   \texttt{main()}.
   
@@ -122,14 +127,14 @@ aurez mis en place.
 
 \item Détaillez la fonctionnalité de la fonction \texttt{input()}
 
-\item De quel type sont les variables \texttt{name} et \texttt{number}
-  ?
+\item De quels types sont les variables \texttt{name}, \texttt{input\_number}, 
+et \texttt{number} ?
 
-\item Votre première  condition et donc premier  bloc d'instruction se
+\item Votre première  condition, et donc premier  bloc d'instruction, se
   trouve entre  les lignes 28  et 33.\\ Expliquez la  différence entre
   \texttt{if}, \texttt{elif} et \texttt{else}.
 
-\item  Entre   les  lignes  36   et  43,  découvrez  les   mots  cléfs
+\item  Entre   les  lignes  36   et  43,  découvrez  les   mots-clefs
   \texttt{and}, \texttt{or}  et \texttt{not}.\\ Proposez  une solution
   pour ajouter  un bloc  d'instruction et ainsi  prendre en  compte le
   dernier cas, ignoré jusqu'à maintenant.
@@ -137,18 +142,20 @@ aurez mis en place.
 
 \end{enumerate}
 
+\lstinputlisting[language=Python]{conditions.py}
+
 \subsection{Un peu de mathématique}
 
 \begin{enumerate}
 \item Calculez la racine carrée de la valeur absolue de -1024.
-  Comment feriez vous en utilisant python ?
+  Comment feriez-vous en utilisant python ?
 
 \item Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
-  toutes les fonctions définies dans ce module.
+  des fonctions définies dans ce module.
   Pour simplifier, un module est un bout de code que l'on trouve dans un fichier
-  mettant à disposition un ensemble de fonctionnalité autour d'un thème commun.
-  Pour connaitre l'ensemble des possibilités du module \texttt{math}, il faut taper la commande
-  \texttt{help("numpy")} dans l'interpréteur de commande python.
+  mettant à disposition un ensemble de fonctionnalités autour d'un thème commun.
+  Pour connaître l'ensemble des possibilités du module \texttt{numpy}, il faut taper la commande
+  \texttt{help("numpy")} dans l'interpréteur de commandes python.
 
 
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
@@ -160,7 +167,7 @@ aurez mis en place.
 
 \end{enumerate}
 
-
+\lstinputlisting[language=Python]{scientifique.py}
 
 
 \subsection{Manipuler les chaînes de caractères}
@@ -171,15 +178,16 @@ aurez mis en place.
 \item Ouvrez avec  \texttt{emacs} le  programme \texttt{chaine.py} puis
   suite à l'analyse du programme, définissez le type de chaque variable.
 
-\item Explquez ce que fait la ligne 23 de votre programme.
+\item Expliquez ce que fait la ligne 23 de votre programme.
   
-\item Comparez le nombre d'élément constituant les variables \texttt{list\_of\_word} et  \texttt{sentence}.
+\item Comparez le nombre d'éléments constituant les variables \texttt{list\_of\_word} et  \texttt{sentence}.
 
 \item Détaillez les fonctionalités des méthodes \texttt{split()}, \texttt{replace()} et \texttt{count()}.
   
 \item Proposez une solution pour accéder au cinquième élément de la variable \texttt{list\_of\_word}.
 
-\item Comparez les deux méthodes d'affichage ligne 33 et ligne 37 puis faites un choix.
+\item Comparez les deux méthodes d'affichage ligne~33 et ligne~37 puis faites un choix.
 
 
 \end{enumerate}
+\lstinputlisting[language=Python]{chaine.py}

@@ -17,6 +17,8 @@ Pour s'exercer à écrire dans un fichier, vous étudierez le fichier \texttt{wr
     
 \end{enumerate}
 
+\lstinputlisting{write_file.py}
+
 \subsection{Lire un fichier texte}
 
 Pour  s'exercer à  lire dans  un  fichier, vous  étudierez le  fichier
@@ -25,27 +27,28 @@ Pour  s'exercer à  lire dans  un  fichier, vous  étudierez le  fichier
 \begin{enumerate}
 
 \item Expliquez  les différences  entre les  méthodes \texttt{read()},
-  \texttt{readlines()} et \texttt{readline()},
+  \texttt{readlines()} et \texttt{readline()}.
 
-\item  Comment peut  on lire  l'ensemble  du fichier  avec la  méthode
+\item  Comment peut-on lire  l'ensemble  du fichier  avec la  méthode
   \texttt{readline()} ?
 
 \item  Que se  passe-t-il lorsque  l'on \textit{oublie}  de fermer  le
   fichier à la fin du programme ?
 
 \item Testez le type auquel appartient la variable \texttt{lines}.
+% Quels genres de tests t'attends-tu à ce que les étudiants fassent ? 
 
 \item Lors de l'affichage de  la variable \texttt{lines}, chaque ligne
-  est encadré par un \texttt{'}  et les différentes lignes se trouvent
+  est encadrée par un \texttt{'}  et les différentes lignes se trouvent
   séparées par une  virgule. L'ensemble est délimité  par des crochets
   \texttt{[]}.  Chaque  élément séparé par une  virgule est accessible
   indépendamment.  Cet objet est de  type \texttt{list}, c'est un type
   de  variable   qui  peut  lui-même  contenir   plusieurs  variables.
-  Commentez  les lignes  49 et  50  puis proposez  deux méthodes  pour
+  Commentez  les lignes  49 et  50 ; puis proposez  deux méthodes  pour
   accéder à l'ensemble des éléments de l'objet \texttt{lines}
 
 \end{enumerate}
-
+\lstinputlisting{read_file.py}
 \subsection{Manipulation des list}
 
 
@@ -53,12 +56,13 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \begin{enumerate}
 \item  Ouvrez   le  programme  \texttt{exo\_list.py}  et   faites  les
-  modifications  nécessaire pour  afficher  le premier  et le  dernier
-  élément de l'objet \texttt{my\_list\_of\_heros}.  %%
+  modifications  nécessaires pour  afficher  le premier  et le  dernier
+  élément de l'objet \texttt{my\_list\_of\_characters}.  %%
 \item  Créez deux  \texttt{list} afin  de séparer  les héros  dotés de
-  pouvoir de celui doté d'un compte en banque.  %%
+  pouvoirs de celui doté d'un compte en banque.  %%
 \item  Utilisez  la liste  vide  \texttt{[]}  pour vider  la  variable
-  \texttt{my\_list\_of\_heros} puis  vérifiez que  cette \texttt{list}
+  \texttt{my\_list\_of\_characters}, 
+  puis  vérifiez que  cette \texttt{list}
   est effectivement vide.  %%
 \item Que fait la commande de la ligne 21 ?  %%
 \item  Afin de  déterminer la  position  d'un élément  connu dans  une
@@ -69,14 +73,14 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
   différence entre \texttt{del} et \texttt{remove}
 
 \item Jusqu'à maintenant l'objet \texttt{list} utilisé compte quelques
-  éléments. Dès lors que vous  devrez gérer un grand nombre d'élément,
+  éléments. Dès lors que vous  devrez gérer un grand nombre d'éléments,
   il faudra  automatiser le parcours  de vos ensembles.   Décrivez les
-  lignes 33 et 34 de votre programme.
+  lignes 33 et 34 du programme.
 \end{enumerate}
+\lstinputlisting{exo_list.py}
 
 
-
-\subsection{Les boucles \texttt{for}}
+\subsection{Les boucles  \texttt{for}}
 
 L'objectif  de cet  exercice est  d'utiliser les  boucles \texttt{for}
 afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
@@ -103,21 +107,22 @@ afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
     N ou noté encore N!~=~$1 \times 2 \times... \times N-1 \times N$}.
   \end{itemize}
 
-
+\lstinputlisting{boucle_for.py}
   
 \item    Créez   un    nouveau   programme    que   vous    appellerez
   \texttt{boucle\_for\_3.py}.
   \begin{itemize}
   \item[$\ast$]  Demandez   à  un  utilisateur  d'entrer   un  entier  positif
-    \texttt{N}.
-  \item[$\ast$]  Proposez à  l'utilisateur de  produire des  nombres pairs  ou
-    impairs.
-  \item[$\ast$] Pour chaque valeur \texttt{x},  de l'ensemble des entiers de 0
-    à \texttt{N}, calculez soit la  valeur $2\times x+1$ pour produire
-    des nombres impairs et $2\times x$ pour des nombres pairs.
+    (\texttt{N} dans le programme).
+  \item[$\ast$]  Proposez à  l'utilisateur de lui  produire des  nombres pairs  ou
+    impairs, selon son choix.
+  \item[$\ast$] Pour chaque valeur \texttt{x} de l'ensemble des entiers de 0
+    à \texttt{N} calculez soit la  valeur $2\times x+1$ pour produire
+    des nombres impairs, soit $2\times x$ pour des nombres pairs.
   \item[$\ast$]    Sauvegardez     votre    résultat    dans     un    fichier
     \texttt{ASCII}\footnote{American  Standard  Code  for  Information
       Interchange}.
+% Un fichier ascii ou un fichier texte de base ?
   \end{itemize}
 
 \end{enumerate}
@@ -125,11 +130,11 @@ afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
 
 
 
-\subsection{Les boucles \texttt{while}}
+\subsection{Les boucles  \texttt{while}}
 
 L'objectif de  cet exercice  est d'utiliser une  boucle \texttt{while}
 afin  de  répéter  une  action tant  qu'une  condition  est  vérifiée.
-Inspirez  vous de  l'exemple \texttt{boucle\_while.py}  pour créer  un
+Inspirez-vous de  l'exemple \texttt{boucle\_while.py}  pour créer  un
 programme.
 
 \begin{enumerate}
@@ -145,45 +150,45 @@ programme.
 
 \end{enumerate}
 %%
-
+\lstinputlisting{boucle_while.py}
 
 
 \subsection{Vos premiers graphiques avec matplotlib}
 
 Vous  trouverez   dans  le   programme  \texttt{plot.py}   un  exemple
-d'utilisation du  module \texttt{matplotlib} À partir  de cet exemple,
+d'utilisation du  module \texttt{matplotlib}. À partir  de cet exemple,
 créez  un programme  pour  tracer  la fonction  $f(x)=\sin  x$ avec  x
 compris entre 0 et 7.
 
 Pour vous exercer, modifiez les paramètres suivants :
 
 \begin{enumerate}
-\item les titres et les échelles des axes
+\item les titres et les échelles des axes ;
 
-\item la forme des  symboles représentant les points à tracer
+\item la forme des  symboles représentant les points à tracer ;
 
-\item reliez les points en utilisant une option de \texttt{plot()}
+\item reliez les points en utilisant une option de \texttt{plot()} ;
 
 \item ajoutez une seconde courbe avant l'affichage représentant $f(x)=cos(x)$ et changez la couleur
   de la seconde courbe.
 
 
 \end{enumerate}
+\lstinputlisting{plot.py}
 
-\subsection{Pour aller plus loin avec matplotlib [OPTION]}
+\subsection{Pour aller plus loin avec matplotlib {\sc [Facultatif]}}
 
-Vous aurez à écrire un programme afin de tracer la carte de france et ses principaux cours d'eau.
+Vous aurez à écrire un programme afin de tracer la carte de France et ses principaux cours d'eau.
 Vous allez : 
 
 \begin{enumerate}
-\item Lire les fichiers \texttt{carte.dat} et \texttt{river.dat}
-\item Chaque colonne de ces fichiers permetrra de remplir des objets \texttt{list} que nous nommerons
-  \texttt{carte\_x},  \texttt{carte\_y},  \texttt{river\_x} et \texttt{river\_y}.
-\item la forme des  symboles représentant les points à tracer
+\item Lire les fichiers \texttt{map.dat} et \texttt{river.dat}. Chaque colonne de ces fichiers permet de remplir des objets \texttt{list} que nous nommerons
+  \texttt{map\_x},  \texttt{map\_y},  \texttt{river\_x} et \texttt{river\_y}.
+\item Choisir la forme des  symboles représentant les points à tracer.
 
-\item Sur le même graphique, vous tracerez $carte\_y = f(carte\_x)$ et $river\_y = f(river\_x)$.
+\item Sur un même graphique, tracer $map\_y = f(map\_x)$ et $river\_y = f(river\_x)$.
 
-\item Utilisez les options adéquat pour tracer en noir les contours de la carte et en rouge les cours d'eau.
+\item Utiliser les options adéquates pour tracer en noir les contours de la carte et en bleu les cours d'eau.
 
 
 \end{enumerate}

@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # Lemiere Yves
 # Juillet 2017
@@ -22,5 +22,6 @@ def main():
         iterator=iterator+1
         
         
-    print("You tried %d times"%iterator)
+    print("You tried {} times".format(iterator))
 
+main()

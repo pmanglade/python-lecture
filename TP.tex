@@ -26,6 +26,22 @@
 \usepackage[utf8]{inputenc}
 %\usepackage{kpfonts}
 \usepackage{lastpage}
+\usepackage{listings} % to include code in latex
+\lstset
+{ %Defaults formatting for code included in lstlisting
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=true,
+    tabsize=3,
+    breaklines=true,
+    breakatwhitespace=false,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={à}{{\`a}}1 {À}{{\`A}}1 {é}{{\'e}}1  {è}{{\`e}}1, 
+}
+
 \usepackage{lmodern}
 \usepackage{multicol}
 \usepackage{multirow} % Allow multirow in tabular env
@@ -109,7 +125,7 @@
 \begin{minipage}[t]{0.12\textwidth}
 \flushleft
 {
-\footnotesize{2017-2018}}
+\footnotesize{2017--2018}}
 \end{minipage}
 
 \vspace{0.5cm}

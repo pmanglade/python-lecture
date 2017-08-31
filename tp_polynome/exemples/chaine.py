@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # Lemiere Yves
 # Juillet 2017
@@ -30,10 +30,10 @@ def main():
     print(list_of_word)
     
     tmp_word = "mille"
-    print("\nThere's %d times the word '%s' \n" %(sentence.count(tmp_word),tmp_word))
+    print("\nThere's %d times the word '%s' \n"%(sentence.count(tmp_word),tmp_word))
     # Ancienne methode d'affichage
     
-    tmp_sentence = "There's {} times the word '{}'"
+    tmp_sentence = "There's {} times the word {!r}"
     print(tmp_sentence.format(sentence.count(tmp_word),tmp_word))
     # Methode moderne d'affichage
 
@@ -41,9 +41,9 @@ def main():
     
     tmp_word = "fois"
     if tmp_word in new_sentence:
-        print("\nI found the word '%s'"%tmp_word)
+        print("\nI found the word {!r}".format(tmp_word))
     else:
-        print("\nThe word '%s' is missing"%tmp_word)
+        print("\nThe word {!r} is missing".format(tmp_word))
         
     return
 

@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
  # Lemiere Yves
  # Juillet 2017
@@ -21,5 +21,5 @@ my_sqrt_value = sqrt(my_abs_value)
 
 
 if debug == True:
-    print ("My initial value  is    : %d" % my_value)
-    print ("My square root value is : %d" % my_sqrt_value)
+    print ("My initial value  is    : {}".format(my_value))
+    print ("My square root value is : {}".format(my_sqrt_value))

@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # Lemiere Yves
 # Juillet 2017
@@ -26,9 +26,9 @@ def main():
 
     
     if another_number > number:
-        print("Right, %s is greater than %s \n"%(another_number,number))
+        print("Right, {} is greater than {} \n".format(another_number,number))
     elif  another_number < number:
-        print("You're wrong, %s is not greater than %s \n"%(another_number,number))
+        print("You're wrong, {} is not greater than {} \n".format(another_number,number))
     else:
         print("You entered two times the same values...\n")
         

@@ -7,15 +7,18 @@
 
 Dans cet exercice, à partir d'une série de points que vous lirez d'un fichier texte, vous construirez un histogramme de distribution.
 Typiquement un histogramme vous permettra d'étudier la répartition d'une variable.
-Néanmoins, il est nécessaire de définir trois paramètres : les valeurs minimal et maximal de la gamme des données à étudier et
+
+
+Pour ce faire, il est nécessaire de définir trois paramètres : les valeurs minimales et maximales de la gamme des données à étudier et
 le nombre de classes.
 \begin{enumerate}
-\item Demandez à un utilisateur d'entrée les valeurs min, max et nombre de classe ($min$, $max$ et $nb\_bin$).
+\item Demandez à un utilisateur d'entrer les valeurs min, max et nombre de classes ($min$, $max$ et $nb\_bin$).
+% Pourquoi nb_bin est au singulier quand histo_bins est au pluriel ? 
 \item Créez une liste $histo\_bins$  contenant $nb\_bin$ cases dont la valeur est égale à 0.
 \item Calculez la largeur de répartition des classes ($bin\_witdh = (max - min) / nb\_bin$).
-\item Lisez le fichier \texttt{data.dat} lingne à ligne.
+\item Lisez le fichier \texttt{data.dat} ligne à ligne.
 \item Pour chaque valeur lue, trouvez à quelle classe appartient la valeur.
-\item Lorsque valeur appartient à la $i^{eme}$~classe, ajoutez $+1$ à la  $i^{eme}$~case de la liste  $histo\_bins$
+\item Lorsque la valeur appartient à la $i^{\`eme}$~classe, ajoutez $+1$ à la  $i^{eme}$~case de la liste  $histo\_bins$.
 \item Tracez $histo\_bins$ en fonction de $i$ et comparez les résultats en fonction de la valeur  $nb\_bin$ entrée.
 \end{enumerate}
 
@@ -26,7 +29,7 @@ le nombre de classes.
 L'objectif de cet exercice est d'étudier les données fournies par la station météo-france
 de Caen-Carpiquet.
 \begin{enumerate}
-\item Avec un programme python, ouvrez le fichier \texttt{temperature.dat}
+\item Avec un programme Python, ouvrez le fichier \texttt{temperature.dat}.
 
 \item Utilisez une boucle \texttt{for} pour lire ligne à ligne le fichier de données.
   Puis affichez à l'écran la variable contenant la ligne courante.
@@ -39,7 +42,7 @@ de Caen-Carpiquet.
 
 \item À chaque itération de la boucle, faites afficher la température et stockez chaque valeur dans une \texttt{list} de températures.
 
-\item Sans écrire une ligne de programmation , proposez la logique pour trouver :
+\item Sans écrire une ligne de programmation, proposez la logique pour trouver :
   \begin{itemize}
   \item[$\ast$] La température minimale
   \item[$\ast$] La température maximale
@@ -47,15 +50,15 @@ de Caen-Carpiquet.
   \item[$\ast$] L'écart-type  $\sigma = \sqrt{\frac{1}{n}  \sum\limits_{\substack{i=0}}^{n}{} (T_i-\bar{T})^2   }$
   \end{itemize}
 
-\item Réalisez ensuite ces calculs dans votre programme python et enregistrez les résultats dans un fichier.
+\item Réalisez ensuite ces calculs dans votre programme Python et enregistrez les résultats dans un fichier.
 
 \item Tracez les valeurs des températures en utilisant le module \texttt{matplotlib}.
 
-\item Vous ferez ensuite le même travail pour la pression atmosphérique et pour l'humidité relative.
+\item Faites ensuite le même travail pour la pression atmosphérique et pour l'humidité relative.
 
 \item Sans écrire le programme, proposez une solution pour ranger dans l'ordre croissant
-  les grandeurs que vous avez stocké dans des \texttt{list}.\\
-  \textit{OPTION : Implémentez le tri que vous avez étudier.}
+  les grandeurs que vous avez stockées dans des \texttt{list}.\\
+  \textit{OPTION : Implémentez l'algorithme de tri que vous avez formulé.}
 
 \item Testez la fonctionnalité \texttt{.sort()} sur un objet de type \texttt{list} et commentez.
 
