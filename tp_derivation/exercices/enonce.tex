@@ -3,7 +3,7 @@ Il  arrive que  la dérivation  analytique d'une  fonction ne  soit pas
 facilement  calculable.  Ce TP  survol  des  méthodes élémentaires  de
 dérivation numérique.
 
-\subsection{Précision de la méthode numérique face au calcul analytique}
+\subsection{Précision}
 Cet exercice vise à étudier les erreurs commises lors de l'emploi d'une
 méthode de dérivation numérique.
 \begin{enumerate}
@@ -15,18 +15,16 @@ méthode de dérivation numérique.
   pourra   être   choisi   lors   de   l'appel   de   cette   fonction
   \cf{function.py}.  %%
 \item Utiliser cette fonction  pour calculer $\frac{d\cos(x)}{dx}$ sur
-  100 points répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
+  cent points répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
   Ensuite tracer la  fonction $\cos(x)$ et les points  calculés sur un
   graphique \cf{plot.py}.  %%
-\item   Sur  les   mêmes  100   points,  calculer   les  valeurs   de
+\item   Sur  les   mêmes  cent   points,  calculer   les  valeurs   de
   $\frac{d\cos(x)}{dx}   =   -\sin(x)$   puis  faire   la   différence
   $\varepsilon$ entre dérivée numérique et fonction analytique %%
+\cf{loop.py}.
 \item Calculer  la moyenne  de la valeur  absolue de  cette différence
   $\bar{\varepsilon}$.  %%
-\item Rappelons que plus $h$ est  petit, plus le calcul par la méthode
-  numérique sera longue mais précise.
-  
-  Avec  une échelle  log/log, tracer  l'évolution de  cette différence
+\item Avec  une échelle  log/log, tracer  l'évolution de  cette différence
   $\bar{\varepsilon}$         en        fonction         de        $h$
   ($\bar{\varepsilon}=f(h)$).\\ Les valeurs choisies pour $h$ suivront
   une  suite  géométrique  de  raison  $2^\frac{1}{2}$  et  de  valeur
@@ -43,10 +41,10 @@ méthode de dérivation numérique.
   observé à partir du développement limité de $\cos(x)$ autour de $0$.
 \end{enumerate}
 
-\subsection{Pour aller plus loin avec les algorithmes de dérivation}
+\subsection{Autres formules de dérivation}
 
-De  nombreux  algorithmes  de  dérivation  numérique  existent.  Cette
-section vise à en programmer quelques-uns et à les comparer.
+De  nombreuses  formulations  de  dérivation  numérique  existent.  Cette
+section vise à en programmer quelques-unes et à les comparer.
 \begin{enumerate}
 \item Programmer les fonctions de dérivation utilisant les formules suivantes :
   \begin{eqnarray*}
@@ -59,7 +57,7 @@ plus de termes du développement limité de la fonction $f$.
    \begin{eqnarray*}
 f'(x) &=& \frac{f(x+h)-f(x)}{h}\,;\\
 f'(x) &=& \frac{-3f(x)+4f(x+h) -f(x+2h)}{2h}\,;\\
-f'(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}\,.
+f'(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}.
   \end{eqnarray*}
  Programmer les fonctions de dérivation correspondantes. Ces fonctions peuvent être utilisées avec $h>0$ ou $h<0$.
 \item  À nombre  d'évaluation de  la fonction  $f$ égale,  comparer la
@@ -69,7 +67,7 @@ f'(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}\,.
 
 
 
-\subsection{Ordres supérieurs}
+\subsection{Ordres supérieurs \sc{[Facultatif]}}
 Il est possible  d'obtenir des dérivées d'ordre supérieur  par la même
 méthode (seconde, troisième\ldots).
 \begin{enumerate}
@@ -85,7 +83,7 @@ $$f'(x)=  \frac{f(x+h)+f(x-h)-2f(x)}{h^2}.$$  Comparer l'évolution  de
   comparaison \og{} sur papier \fg{} des deux méthodes.
 \end{enumerate}
 
-\subsection{Dérivées de série de points régulière}
+\subsection{Dérivées d'une série de points régulière \sc{[Facultatif]}}
 
 Ces méthodes de dérivation numérique  peuvent être utiles pour dériver
 des fonctions dont la forme analytique est complexe et pour lesquelles
@@ -97,18 +95,63 @@ dérivée.
 \item Écrire un programme générant  un fichier contenant deux colonnes
   \cf{file.py}. Dans  la première  on trouvera les  valeurs de  $x$ et
   dans la seconde celles de $y=f(x)$ ; où $f$ sera une fonction de votre
-  choix. Générer  100 points ($x$,$y$) sur un  intervalle $[a\,;\,b]$  de votre
+  choix. Générer  cent points ($x$,$y$) sur un  intervalle $[a\,;\,b]$  de votre
   choix.
-\item Écrire un aautre programme capable de relire ce fichier.
+\item Écrire un autre programme capable de relire ce fichier.
 \item  Combien de  valeurs de  la  dérivée peut-on  calculer avec  une
   formule de dérivation centrée ?
 \item  Écrire  une fonction  capable  de  calculer  la dérivée  de  la
   fonction échantillonnée dans le fichier pour chacun des points.
 \end{enumerate}
 
-\subsection{Dérivées de séries de points irrégulière}
+\subsection{Dérivées de séries de points irrégulières \sc{[Facultatif]}}
 
 Reproduire le même  travail, mais cette fois avec une  série de points
 distribués  de manière  irrégulière sur  l'intervalle $[a\,;\,b]$.  Il
 faudra donc  calculer à chaque  fois de nouveaux coefficients  pour la
 dérivation.
+
+\begin{figure}
+\lstinputlisting{../exemples/file.py}\caption{file.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../exemples/function.py}\caption{function.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../../tp_integration/exemples/if.py}\caption{if.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../../tp_integration/exemples/listElement.py}\caption{listElement.py}
+\end{figure}
+\begin{figure}
+\lstinputlisting{../../tp_integration/exemples/listOfList.py}\caption{listOfList.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../exemples/loop.py}\caption{loop.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../exemples/mesh.py}\caption{mesh.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../exemples/plot.py}\caption{plot.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../../tp_dl/exemples/polynomesEtSeries.py}\caption{polynomesEtSeries.py}
+\end{figure}
+
+\begin{figure}
+\lstinputlisting{../../tp_integration/exemples/returnList.py}\caption{returnList.py}
+\end{figure}
+
+
+
+
+
+

@@ -22,10 +22,10 @@ elif a==b: ###### WARNING USE == not = to test EQUALITY
 else :
    print("C'est b qui l'emporte\n")
 
-
 ##################
 # AND OR
 if a==b or a > b and b < a :
    print("ok")
 else :
    print("not ok")
+
