@@ -9,7 +9,9 @@ permettant de tirer des nombres aléatoires entiers ou réels.
 
 \item Après  plusieurs exécutions  du programme, comparez  les données
   produites  et mettez  en \oe  uvre  une solution  pour améliorer  le
-  caractère aléatoire du programme.
+  caractère aléatoire du programme. On pourra songer à employer    une 
+  méthodes basée sur l'emploi  de la fonction \texttt{clock} du module 
+  \texttt{time}.
   
 \item Tracez  un histogramme de  distribution des valeurs  entières et
   des valeurs réelles produites.
@@ -23,6 +25,7 @@ permettant de tirer des nombres aléatoires entiers ou réels.
   nombre de valeurs générées.
 
 \end{enumerate}
+\lstinputlisting{random_0.py}
 %%
 
 \subsection{Description du tirage aléatoire}
@@ -46,7 +49,9 @@ Sur  la base  du programme  \texttt{random\_and\_stat.py}, vous  allez
   aléatoirement $N$ avec $N \in [10:10^5]$.
   
 \item Calculez la quantité de nombres tirés par valeur (nombre de $a$,
-  $a+1$, \dots,  $b-1$, $b$)  et comparez à  la valeur  attendue. Pour
+  $a+1$, \dots,  $b-1$, $b$ ; $a$ et $b$ étant les bornes de 
+  l'intervalle dans lequelle elles sont générées)  et comparez à
+  la valeur  attendue. Pour
   chaque  valeur  calculez l'écart  entre  valeur  attendue et  valeur
   obtenue ($\varepsilon_2$).
 
@@ -54,12 +59,12 @@ Sur  la base  du programme  \texttt{random\_and\_stat.py}, vous  allez
   pour chaque valeur.
 
 \end{enumerate}
-
+\lstinputlisting{random_and_stat.py}
 
 \subsection{L'aléatoire à la base de la simulation Monte-Carlo}
 
 Bien que  la simulation en  physique n'ait rien  à voir avec  les jeux
-pratiqués   dans   la   ville   éponyme,  vous   allez   utilisés   le
+pratiqués   dans   la   ville   éponyme,  vous   allez   utiliser   le
 \textit{hasard}   pour  introduire   une  approche   statistique  d'un
 problème.  Nous verrons dans cet exemple une méthode simple pour faire
 un choix équiprobable dans une liste de particules élémentaires.  Pour
@@ -67,7 +72,7 @@ cela vous utiliserez l'exemple \texttt{random\_a\_list.py}.
 
 \begin{enumerate}
 \item Proposez à l'utilisateur de mélanger la liste de particules puis
-  utilisez la méthode adéquat en cas de réponse positive.  %%
+  utilisez la méthode adéquate en cas de réponse positive.  %%
 \item Affichez  la liste produite  après mélange puis vérifiez  que la
   liste a bien été mélangée.  %%
 \item  Proposez  à  l'utilisateur de  sélectionner  aléatoirement  une
@@ -78,42 +83,54 @@ cela vous utiliserez l'exemple \texttt{random\_a\_list.py}.
   distinctes.  %%
 \end{enumerate}
 
+\lstinputlisting{random_a_list.py}
 
 \subsection{Tout est question de distribution}
 
-Jusqu'à  maintenant, vous  avez étudiez  des distributions  aléatoires
-uniformes, cela signifie que chaque valeur tirée a la même probabilité
-d'exister.  Utilisez les  exemples \texttt{random\_distribution.py} et
+Jusqu'à  maintenant, vous  avez étudié   des distributions  aléatoires
+uniformes, cela signifie que lors d'un tirage chaque valeur possible est
+équiprobable, pour des tirages d'entiers ; ou que la probabilité de tirer 
+un nombre dans un sous intervalle est proportionnelle à a taille relative 
+de celui-ci, dans le cas de tirages de nombres flottants.
+
+Utilisez les  exemples \texttt{random\_distribution.py} et
 \texttt{random\_2D.py} pour écrire votre  propre programme et répondre
 aux questions suivantes.
 
 
 \begin{enumerate}
+% 01/09/2017 bcp d'erreurs dans ce qui suit. Merci de bien vérifier
+% que mes propositions de corrections ne trahissent pas l'idée originale.
 \item Comparez  et commentez  les différentes  distributions (uniform,
-  triangular, gauss).  Calculez les  moyennes, écart type et extremum.
+  triangular, gauss).  Calculez les  moyennes, écarts-types, et extrémums.
   %%
+\item Comment paramétrer la distribution Gaussienne pour que sa moyenne
+  et son écart-type soient les mêmes que ceux de la distribution uniforme ? 
 \item Évaluez les  temps d'exécution des différentes  méthodes pour le
   même nombre de tirage.  %%
 \item Écrivez votre propre programme pour :
   \begin{itemize}
-  \item[$\ast$] Tirer  aléatoirement selon deux distributions  ($x$ et
-    $y$) uniformes $N_{tot} \times N_{tot}$ valeurs comprises entre -1
-    et 1.
-  \item[$\ast$] Pour un couple $(x,y)$, calculer la valeur $r$ tel que
-    $r^2 = x^2+y^2$
-  \item[$\ast$] Stocker dans  uniquement les valeurs de $x$  et de $y$
-    pour lesquels $r \inf 1$ et  affichez le nombre de valeurs gardées
-    ($N_{sel}$).
-  \item[$\ast$] Calculer  le rapport de $N_{sel}/N_{tot}$  et comparer
-    cette valeur à $\frac{\Pi}{4}$
-  \item[$\ast$] Évaluer l'écart entre ces  deux valeurs en fonction du
-    nombre de tirage effectués.
+  \item[$\ast$] tirer  aléatoirement selon une distribution uniforme 
+    $N_{tot}$ couples $(x,y) \in [-1:1]^2$ ;
+  \item[$\ast$] calculer la valeur $r$ telle que
+    $r^2 = x^2+y^2$, pour chaque couple $(x,y)$ ;
+  \item[$\ast$] stocker dans une \texttt{list} 
+    uniquement les valeurs de $x$  et de $y$
+    pour lesquelles $r < 1$ et  afficher le nombre de valeurs ainsi
+    sélectionnées ($N_{sel}$) ;
+  \item[$\ast$] calculer  le rapport de $N_{sel}/N_{tot}$  et comparer
+    cette valeur à $\frac{\pi}{4}$ ;
+  \item[$\ast$] évaluer l'écart entre ces  deux valeurs en fonction du
+    nombre de tirages effectués.
   \end{itemize}
   %%
 \item Sans  nécessairement écrire l'algorithme, proposez  une solution
   alternative pour tirer une distribution  de points dans un cercle de
-  rayon 1.
+  rayon 1. Puis réfléchissez à la question suivante : 
+  \og{} la distribution obtenue est-elle uniforme ? \fg{} 
 
+\lstinputlisting{random_distribution.py}
+\lstinputlisting{random_2D.py}
 
   
 \end{enumerate}

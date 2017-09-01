@@ -1,4 +1,4 @@
-#!/usr/bin/python3.5
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
  # Lemiere Yves
  # Juillet 2017
@@ -33,9 +33,9 @@ if __name__ == "__main__":
 
         
         print("Define the expected random distribution")
-        input_N          = input("the number value expected ? ")
-        input_min_value  = input("Minimum value from range ? ")
-        input_max_value  = input("Maximum  value from range ? ")
+        input_N          = input("the number of values expected ? ")
+        input_min_value  = input("Minimum value (a) ? ")
+        input_max_value  = input("Maximum value (b) ? ")
 
 
         N =int(input_N)

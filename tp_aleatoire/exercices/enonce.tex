@@ -1,13 +1,15 @@
 \subsection{Le mouvement brownien}
 
 Le  mouvement brownien  correspond  à la  description mathématique  du
-mouvement  aléatoire d'une  particule immergé  dans un  fluide soumise
-uniquement      aux     chocs      avec      les     molècules      du
-fluide\footnote{https://fr.wikipedia.org/wiki/Mouvement\_brownien}.
+mouvement  aléatoire d'une  particule immergée  dans un  fluide soumise
+uniquement      aux     chocs      avec      les     molécules      du
+fluide\footnote{https://fr.wikipedia.org/wiki/Mouvement\_brownien}. 
+Cette exercice consiste à générer (simuler) un tel mouvement et à en
+analyser certaines propriétés.
 
 
-Pour  faire simple,  vous déplacerez  aléatoirement un  point dans  un
-espace discret et infini à deux dimensions.
+Pour  faire simple,  vous déplacerez  aléatoirement un  point
+sur un pavage carré et infini à deux dimensions.
 
 
 \begin{enumerate}
@@ -15,21 +17,25 @@ espace discret et infini à deux dimensions.
 \item Créez les fonctions suivantes :
   \begin{description}
   \item[choose\_direction]  Pour choisir  aléatoirement une  direction
-    dans la liste suivante : Ouest, Sud, Est, Nord
-  \item[prepare\_mouvement]     Pour      produire     les     valeurs
-    (delta\_x,delta\_y)  à partir  d'une direction  (Ouest, Sud,  Est,
-    Nord)\\ Ex : Pour une direction Nord $\rightarrow$ delta\_x = 0 et
-    delta\_y = +1
-  \item[move] Pour renvoyer  les nouvelles coordonnées (new\_x,new\_y)
-    à partir  d'un mouvement (delta\_x,delta\_y) à  appliquer au point
-    (x,y).
-  \item[simulate]  Pour effectuer  $N$ fois  les opérations  suivantes
-    (appelé  par  la  suivante   \textit{itérations})  :  choisir  une
-    direction, preparer le mouvement dans  un espace à deux dimensions
-    puis  effectuer  le  mouvement.   Puis  renvoyer  les  listes  des
-    positions (x,y) calculées lors des $N$ mouvements
-  \item[distance] Pour calculer la  distance entre deux points (x1,y1)
-    et (x2,y2)
+    dans la liste suivante : Ouest, Sud, Est, Nord.
+  \item[prepare\_move]     Pour      produire     les     valeurs
+    (\texttt{delta\_x},\texttt{delta\_y})  à partir  d'une direction  
+    (\texttt{Ouest}, \texttt{Sud},  \texttt{Est},
+    \texttt{Nord})\\ Ex : Pour une direction \texttt{Nord} $\rightarrow$ \texttt{delta\_x} = 0 et
+    \texttt{delta\_y} = +1.
+  \item[move] Pour renvoyer  les nouvelles coordonnées 
+    (\texttt{new\_x},\texttt{new\_y})
+    à partir  d'un mouvement (\texttt{delta\_x},\texttt{delta\_y})
+     à  appliquer aux
+    coordonnées (\texttt{x},\texttt{y}).
+  \item[simulate]  Pour effectuer  $N$ fois  les opérations  précédentes ---
+    c'est-à-dire $N$ \emph{itérations}  consistant à choisir  une
+    direction, preparer le mouvement dans  un espace à deux dimensions,
+    puis  effectuer  le  mouvement --- ; puis  renvoyer  les  listes  des
+    positions (\texttt{x},\texttt{y}) calculées lors des $N$ mouvements.
+  \item[distance] Pour calculer la  distance entre deux points 
+    (\texttt{x1},\texttt{y1})
+    et (\texttt{x2},\texttt{y2}).
   \end{description}
   %%
 \item Dans le programme  principal, effectuez les opérations suivantes
@@ -44,7 +50,7 @@ espace discret et infini à deux dimensions.
     $\bar{d}$  des distances  $d$  et tracez  la  distribution de  ces
     distances.
   \item[$\ast$]   Réalisez plusieurs  fois l'étape  précédente et  comparez les
-    distributions obtenues.
+    distributions obtenues et leur évolution en fonction de $N$.
   \end{itemize}
 
 
