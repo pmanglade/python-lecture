@@ -5,23 +5,23 @@ Cours
 -----
 
 Dérivation
-|-> derivé sur papier (a*x2)
 |-> dev de Taylor
-`-> Rappel math
+`-> obtention d'approximation de dérivées à partir de DL.
 
 
 Exemple
 -------
 
-|-> Lecture d'un fichier de points (x,y)
-|-> calcul de la dérivé avec 2 points dans une fonction
-|-> Boucle sur la fonction
+|-> Quelques rappels sur les éléments de Python vu précédemments. 
 
 Exercice
 --------
 
 
 |-> Calcul de dérivé sur une série de point
-|-> Tracer le fichier et la dérivé
-|-> Faire le calcul de la dérivé sur une fonction + estimation de l'erreur
-(|-> Méthode ordre + élevé)
+|-> Étude de l'erreur commise par une méthode
+|-> Choix optimal du paramètre de dérivation
+|-> Formules de dérivation d'ordre supérieur
+|-> Calcul de dérivées à partir de séries de points
+régulières ou irrégulières. 
+

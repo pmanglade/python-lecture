@@ -1,0 +1,27 @@
+\section{Dérivation}
+
+
+\subsection{Mathématiques}
+L'objectif du TP est d'abord de programmer des formules de dérivations numériques. 
+Elles sont toutes basées sur le développement limité des fonctions. 
+
+\begin{enumerate}
+\item Dans un premier temps montrer que 
+$$\frac{f(x+h)-f(x-h)}{2h} = f'(x) + O(h^3).$$
+
+\item La meilleure valeur de $h$ pour calculer la dérivée analytique est conditionnées d'une part par la différence entre  $f(x+h)$ et $f(x-h)$ qui doit être aussi grande que possible et $h^3$ qui doit être aussi petit que possible. 
+
+\item Dans le cas de la fonction choisie $f'''(x) = -\sin x$. L'étude du développement limité nous montre que le $O(h^3) = f'''(x) h^3/3! + O(h^5)$. C'est ce qu'on retrouve en faisant la différence entre la dérivée numérique et la dérivée réelle. 
+
+\item En choisissant un échantillonnage régulier de fonction $f$ autour de $x$, on peut écrire les développement limités de $f$ en ces points et trouver les coefficients tels que la somme de ces DL annule un maximum de termes après $f'(x)$. Cette méthode permet de trouver les formules d'ordre supérieur, ou non symétrique.
+
+\item L'évolution de la précision moyenne de ces formules de dérivation est fonction du premier terme non annullé dans la somme des DL. 
+
+
+\item De la même manière on peut obtenir des formules d'ordre supérieur en annullant dans la sommation les coef. des dérivées d'ordre inférieur à celle souhaitée. Par ailleurs, plus on annulera de coefficients de dérivées d'ordre supérieur plus la formule sera précise.
+
+\item Si l'on désire appliquer ces méthodes à des séries irrégulières il faut, soit prendre une formule dyssymétrique à deux points, soit recalculer à chaque fois les coefficiens annulant des dérivées.  
+\end{enumerate}
+\subsection{Programmation}
+Rien de nouveau. 
+

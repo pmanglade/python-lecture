@@ -1,27 +1,30 @@
-séance 7
+séance 4
 ========
 
 Cours
 -----
 
-Intégration
-|-> integrale sur papier (a*x2)
-|-> Méthode des rectangles/trapèzes (jouer avec le pas)
-`-> Rappel math
+Dérivation
+|-> Intégrale au sens de Riemann
+|-> Obtention d'intégrale à partir de calculs de surfaces
+|-> (Théoème fondamental de l'analyse)
+|-> (dev de Taylor)
+`-> (obtention d'approximation d'intégrale à partir de DL.)
 
 
 Exemple
 -------
 
-|-> Utiliser une liste
-(|-> Méthode de simpson ou plus)
-
+|-> Quelques rappels sur les éléments de Python vu précédemments.
+`-> Utilisation de listes de listes
 
 Exercice
 --------
 
 
-|-> Calculer l'intégrale de ****
-|-> Calcul l'erreur avec le calcul exact
-|-> Calculer l'intégrale d'une fonction compliqué
-(|-> Estimer l'erreur avec une méthode numérique)
+|-> Méthode des rectangles
+|-> Étude de l'erreur en fonction du pas d'integration
+|-> Utilisation de l'analyse pour calculer un encadrement d'intégrale
+|-> Comparaison avec des méthodes d'ordre supérieur
+
+

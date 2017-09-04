@@ -35,7 +35,7 @@ Où $dF = f(x)dx$, $h_n=\frac{(b-a)}{n}$, et $x_i=a+ i\frac{(b-a)}{n} = a+ih_n$.
   d'estimer $\int_a^b  f(x)dx$ pour toute fonction  $f(x)$ définie sur
   l'intervalle $[a\,;\,b]$.  La fonction  d'intégration
   à   écrire  aura   pour  arguments   :   $f$,  $a$,   $b$,  et   $n$
-  \\ \cf{function.py}.
+  \cf{function.py}.
   %%
 \item Écrire la même fonction mais prenant cette fois pour argument la
   valeur de  $h$, plutôt que $n$.  La  fonction commencera par  adapter au  plus juste
@@ -51,8 +51,8 @@ Où $dF = f(x)dx$, $h_n=\frac{(b-a)}{n}$, et $x_i=a+ i\frac{(b-a)}{n} = a+ih_n$.
     celles  de   l'intégrale  correspondante $\int_a^xf(t)dt$.
   \end{itemize}
   Tester cette fonction en prenant $f=\cos$, $a=0$, $b=\pi$, $N=100$, et
-  $h=0.01$.\\
-  \cf{mesh.py, loop.py et returnList.py}\\
+  $h=0.01$
+  \cf{mesh.py, loop.py et returnList.py}.\\
 %%
 \item  Sur un même graphique, tracer $\int_a^xf(t)dt$ et $\sin(x)$ en fonction de $x$
   \cf{plot.py}.
@@ -153,7 +153,7 @@ Ajouter cette formulation à votre  comparatif en faisant attention à
 ce qu'elle ne peut être utilisée pour $n<8$.
 \item  Les quadratures  de Gauss-Legendre  consistent à  approximer la
   fonction à  intégrer par un  polynôme de  Legendre. Il en  existe de
-  divers degrés  $m$, où $m$  est aussi  le nombre d'évaluation  de la
+  divers degrés  $m$, où $m$  est aussi  le nombre d'évaluations  de la
   fonction sur  l'intervalle d'intégration.   Elles sont  exactes pour
   l'intégration de  polynômes de  degrés $2m+1$.  Pour réussir  un tel
   exploit, il faut choisir des  points bien particuliers où évaluer la
