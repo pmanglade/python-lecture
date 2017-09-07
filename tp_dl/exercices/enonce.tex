@@ -12,8 +12,8 @@ développement en série de Taylor.
 
 \subsection{Tangente inverse}
 
-Le développement en série de Taylor de la fonction tangente inverse autour de 0 
-s'écrit : 
+Le développement en série de Taylor de la fonction tangente inverse autour de 0
+s'écrit :
 \begin{equation}
 \arctan(x) = \sum_{i=0}^\infty (-1)^i\frac{x^{2i+1}}{2i+1}
 =x -\frac{1}{3}x^3 + \frac{1}{5}x^5-\frac{1}{7}x^7+\ldots
@@ -29,7 +29,7 @@ s'écrit :
   [-1:1]$.\\ \cf{polynomesEtSeries.py}.
   %%
 \item   Ensuite   tracer   la   valeur  absolue   de   la   différence
-  ($\varepsilon_3$,$\varepsilon_5$, \dots) de chacune de ces fonctions
+  ($\varepsilon_3$, $\varepsilon_5$, \dots) de chacune de ces fonctions
   avec $\arctan(x)$.
   %%
 \item Pour quelle gamme de valeurs de $x$ semble-t-il facile d'évaluer
@@ -51,19 +51,19 @@ s'écrit :
   de  la formule~\ref{arctanred2}  avant de  calculer $\arctan(x)$  en
   utilisant un développement d'ordre $2n+1$.
   %%
-\item Évaluer le bon fonctionnement de cette fonction sur 
-  l'intervalle $[-7,\,;\,7]$. Notre fonction pourra-t-elle effectivement 
+\item Évaluer le bon fonctionnement de cette fonction sur
+  l'intervalle $[-7\,;\,7]$. Notre fonction pourra-t-elle effectivement
   calculer $\arctan(x) \,\, \forall x \in [-\infty\,;\,\infty]$ ?
   %%
-\item Il est facile d'améliorer encore les résultats précédents 
-  grâce à la formule : 
+\item Il est facile d'améliorer encore les résultats précédents
+  grâce à la formule :
 \begin{equation}
-\arctan(x) = \frac{|x|\pi}{x2}-\arctan(1/x) 
+\arctan(x) = \frac{|x|\,\pi}{x\,2}-\arctan(1/x)
 \end{equation}
 Programmer une nouvelle fonction utilisant les développements précédents et
-cette nouvelle transformation quand $|x|>1$ \cf{if.py}. Pour 
-quelles valeurs de $x$ l'erreur est-elle maximale ? 
-\item Déterminer l'ordre de développement à utiliser pour que 
+cette nouvelle transformation quand $|x|>1$ \cf{if.py}. Pour
+quelles valeurs de $x$ l'erreur est-elle maximale ?
+\item Déterminer l'ordre de développement à utiliser pour que
 l'erreur maximale soit inférieure à $10^{-13}$.
 \end{enumerate}
 
@@ -75,7 +75,7 @@ $0$ s'écrit :
 \end{equation}
 \begin{enumerate}
   %%
-\item Tracer ce  développement aux ordres 2, 4, et  6 sur l'intervalle
+\item Tracer ce  développement aux ordres 2, 4 et  6 sur l'intervalle
   $[-2\pi\,;\,2\pi]$.
   %%
 \item Améliorer  le calcul en  tenant compte  du fait que  la fonction
@@ -112,7 +112,6 @@ $0$ s'écrit :
   récursive   capable  de  calculer   la  puissance
   $n^\textrm{ième}$ d'un nombre,  et la valeur de $n$  sera choisie de
   sorte que $x/n$ soit inférieure à $1$.\\
-  \cf{recursion.py}  
+  \cf{recursion.py}
 
 \end{enumerate}
-

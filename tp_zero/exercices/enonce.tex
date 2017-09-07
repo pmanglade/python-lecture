@@ -1,89 +1,92 @@
 \section{Recherche de zéro}
-Aussi simple qu'elle puisse paraître a priori, la recherche 
+Aussi simple qu'elle puisse paraître a priori, la recherche
 de zéro est
-l'un des domaines les plus important des mathématiques et de l'algorithmique. 
-En effet, trouver le zéro d'une fonction, c'est non seulement 
-être capable de résoudre une équation, mais aussi de trouver 
-les extremas de la primitive de la fonction dont les zéros sont recherchés. 
-Autant dire, qu'une immense partie des problèmes de physique comportent 
-une telle recherche.
+l'un des domaines les plus importants des mathématiques et de l'algorithmique.
+En effet, trouver le zéro d'une fonction\footnote{On parle également de la *racine* d'une équation.},
+c'est non seulement
+être capable de résoudre une équation, mais aussi de trouver
+les extremas de la primitive de la fonction dont les zéros sont recherchés.
+Autant dire, qu'une immense partie des problèmes de physique impliquent
+de telles approches.
 
-Dans ce TP nous nous limiterons à l'étude de fonctions à une seule dimension et aux algorithmes les plus simples. 
+Dans ce TP, nous nous limiterons à l'étude de fonctions à une seule dimension et
+aux algorithmes les plus simples.
 
-Pour rechercher les zéros d'une 
-fonction $f$ de $\mathbb{R}  \longrightarrow  \mathbb{R}$, 
-la première chose à faire est  de localiser un intervalle contenant 
+Pour rechercher les zéros d'une
+fonction $f$ de $\mathbb{R}  \longrightarrow  \mathbb{R}$,
+la première chose à faire est  de localiser un intervalle contenant
 au moins un zéro. Dans ce qui suit, on admettra qu'un intervalle $[a\,;\,b]$
 est connu, sur lequel la fonction étudiée est continue voire continument dérivable, et $\exists x_0 \in  [a\,;\,b], \, f(x_0)=0$.
 
 \subsection{Dichotomie}
-Cette méthode consiste à découper l'intervalle dans lequel 
+Cette méthode consiste à découper l'intervalle dans lequel
 un zéro est recherché jusqu'à obtenir la solution. À chaque iteration
-la valeur de $f$ au milieu de l'intervalle est comparée avec celle aux extrémités. On en déduit un nouvelle intervalle moitié plus petit dans lequel est localisé la solution. 
+la valeur de $f$ au milieu de l'intervalle est comparée avec celle aux extrémités. On en déduit un nouvel intervalle moitié plus petit dans lequel est localisée la solution.
 \begin{enumerate}
-\item Programmer deux fonctions : 
+\item Programmer deux fonctions :
 $f(x) = p(x-a)(x-b)(x-c)(x-d)$ avec $a=1$, $b=3$, $c=-5$, $d=9$, et $p=0.003$ ;
 puis $g(x) = e^{\cos (x) + 0.5} - 2 e^{\sin(x/2)}+x\sin(x)$.
-\item Sur l'intervalle $[-6\,;\,6]$ tracer ces deux fonctions ainsi 
-que $h(x)=0$. Combien de zéros présentent $f$ et $g$ ? Les positions exactes 
-de ceux de $f$ étant connues, nous l'utiliserons pour valider les algorithmes 
-qui seront ensuite testés sur $g$. 
-\item Le graphique nous montre que les deux fonctions ont un zéro entre $-\sqrt{2}$ et $2$. Nous utiliserons cet intervalle pour commencer. Nous cherchons donc $x_0 \in [a\,;\,b], \, f(x_0)=0$. 
+\item Sur l'intervalle $[-6\,;\,6]$ tracer ces deux fonctions ainsi
+que $h(x)=0$. Combien de zéros présentent $f$ et $g$ ? Les positions exactes
+de ceux de $f$ étant connues, nous l'utiliserons pour valider les algorithmes
+qui seront ensuite testés sur $g$.
+\item Le graphique nous montre que les deux fonctions ont un zéro entre $-\sqrt{2}$ et $2$. Nous utiliserons cet intervalle pour commencer. Nous cherchons donc $x_0 \in [a\,;\,b], \, f(x_0)=0$.
 \begin{itemize}
 \item Calculer $m=\frac{a+b}{2}$ et $f(m)$.
-\item En fonction du signe de $f(a)f(m)$ décider si   $x_0 \in [a\,;\,m]$  ou  $x_0 \in [m\,;\,b]$
+\item En fonction du signe de $f(a)\times{}f(m)$ décider si   $x_0 \in [a\,;\,m]$  ou  $x_0 \in [m\,;\,b]$
 \end{itemize}
- En suivant cette procédure nous avons réduit notre intervalle d'un facteur $2$. 
-Programmer cette procédure. Puis la programmer sous la forme 
+ En suivant cette procédure nous avons réduit notre intervalle d'un facteur $2$.
+Programmer cette procédure. Puis la programmer sous la forme
 d'une fonction qui répétera l'opération autant de fois que nécessaire, tant que $b-a > \varepsilon $, où $\varepsilon$ sera un nombre arbitraire. La fonction retournera
-les bornes de l'intervalle qu'elle aura réduit. 
-\item Combien d'itération faut-il pour trouver $x_0$ pour $f$ ? Et pour $g$ ? 
-\item Que se passe-t-il si l'intervalle choisi pour faire la recherche est 
+les bornes de l'intervalle qu'elle aura réduit.
+\item Combien d'itération faut-il pour trouver $x_0$ pour $f$ ? Et pour $g$ ?
+\item Que se passe-t-il si l'intervalle choisi pour faire la recherche est
  $[a\,;\,b]$ ?
-\item Représenter sur un graphique semi-logarithmique ({\tt semilogy}) 
+\item Représenter sur un graphique semi-logarithmique ({\tt semilogy})
 l'évolution de la largeur de l'intervalle
 en fonction du nombre d'itérations de l'algorithme. Comparer avec la forme
-de la courbe $\frac{1}{2^n}$. 
-\end{enumerate} 
+de la courbe $\frac{1}{2^n}$.
+\end{enumerate}
 \subsection{Newton}
-La méthode de Newton est basée sur le développement limité à l'ordre 1 
+La méthode de Newton est basée sur le développement limité à l'ordre 1
 d'une fonction. En considérant que l'on cherche $x_0$ tel que $f(x_0) = 0$ :
 \begin{align}
 & f(x_0) = f(x) + (x_0-x) f'(x) \\
 \Rightarrow & f(x) = (x-x_0)f'(x) \\
 \Rightarrow & x-f(x)/f'(x) = x_0
 \end{align}
-On remarque immédiatement qu'il est nécessaire de connaître la dérivée 
+On remarque immédiatement qu'il est nécessaire de connaître la dérivée
 de la fonction pour pouvoir employer cette formule. De surcroît,
 comme la formule n'est qu'un développement au premier ordre, elle n'est souvent pas
-exacte. Et il faudra calculer itérativement pour trouver une solution. 
+exacte. Et il faudra calculer itérativement pour trouver une solution.
 \begin{enumerate}
-\item Programmer une fonction recevant en argument, $f$, $f'$, $x$, et $\varepsilon$. Cette fonction utilisera l'algorithme de Newton pour 
+\item Programmer une fonction recevant en argument, $f$, $f'$, $x$, et $\varepsilon$. Cette fonction utilisera l'algorithme de Newton pour
 déterminer une valeur $x_0$ telle que $|f(x_0)| < \varepsilon$.
-\item En utilisant la fonction $h(x) = e^x\log(x)-x^2$ comparer les rythmes de convergence de la méthode de Newton, et de la dichotomie. 
+\item En utilisant la fonction $h(x) = e^x\log(x)-x^2$ comparer les rythmes de convergence des méthodes
+  de Newton et de la dichotomie.
 \end{enumerate}
 
 
-\subsection{Séquente}
-La méthode de Newton n'est applicable qu'aux fonctions dont la dérivée 
-est connue exactement ; ce qui n'est pas le cas général. 
-La méthode de la séquente consiste à remplacer dans la formule de Newton 
+\subsection{Sécante}
+La méthode de Newton n'est applicable qu'aux fonctions dont la dérivée
+est connue exactement; ce qui n'est pas le cas général.
+La méthode de la sécante consiste à remplacer dans la formule de Newton
 la dérivée de la fonction par l'estimation de cette dernière par différence finie
-sur l'intervalle $[a\,;\,b]$ dans lequel une solution est recherchée. 
+sur l'intervalle $[a\,;\,b]$ dans lequel une solution est recherchée.
 \begin{enumerate}
-\item Programmer la méthode de la séquente.
+\item Programmer la méthode de la sécante.
 \item La comparer aux méthodes précédentes sur un graphique.
-\item Pourquoi ne pas utiliser une méthode basée sur un développement 
-limité d'ordre 2 ? ou plus ? 
-\item Définir un algorithme d'ordre supérieur à ceux proposés ici. 
-Puis le tester sur divers minima des fonctions $f$, $g$, et $h$. Et comparer 
-aux algorithmes programmés précédemment. 
+\item Pourquoi ne pas utiliser une méthode basée sur un développement
+limité d'ordre 2 ? ou plus ?
+\item Définir un algorithme d'ordre supérieur à ceux proposés ici.
+Puis le tester sur divers minima des fonctions $f$, $g$, et $h$. Et comparer
+aux algorithmes programmés précédemment.
 \end{enumerate}
 
 %\subsection{Parabole}
 %\subsection{Gauss-Newton}
 %\subsection{Levenberg-Marquardt}
 \subsection{Du zéro à l'extremum}
-Adapter l'un des algorithmes précédemment programmé pour rechercher non plus 
+Adapter l'un des algorithmes précédemment programmés pour rechercher non plus
 le zéro d'une fonction mais un extremum. Pour cela, remarquer que quand
- $f'(x)=0$, alors $f(x)$ est un extrema sauf si $f"(x) = 0$. 
+ $f'(x)=0$, alors $f(x)$ est un extrema sauf si $f"(x) = 0$.
