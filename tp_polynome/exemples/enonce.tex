@@ -23,8 +23,8 @@ commande Python.
 
 \subsection{Un peu plus qu'une calculatrice}
 
-Pour   cette  série   de   commande,  vous   commencerez  par   ouvrir
-l'interpréteur de commande python.
+Pour   cette  série   de   commandes,  vous   commencerez  par   ouvrir
+l'interpréteur de commandes python.
 
 \begin{enumerate}
 
@@ -33,16 +33,15 @@ l'interpréteur de commande python.
   \texttt{f} puis initialisez les avec  les valeurs suivantes : 5, 13,
   17, 3.14159, 'bob' et 'bonjour'.\\ Exemple : \texttt{a = 5}
 
-  
+
 \item  Affichez  à l'écran  la  valeur  de  chacune des  variables  en
   utilisant la commande \texttt{print}.
 
 \item  Affichez   le  type  de   chaque  variable  avec   la  commande
   \texttt{type()}.\\ Exemple : \texttt{type(a)}
 
-\item Faites la somme des variables \texttt{a} et \texttt{b} et placez
-  le  résultat  dans  une   variable  \texttt{sum}  puis  affichez  le
-  résultat.
+\item Faites la somme des variables \texttt{a} et \texttt{b} et affectez
+  le  résultat  à  une   variable  \texttt{sum}  que vous afficherez.
 
 \item Affectez la valeur 666 à la variable \texttt{a} puis affichez de
   nouveau la valeur de la variable \texttt{sum}.
@@ -68,12 +67,13 @@ l'interpréteur de commande python.
 
 \subsection{Le premier programme Python}
 
-Afin d'exécuter  une suite  d'instructions plus complexes,  comme tout
-langage  informatique, on  peut enregistrer  ces instructions  dans un
-fichier (programme).
+Afin d'exécuter  une suite  d'instructions plus complexe,  comme dans
+de nombreux langages  informatiques, on  peut enregistrer  ces
+instructions  dans un fichier (on parle de programme \emph{source}
+ou \emph{script} ou encore \emph{macro}).
 
-Gardez à l'esprit  que toute séquence de caractères sur un ligne 
-commençant par \#  est interprétée comme un commentaire 
+Gardez à l'esprit  que toute séquence de caractères sur une ligne
+commençant par le caractère \#  est interprétée comme un commentaire
 et ne sera donc pas exécutée.
 
 \begin{enumerate}
@@ -84,7 +84,7 @@ et ne sera donc pas exécutée.
 \item Ouvrez avec \texttt{emacs} le programme \texttt{script\_0.py}.
 
 \item La première ligne de  votre script (version très simplifiée d'un
-  programme) est, ce que l'on nomme, le shebang (ou shabang).
+  programme) est, ce que l'on nomme, le \emph{shebang}.
 
 \item Que  se passe-t-il après  avoir supprimé  la première  ligne du
   programme ?
@@ -94,7 +94,7 @@ et ne sera donc pas exécutée.
 \item Que permet de  faire l'instruction \texttt{$\backslash$n} qui se
   trouve aux lignes 24 et 28 ?
 
-\item Détaillez les commandes en  charges de l'affichage des variables
+\item Détaillez les commandes en  charge de l'affichage des variables
   \texttt{a}, \texttt{b} et \texttt{c}.
 
 
@@ -107,36 +107,43 @@ et ne sera donc pas exécutée.
 
 
 % Je ne prends pas la liberté de modifier. Mais il me semble que
-% ce qui suit est faux. 
-Rapidement,  vous   mettrez  à   disposition  vos  programmes   à  des
-utilisateurs.   Nous  allons donc  introduire  la  notion de  fonction
+% ce qui suit est faux.
+%2017-09-07 FM:
+%Rapidement,  vous   mettrez  à   disposition  vos  programmes   à  des
+%utilisateurs.
+
+Nous  allons donc  introduire  la  notion de  fonction
 principale   \texttt{main()}  que   vous   trouverez  dans   l'exemple
-\texttt{conditions.py}.  De plus, il sera nécessaire que l'utilisateur
-interagisse  sans avoir  à intervenir  dans les  algorithmes que  vous
-aurez mis en place.
+\texttt{conditions.py}.
+
+%2017-09-07 FM:
+%De plus, il sera nécessaire que l'utilisateur
+%interagisse  sans avoir  à intervenir  dans les  algorithmes que  vous
+%aurez mis en place.
 
 
 \begin{enumerate}
 
 \item  Ouvrez avec  \texttt{emacs} le  programme \texttt{conditions.py}
-  puis repérez le début du programme principale et son utilisation par
+  puis repérez le début du programme principal et son utilisation par
   \texttt{main()}.
-  
+
 \item Exécuter votre programme en passant dans le terminal la commande
   \texttt{python conditions.py} puis commentez.
 
-\item Détaillez la fonctionnalité de la fonction \texttt{input()}
+\item Détaillez la fonctionnalité de la fonction \texttt{input()}.
 
-\item De quels types sont les variables \texttt{name}, \texttt{input\_number}, 
+\item De quels types sont les variables \texttt{name}, \texttt{input\_number},
 et \texttt{number} ?
 
-\item Votre première  condition, et donc premier  bloc d'instruction, se
-  trouve entre  les lignes 28  et 33.\\ Expliquez la  différence entre
+\item Le premier test conditionnel amorce le bloc d'instructions
+  situé entre  les lignes 28  et 33.\\ Expliquez la  différence entre
   \texttt{if}, \texttt{elif} et \texttt{else}.
 
+%2017-09-07 FM: !!! pas de or no not !!!
 \item  Entre   les  lignes  36   et  43,  découvrez  les   mots-clefs
   \texttt{and}, \texttt{or}  et \texttt{not}.\\ Proposez  une solution
-  pour ajouter  un bloc  d'instruction et ainsi  prendre en  compte le
+  pour ajouter  un bloc  d'instructions et ainsi  prendre en  compte le
   dernier cas, ignoré jusqu'à maintenant.
 
 
@@ -144,7 +151,7 @@ et \texttt{number} ?
 
 \lstinputlisting[language=Python]{conditions.py}
 
-\subsection{Un peu de mathématique}
+\subsection{Un peu de mathématiques}
 
 \begin{enumerate}
 \item Calculez la racine carrée de la valeur absolue de -1024.
@@ -161,7 +168,7 @@ et \texttt{number} ?
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
   La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}.
 
-\item Ce qui fait la force du langage python est, entre autre, le nombre important de module.
+\item Ce qui fait la force du langage python est, entre autres, le nombre important de modules disponibles.
   Découvrez les modules \texttt{time} ou \texttt{random}.
 
 
@@ -179,11 +186,11 @@ et \texttt{number} ?
   suite à l'analyse du programme, définissez le type de chaque variable.
 
 \item Expliquez ce que fait la ligne 23 de votre programme.
-  
+
 \item Comparez le nombre d'éléments constituant les variables \texttt{list\_of\_word} et  \texttt{sentence}.
 
 \item Détaillez les fonctionalités des méthodes \texttt{split()}, \texttt{replace()} et \texttt{count()}.
-  
+
 \item Proposez une solution pour accéder au cinquième élément de la variable \texttt{list\_of\_word}.
 
 \item Comparez les deux méthodes d'affichage ligne~33 et ligne~37 puis faites un choix.
