@@ -4,16 +4,16 @@ Le programme \texttt{random\_0.py}  contient deux fonctions distinctes
 permettant de tirer des nombres aléatoires entiers ou réels.
 
 \begin{enumerate}
-\item Modifiez le programme afin  de sauvegardez dans un fichier texte
+\item Modifiez le programme afin  de sauvegarder dans un fichier texte
   l'ensemble des valeurs générées.
 
 \item Après  plusieurs exécutions  du programme, comparez  les données
-  produites  et mettez  en \oe  uvre  une solution  pour améliorer  le
-  caractère aléatoire du programme. On pourra songer à employer    une 
-  méthodes basée sur l'emploi  de la fonction \texttt{clock} du module 
+  produites  et mettez  en \oe{}uvre  une solution  pour améliorer  le
+  caractère aléatoire du programme. On pourra songer à employer    une
+  méthodes basée sur l'emploi  de la fonction \texttt{clock} du module
   \texttt{time}.
-  
-\item Tracez  un histogramme de  distribution des valeurs  entières et
+
+\item Tracez  un histogramme de la distribution des valeurs  entières et
   des valeurs réelles produites.
 
 \item  Calculez  la  valeur  moyenne de  la  distribution  de  valeurs
@@ -44,13 +44,13 @@ Sur  la base  du programme  \texttt{random\_and\_stat.py}, vous  allez
 \item Écrivez une fonction pour accueillir l'algorithme que vous venez
   d'écrire.
 
-  
+
 \item Tracez $\varepsilon_1$  en fonction du nombre  de valeurs tirées
   aléatoirement $N$ avec $N \in [10:10^5]$.
-  
+
 \item Calculez la quantité de nombres tirés par valeur (nombre de $a$,
-  $a+1$, \dots,  $b-1$, $b$ ; $a$ et $b$ étant les bornes de 
-  l'intervalle dans lequelle elles sont générées)  et comparez à
+  $a+1$, \dots,  $b-1$, $b$ ; $a$ et $b$ étant les bornes de
+  l'intervalle dans lequel elles sont générées)  et comparez à
   la valeur  attendue. Pour
   chaque  valeur  calculez l'écart  entre  valeur  attendue et  valeur
   obtenue ($\varepsilon_2$).
@@ -88,10 +88,10 @@ cela vous utiliserez l'exemple \texttt{random\_a\_list.py}.
 \subsection{Tout est question de distribution}
 
 Jusqu'à  maintenant, vous  avez étudié   des distributions  aléatoires
-uniformes, cela signifie que lors d'un tirage chaque valeur possible est
-équiprobable, pour des tirages d'entiers ; ou que la probabilité de tirer 
-un nombre dans un sous intervalle est proportionnelle à a taille relative 
-de celui-ci, dans le cas de tirages de nombres flottants.
+uniformes, cela signifie que lors d'un tirage chaque valeur entière possible à la même
+chance d'être obtenue par rapport à n'importe quelle autre valeur (équiprobabilité);
+ou que la probabilité de tirer un nombre dans un sous intervalle est proportionnelle à la taille relative
+de celui-ci, dans le cas de tirages de nombres réels.
 
 Utilisez les  exemples \texttt{random\_distribution.py} et
 \texttt{random\_2D.py} pour écrire votre  propre programme et répondre
@@ -105,34 +105,34 @@ aux questions suivantes.
   triangular, gauss).  Calculez les  moyennes, écarts-types, et extrémums.
   %%
 \item Comment paramétrer la distribution Gaussienne pour que sa moyenne
-  et son écart-type soient les mêmes que ceux de la distribution uniforme ? 
-\item Évaluez les  temps d'exécution des différentes  méthodes pour le
-  même nombre de tirage.  %%
+  et son écart-type soient les mêmes que ceux de la distribution uniforme ?
+%% \item Évaluez les  temps d'exécution des différentes  méthodes pour le
+%%   même nombre de tirages.  %%
 \item Écrivez votre propre programme pour :
   \begin{itemize}
-  \item[$\ast$] tirer  aléatoirement selon une distribution uniforme 
+  \item[$\ast$] tirez  aléatoirement selon une distribution uniforme
     $N_{tot}$ couples $(x,y) \in [-1:1]^2$ ;
-  \item[$\ast$] calculer la valeur $r$ telle que
+  \item[$\ast$] calculez la valeur $r$ telle que
     $r^2 = x^2+y^2$, pour chaque couple $(x,y)$ ;
-  \item[$\ast$] stocker dans une \texttt{list} 
+  \item[$\ast$] stockez dans une liste
     uniquement les valeurs de $x$  et de $y$
-    pour lesquelles $r < 1$ et  afficher le nombre de valeurs ainsi
+    pour lesquelles $r < 1$ et  affichez le nombre de valeurs ainsi
     sélectionnées ($N_{sel}$) ;
-  \item[$\ast$] calculer  le rapport de $N_{sel}/N_{tot}$  et comparer
+  \item[$\ast$] calculez  le rapport de $N_{sel}/N_{tot}$  et comparez
     cette valeur à $\frac{\pi}{4}$ ;
-  \item[$\ast$] évaluer l'écart entre ces  deux valeurs en fonction du
+  \item[$\ast$] évaluez l'écart entre ces  deux valeurs en fonction du
     nombre de tirages effectués.
   \end{itemize}
   %%
 \item Sans  nécessairement écrire l'algorithme, proposez  une solution
   alternative pour tirer une distribution  de points dans un cercle de
-  rayon 1. Puis réfléchissez à la question suivante : 
-  \og{} la distribution obtenue est-elle uniforme ? \fg{} 
+  rayon 1. Puis réfléchissez à la question suivante :
+  \og{} la distribution obtenue est-elle uniforme ? \fg{}
 
 \lstinputlisting{random_distribution.py}
 \lstinputlisting{random_2D.py}
 
-  
+
 \end{enumerate}
 
 

@@ -1,6 +1,6 @@
 
-À plus forte raison que les dérivées, il est parfois compliqué de calculer
-des intégrales analytiques. Dans ce TP nous écrirons des programmes
+À plus forte raison que pour les dérivées, il est parfois compliqué de calculer
+des intégrales analytiques. Dans ce TP, nous écrirons des programmes
 calculant numériquement des approximations d'intégrales.
 
 La méthode utilisée est basée sur le théorème fondamental de l'analyse.
@@ -51,7 +51,7 @@ Où $dF = f(x)dx$, $h_n=\frac{(b-a)}{n}$, et $x_i=a+ i\frac{(b-a)}{n} = a+ih_n$.
     celles  de   l'intégrale  correspondante $\int_a^xf(t)dt$.
   \end{itemize}
   Tester cette fonction en prenant $f=\cos$, $a=0$, $b=\pi$, $N=100$, et
-  $h=0.01$
+  $h=0,01$
   \cf{mesh.py, loop.py et returnList.py}.\\
 %%
 \item  Sur un même graphique, tracer $\int_a^xf(t)dt$ et $\sin(x)$ en fonction de $x$
@@ -67,7 +67,7 @@ Où $dF = f(x)dx$, $h_n=\frac{(b-a)}{n}$, et $x_i=a+ i\frac{(b-a)}{n} = a+ih_n$.
   %%
 \item Aux   mêmes  points   tracer  $f(x)=x$,   puis  comparer.
 
-  
+
 \end{enumerate}
 
 \subsection{Intervalle de confiance}
@@ -85,7 +85,7 @@ l'intégrale d'une fonction.
   Ces méthodes sont appelées,  respectivement, méthodes des rectangles
   à droite et  à gauche.  \\ Comparer les  intégrations réalisées avec
   ces deux méthodes.
-  
+
   %%
 \item  Vérifier  sur  quelques  exemples  que  pour  des  portions  de
   fonction monotone, l'une des  intégrations donne une majoration de
@@ -96,9 +96,9 @@ l'intégrale d'une fonction.
   \begin{itemize}
   \item[$\ast$]  Pour  chaque  pas   d'intégration  $h$,  calculer  la
     fonction à droite puis à gauche ;
-  \item[$\ast$] comparer les deux valeurs obtenues pour $hf$ ;
+  \item[$\ast$] comparer les deux valeurs obtenues pour le terme $h\,f$ ;
   \item[$\ast$] utiliser la plus petite pour évaluer la minoration ;
-  \item[$\ast$] employer la plus plus grande pour calculer la majoration.
+  \item[$\ast$] employer la plus grande pour calculer la majoration.
 \end{itemize}
 \end{enumerate}
 
@@ -121,7 +121,7 @@ méthodes plus efficaces.
   \begin{itemize}
   \item[$\ast$] Programmer  cette  méthode dans une fonction en parallèle de la précédente
     (c.-à-d. méthode des rectangles).
-  \item[$\ast$] Pour la fonction $G(x) = \int_{\sqrt{2}}^{\sqrt{7}} \exp(x) dx$, 
+  \item[$\ast$] Pour la fonction $G(x) = \int_{\sqrt{2}}^{\sqrt{7}} \exp(x) dx$,
     comparer le résultat de l'integration numérique (avec les deux méthodes) à celui de la résolution analytique.
   \item[$\ast$] Calculer et tracer (sur  un graphique  log/log) l'écart $\varepsilon$ entre la méthode numérique
     et la résolution analytique en   fonction  des  valeurs   de  $h$.
@@ -139,8 +139,8 @@ méthodes plus efficaces.
 
   Programmer  cette méthode  et  comparer sa  précision  en fonction  du
   nombre d'évaluations de la fonction à celle des autres.
-\item  Afin de minimiser les évaluations de la fonction à intégrer il est 
-possible d'obtenir la formulation suivante pour la méthode de Simpson : 
+\item  Afin de minimiser les évaluations de la fonction à intégrer il est
+possible d'obtenir la formulation suivante pour la méthode de Simpson :
  \begin{equation}
 \begin{split}
 \int_a^b  f(x)dx   \simeq  \frac{h}{48}  &\biggl[17f(a)   +  59f(a+h)+
@@ -148,9 +148,9 @@ possible d'obtenir la formulation suivante pour la méthode de Simpson :
   49f(a+3h)\biggr.\\ &+48\sum_{i=4}^{n-4}f(x_i)\\ &\biggl.+49f(b-3h)+43f(b-2h)+59f(b-h)+17f(b)\biggr]
 \end{split}
  \end{equation}
- 
-Ajouter cette formulation à votre  comparatif en faisant attention à
-ce qu'elle ne peut être utilisée pour $n<8$.
+
+ Ajouter cette formulation à votre  comparatif en faisant attention au fait
+ qu'elle ne peut être utilisée pour $n<8$.
 \item  Les quadratures  de Gauss-Legendre  consistent à  approximer la
   fonction à  intégrer par un  polynôme de  Legendre. Il en  existe de
   divers degrés  $m$, où $m$  est aussi  le nombre d'évaluations  de la
@@ -185,7 +185,7 @@ f(x_i+\frac{h}{2}(1+p_j))
 Comparer  ces  quadratures  aux autres  intégrateurs  déjà  programmés.\\
 \cf{listElement.py et listOfList.py}
 
- 
+
 
 
 

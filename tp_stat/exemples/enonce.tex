@@ -2,27 +2,27 @@
 
 \subsection{Écrire dans un fichier}
 
-Pour s'exercer à écrire dans un fichier, vous étudierez le fichier \texttt{write\_file.py}.
+Pour s'exercer à écrire des messages textuels dans un fichier, vous étudierez le fichier \texttt{write\_file.py}.
 
 \begin{enumerate}
 
 \item La ligne 21 permet d'ouvrir le fichier \texttt{quote\_file.dat} en écriture grâce
-  à l'option \texttt{w}.
-  Ajoutez à la fin du programme les lignes nécessaires afin d'ajouter, à la fin du
-  fichier \texttt{quote\_file.dat}, la traduction de la citation.
+  à l'option \texttt{w} (\emph{write}).
+  Complétez le programme des lignes nécessaires pour ajouter, à la fin du
+  fichier \texttt{quote\_file.dat}, la traduction française de la citation.
 
 \item   Écrivez   un  nouveau   programme   \texttt{write\_file\_2.py}
   permettant d'ouvrir  de nouveau le  fichier \texttt{quote\_file.dat}
   afin d'y ajouter une nouvelle citation.
-    
+
 \end{enumerate}
 
 \lstinputlisting{write_file.py}
 
 \subsection{Lire un fichier texte}
 
-Pour  s'exercer à  lire dans  un  fichier, vous  étudierez le  fichier
-\texttt{read\_file.py}.
+Pour  s'exercer à  lire des données à partir d'un  fichier dans uin format textuel,
+vous  étudierez le  fichier \texttt{read\_file.py}.
 
 \begin{enumerate}
 
@@ -36,43 +36,44 @@ Pour  s'exercer à  lire dans  un  fichier, vous  étudierez le  fichier
   fichier à la fin du programme ?
 
 \item Testez le type auquel appartient la variable \texttt{lines}.
-% Quels genres de tests t'attends-tu à ce que les étudiants fassent ? 
+% Quels genres de tests t'attends-tu à ce que les étudiants fassent ?
 
 \item Lors de l'affichage de  la variable \texttt{lines}, chaque ligne
-  est encadrée par un \texttt{'}  et les différentes lignes se trouvent
-  séparées par une  virgule. L'ensemble est délimité  par des crochets
-  \texttt{[]}.  Chaque  élément séparé par une  virgule est accessible
+  est encadrée par un caractère \texttt{'} (emph{quote}) et les différentes
+  lignes se trouvent
+  séparées par des  virgules. L'ensemble est délimité  par des crochets
+  \texttt{[]}.  Chaque  élément séparé d'un autre par une  virgule est accessible
   indépendamment.  Cet objet est de  type \texttt{list}, c'est un type
-  de  variable   qui  peut  lui-même  contenir   plusieurs  variables.
+  de  variable \emph{container}  qui  peut  lui-même  contenir   plusieurs  variables.
   Commentez  les lignes  49 et  50 ; puis proposez  deux méthodes  pour
   accéder à l'ensemble des éléments de l'objet \texttt{lines}
 
 \end{enumerate}
 \lstinputlisting{read_file.py}
-\subsection{Manipulation des list}
+\subsection{Manipulation des listes}
 
 
 Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \begin{enumerate}
 \item  Ouvrez   le  programme  \texttt{exo\_list.py}  et   faites  les
-  modifications  nécessaires pour  afficher  le premier  et le  dernier
-  élément de l'objet \texttt{my\_list\_of\_characters}.  %%
+  modifications  nécessaires pour  afficher  les premier  et  dernier
+  éléments de l'objet \texttt{my\_list\_of\_heroes}.  %%
 \item  Créez deux  \texttt{list} afin  de séparer  les héros  dotés de
   pouvoirs de celui doté d'un compte en banque.  %%
 \item  Utilisez  la liste  vide  \texttt{[]}  pour vider  la  variable
-  \texttt{my\_list\_of\_characters}, 
-  puis  vérifiez que  cette \texttt{list}
+  \texttt{my\_list\_of\_heroes},
+  puis  vérifiez que  cette liste
   est effectivement vide.  %%
 \item Que fait la commande de la ligne 21 ?  %%
 \item  Afin de  déterminer la  position  d'un élément  connu dans  une
-  \texttt{list}, utilisez la commande index(élément).  Retrouvez ainsi
+  liste, utilisez la commande \texttt{index(valeur)}.  Retrouvez ainsi
   la position de \textit{Daredevil}.
 
 \item En vous aidant  du programme \texttt{exo\_list.py}, expliquez la
   différence entre \texttt{del} et \texttt{remove}
 
-\item Jusqu'à maintenant l'objet \texttt{list} utilisé compte quelques
+\item Jusqu'à maintenant l'objet de type \texttt{list} utilisé compte quelques
   éléments. Dès lors que vous  devrez gérer un grand nombre d'éléments,
   il faudra  automatiser le parcours  de vos ensembles.   Décrivez les
   lignes 33 et 34 du programme.
@@ -82,9 +83,9 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \subsection{Les boucles  \texttt{for}}
 
-L'objectif  de cet  exercice est  d'utiliser les  boucles \texttt{for}
-afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
-\texttt{list}.
+L'objectif  de cet  exercice est  d'utiliser les  boucles basée sur
+l'instruction \texttt{for} afin  de  parcourir  des  ensembles  de
+valeurs  contenues  dans  des listes.
 
 
 
@@ -92,23 +93,24 @@ afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
 \item Vous  étudierez le programme \texttt{boucle\_for.py}.   Les mots
   clefs \texttt{for} et \texttt{in} séparent \texttt{heros}, qui prend
   successivement    les    différentes    valeurs    contenues    dans
-  \texttt{my\_list\_of\_character}.  Détaillez la  différence entre la
-  boucle commençant ligne 22 et la boucle commençant en ligne 35.
+  \texttt{my\_list\_of\_heroes}.  Détaillez la  différence entre la
+  boucle commençant à la ligne 22 et la boucle commençant à ligne 35.
 
-\item La boucle que vous avez  utilisé jusqu'à présent se base sur une
-  \texttt{list} déjà existant.  Toutefois,  il est utile d'effectuer N
-  fois une  action. Pour cela, à  la place d'une \texttt{list}  de $N$
-  éléments, vous utiliserez  l'instruction \texttt{range(N)}pour créer
-  une liste de $N$ entiers.
+\item La boucle que vous avez  utilisée jusqu'à présent se base sur une
+  liste déjà existante.  Toutefois,  il est utile d'effectuer $N$
+  fois une  action. Pour cela, à  la place d'une liste  de $N$
+  éléments, vous utiliserez  l'instruction \texttt{range(N)} pour créer
+  une liste de $N$ entiers correspondant à la suite des indices des éléments
+  de la liste.
   \begin{itemize}
   \item[$\ast$]  Créez un  nouveau  programme \texttt{boucle\_for\_2.py}  pour
-    mettre en oeuvre cette boucle.
+    mettre en \oe{}uvre cette boucle.
   \item[$\ast$] Calculez la factoriellle de \texttt{N}\footnote{factorielle de
-    N ou noté encore N!~=~$1 \times 2 \times... \times N-1 \times N$}.
+    $N$, notée $N!$~=~$1 \times 2 \times... \times N-1 \times N$ et $1! = 0! = 1$}.
   \end{itemize}
 
 \lstinputlisting{boucle_for.py}
-  
+
 \item    Créez   un    nouveau   programme    que   vous    appellerez
   \texttt{boucle\_for\_3.py}.
   \begin{itemize}
@@ -120,8 +122,8 @@ afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
     à \texttt{N} calculez soit la  valeur $2\times x+1$ pour produire
     des nombres impairs, soit $2\times x$ pour des nombres pairs.
   \item[$\ast$]    Sauvegardez     votre    résultat    dans     un    fichier
-    \texttt{ASCII}\footnote{American  Standard  Code  for  Information
-      Interchange}.
+    en mode textuel (\texttt{ASCII}\footnote{American  Standard  Code  for  Information
+      Interchange}).
 % Un fichier ascii ou un fichier texte de base ?
   \end{itemize}
 
@@ -132,7 +134,8 @@ afin  de  parcourir  des  ensembles  de  valeurs  contenues  dans  des
 
 \subsection{Les boucles  \texttt{while}}
 
-L'objectif de  cet exercice  est d'utiliser une  boucle \texttt{while}
+L'objectif de  cet exercice  est d'utiliser une  boucle basée sur l'instruction
+\texttt{while}
 afin  de  répéter  une  action tant  qu'une  condition  est  vérifiée.
 Inspirez-vous de  l'exemple \texttt{boucle\_while.py}  pour créer  un
 programme.
@@ -142,11 +145,11 @@ programme.
   entre 0 et 1000  tant qu'il ne trouve pas la  valeur exacte qui sera
   définie dans le programme.
 
-\item  Après  chaque essais,  comparez  le  nombre proposé  au  nombre
-  mystère et dites s'il est plus grand ou plus petit.
+\item  Après  chaque essai,  comparez  le  nombre proposé  au  nombre
+  mystère et informez l'utilisateur s'il est plus grand ou plus petit.
 
 \item Lorsque la valeur mystère est trouvée, informez l'utilisateur et
-  stoppez le programme
+  stoppez le programme.
 
 \end{enumerate}
 %%
@@ -178,17 +181,21 @@ Pour vous exercer, modifiez les paramètres suivants :
 
 \subsection{Pour aller plus loin avec matplotlib {\sc [Facultatif]}}
 
-Vous aurez à écrire un programme afin de tracer la carte de France et ses principaux cours d'eau.
-Vous allez : 
+Vous aurez à écrire un programme afin  de tracer la carte de France et
+ses principaux cours d'eau.  Vous allez :
 
 \begin{enumerate}
-\item Lire les fichiers \texttt{map.dat} et \texttt{river.dat}. Chaque colonne de ces fichiers permet de remplir des objets \texttt{list} que nous nommerons
-  \texttt{map\_x},  \texttt{map\_y},  \texttt{river\_x} et \texttt{river\_y}.
-\item Choisir la forme des  symboles représentant les points à tracer.
+\item Lire les fichiers \texttt{map.dat} et \texttt{river.dat}. Chaque
+  colonne  de  ces fichiers  permet  de  remplir  des objets  de  type
+  \texttt{list} que  nous nommerons  \texttt{map\_x}, \texttt{map\_y},
+  \texttt{river\_x} et \texttt{river\_y}.
+\item Choisir la forme des symboles représentant les points à tracer.
 
-\item Sur un même graphique, tracer $map\_y = f(map\_x)$ et $river\_y = f(river\_x)$.
+\item Sur un même graphique,  tracer les contours $map\_y = f(map\_x)$
+  et $river\_y = f(river\_x)$.
 
-\item Utiliser les options adéquates pour tracer en noir les contours de la carte et en bleu les cours d'eau.
+\item Utiliser les options adéquates  pour tracer en noir les contours
+  de la carte et en bleu les cours d'eau.
 
 
 \end{enumerate}

@@ -3,13 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 x = np.arange(0.07, 5, 0.1*np.sqrt(2)) # First create a list for the abcissas.
-y = np.sin(x)            # Then compute the list of ordonate.
-                         # Notice how each point is coputed in a single instruction.
+y = np.sin(x)            # Then compute the list of ordinates.
+                         # Notice how all points in the list are computed through a single instruction.
 
 plt.plot(x, y)           # Then plot all this
 plt.show()               # AND display the plot
 
-plt.loglog(x,abs(y))     # Make a loglog plot this time
+plt.loglog(x,abs(y))     # Make a loglog plot now
 plt.show()               # AND display the plot
 
 
@@ -35,4 +35,3 @@ plt.grid(True)                  # display a grid
 
 plt.legend()
 plt.show()
-

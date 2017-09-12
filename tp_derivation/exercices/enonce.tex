@@ -1,6 +1,6 @@
 %%
 Il  arrive que  la dérivation  analytique d'une  fonction ne  soit pas
-facilement  calculable.  Ce TP  survol  des  méthodes élémentaires  de
+facilement  calculable.  Ce TP  survole  des  méthodes élémentaires  de
 dérivation numérique.
 
 \subsection{Précision}
@@ -11,14 +11,14 @@ méthode de dérivation numérique.
 \item Écrire une fonction capable de calculer la dérivée d'une fonction
   (de  $\mathbb{R}  \longrightarrow  \mathbb{R}$)   en  un  point  $x$
   quelconque en utilisant la formule :
-  $$f'(x)= \frac{f(x+h)-f(x-h)}{2h}\,;$$  où $h$ est un  paramètre qui
+  $$f'(x) \simeq \frac{f(x+h)-f(x-h)}{2h}\,;$$  où $h$ est un  paramètre qui
   pourra   être   choisi   lors   de   l'appel   de   cette   fonction
   \cf{function.py}.  %%
 \item Utiliser cette fonction  pour calculer $\frac{d\cos(x)}{dx}$ sur
-  cent points répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
+  100 points répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
   Ensuite tracer la  fonction $\cos(x)$ et les points  calculés sur un
   graphique \cf{plot.py}.  %%
-\item   Sur  les   mêmes  cent   points,  calculer   les  valeurs   de
+\item   Pour ce même lot de 100   points,  calculer   les  valeurs   de
   $\frac{d\cos(x)}{dx}   =   -\sin(x)$   puis  faire   la   différence
   $\varepsilon$ entre dérivée numérique et fonction analytique %%
 \cf{loop.py}.
@@ -52,7 +52,7 @@ f'(x) &=& \frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}\,; \\
 f'(x) &=& \frac{f(x+3h)-9f(x+2h)+45f(x+h)-45f(x-h)+9f(x-2h)-f(x-3h)}{60h}.
   \end{eqnarray*}
 Les coefficients de ces fonctions sont calculés de manière à annuler de plus en
-plus de termes du développement limité de la fonction $f$.
+plus de termes du développement limité de la fonction $f$ (voir le cours en L3 de Physique).
 \item Des formules non-symétriques existent également. En voici quelques-unes :
    \begin{eqnarray*}
 f'(x) &=& \frac{f(x+h)-f(x)}{h}\,;\\
@@ -60,7 +60,7 @@ f'(x) &=& \frac{-3f(x)+4f(x+h) -f(x+2h)}{2h}\,;\\
 f'(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}.
   \end{eqnarray*}
  Programmer les fonctions de dérivation correspondantes. Ces fonctions peuvent être utilisées avec $h>0$ ou $h<0$.
-\item  À nombre  d'évaluation de  la fonction  $f$ égale,  comparer la
+\item  À nombres  d'évaluations de  la fonction  $f$ égaux,  comparer la
   précision moyenne de chacune de  ces méthodes sur un graphique (pour
   des valeurs de $h$ comprises entre $0,001$ et $1$).
 \end{enumerate}
@@ -73,9 +73,9 @@ méthode (seconde, troisième\ldots).
 \begin{enumerate}
 \item Programmer une  fonction calculant la dérivée à  l'ordre 2 d'une
   fonction        en       utilisant        l'algorithme       $f'(x)=
-  \frac{f(x+h)-f(x-h)}{2h}\,;$  pour  obtenir des  dérivées  première,
-  puis  calculant la  dérivée seconde  à partir  de deux  points ainsi
-  obtenus.
+  \frac{f(x+h)-f(x-h)}{2h}\,;$  pour  obtenir des  dérivées  premières,
+  puis  calculant la  dérivée secondes  à partir  de deux  évaluations ainsi
+  obtenues.
 \item Programmer une fonction calculant la dérivée seconde à l'aide de
   la formule :
 $$f'(x)=  \frac{f(x+h)+f(x-h)-2f(x)}{h^2}.$$  Comparer l'évolution  de
@@ -87,7 +87,8 @@ $$f'(x)=  \frac{f(x+h)+f(x-h)-2f(x)}{h^2}.$$  Comparer l'évolution  de
 
 Ces méthodes de dérivation numérique  peuvent être utiles pour dériver
 des fonctions dont la forme analytique est complexe et pour lesquelles
-on dispose juste d'une série de points. À titre d'exercice nous allons
+on dispose juste d'une série de points (un échantillon).
+À titre d'exercice nous allons
 générer une  telle série de points  dans un fichier, puis  calculer la
 dérivée.
 
@@ -126,6 +127,7 @@ dérivation.
 \begin{figure}
 \lstinputlisting{../../tp_integration/exemples/listElement.py}\caption{listElement.py}
 \end{figure}
+
 \begin{figure}
 \lstinputlisting{../../tp_integration/exemples/listOfList.py}\caption{listOfList.py}
 \end{figure}
@@ -149,8 +151,3 @@ dérivation.
 \begin{figure}
 \lstinputlisting{../../tp_integration/exemples/returnList.py}\caption{returnList.py}
 \end{figure}
-
-
-
-
-

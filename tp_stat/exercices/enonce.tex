@@ -5,15 +5,18 @@
 
 \subsection{Construire un histogramme}
 
-Dans cet exercice, à partir d'une série de points que vous lirez d'un fichier texte, vous construirez un histogramme de distribution.
-Typiquement un histogramme vous permettra d'étudier la répartition d'une variable.
+Dans cet exercice, à partir d'une  série de points que vous lirez d'un
+fichier texte, vous construirez un histogramme représentant une loi de
+distribution.statistique.  Typiquement  un histogramme  vous permettra
+d'étudier  la   répartition  statistique  d'un  ensemble   de  valeurs
+numériques.
 
-
-Pour ce faire, il est nécessaire de définir trois paramètres : les valeurs minimales et maximales de la gamme des données à étudier et
-le nombre de classes.
+Pour ce  faire, il est  nécessaire de  définir trois paramètres  : les
+valeurs minimale et maximale de la gamme des données à étudier et le
+nombre de classes.
 \begin{enumerate}
 \item Demandez à un utilisateur d'entrer les valeurs min, max et nombre de classes ($min$, $max$ et $nb\_bin$).
-% Pourquoi nb_bin est au singulier quand histo_bins est au pluriel ? 
+% Pourquoi nb_bin est au singulier quand histo_bins est au pluriel ?
 \item Créez une liste $histo\_bins$  contenant $nb\_bin$ cases dont la valeur est égale à 0.
 \item Calculez la largeur de répartition des classes ($bin\_witdh = (max - min) / nb\_bin$).
 \item Lisez le fichier \texttt{data.dat} ligne à ligne.
@@ -26,8 +29,8 @@ le nombre de classes.
 
 \subsection{Statistiques élémentaires sur un fichier de données}
 
-L'objectif de cet exercice est d'étudier les données fournies par la station météo-france
-de Caen-Carpiquet.
+L'objectif de cet  exercice est d'étudier les données  fournies par la
+station Météo-France de Caen-Carpiquet.
 \begin{enumerate}
 \item Avec un programme Python, ouvrez le fichier \texttt{temperature.dat}.
 
@@ -40,7 +43,7 @@ de Caen-Carpiquet.
 %  séparer cette chaîne de caractères en prenant l'option de \texttt{split} comme séparateur.
 %  L'objet produit par cette action est une \texttt{list} de chaîne de caractères.
 
-\item À chaque itération de la boucle, faites afficher la température et stockez chaque valeur dans une \texttt{list} de températures.
+\item À chaque itération de la boucle, faites afficher la température et stockez chaque valeur dans une liste.
 
 \item Sans écrire une ligne de programmation, proposez la logique pour trouver :
   \begin{itemize}
@@ -57,7 +60,7 @@ de Caen-Carpiquet.
 \item Faites ensuite le même travail pour la pression atmosphérique et pour l'humidité relative.
 
 \item Sans écrire le programme, proposez une solution pour ranger dans l'ordre croissant
-  les grandeurs que vous avez stockées dans des \texttt{list}.\\
+  les grandeurs que vous avez stockées dans des listes.\\
   \textit{OPTION : Implémentez l'algorithme de tri que vous avez formulé.}
 
 \item Testez la fonctionnalité \texttt{.sort()} sur un objet de type \texttt{list} et commentez.

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
  # Lemiere Yves
  # Juillet 2017
@@ -12,17 +12,17 @@ import random
 if __name__ == "__main__":
 
     debug = True
-    
+
 
     if debug:
         print("*****************************")
         print("* Welcome in random_a_list  *")
         print("*****************************\n")
 
-        
-        
-        
-        list_of_particles = ['electron','muon','tau', 'up', 'down', 'charm', 'strange', 'top', 'bottom']
+
+
+
+        list_of_particles = ['electron', 'muon', 'tau', 'up', 'down', 'charm', 'strange', 'top', 'bottom']
 
 
         # shuffle the list
@@ -33,6 +33,3 @@ if __name__ == "__main__":
 
         # choose an element in the list
         random.choice(list_of_particles)
-        
-
-

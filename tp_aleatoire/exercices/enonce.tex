@@ -1,15 +1,15 @@
 \subsection{Le mouvement brownien}
 
 Le  mouvement brownien  correspond  à la  description mathématique  du
-mouvement  aléatoire d'une  particule immergée  dans un  fluide soumise
+mouvement  aléatoire d'une  particule immergée  dans un  fluide et soumise
 uniquement      aux     chocs      avec      les     molécules      du
-fluide\footnote{https://fr.wikipedia.org/wiki/Mouvement\_brownien}. 
+fluide\footnote{https://fr.wikipedia.org/wiki/Mouvement\_brownien}.
 Cette exercice consiste à générer (simuler) un tel mouvement et à en
 analyser certaines propriétés.
 
 
 Pour  faire simple,  vous déplacerez  aléatoirement un  point
-sur un pavage carré et infini à deux dimensions.
+sur un pavage carré à deux dimensions supposé infini.
 
 
 \begin{enumerate}
@@ -19,21 +19,21 @@ sur un pavage carré et infini à deux dimensions.
   \item[choose\_direction]  Pour choisir  aléatoirement une  direction
     dans la liste suivante : Ouest, Sud, Est, Nord.
   \item[prepare\_move]     Pour      produire     les     valeurs
-    (\texttt{delta\_x},\texttt{delta\_y})  à partir  d'une direction  
+    (\texttt{delta\_x},\texttt{delta\_y})  à partir  d'une direction
     (\texttt{Ouest}, \texttt{Sud},  \texttt{Est},
     \texttt{Nord})\\ Ex : Pour une direction \texttt{Nord} $\rightarrow$ \texttt{delta\_x} = 0 et
     \texttt{delta\_y} = +1.
-  \item[move] Pour renvoyer  les nouvelles coordonnées 
+  \item[move] Pour renvoyer  les nouvelles coordonnées
     (\texttt{new\_x},\texttt{new\_y})
     à partir  d'un mouvement (\texttt{delta\_x},\texttt{delta\_y})
      à  appliquer aux
-    coordonnées (\texttt{x},\texttt{y}).
+    coordonnées initiales (\texttt{x},\texttt{y}).
   \item[simulate]  Pour effectuer  $N$ fois  les opérations  précédentes ---
     c'est-à-dire $N$ \emph{itérations}  consistant à choisir  une
     direction, preparer le mouvement dans  un espace à deux dimensions,
-    puis  effectuer  le  mouvement --- ; puis  renvoyer  les  listes  des
+    puis  effectuer  le  mouvement ---  puis  renvoyer  les  listes  des
     positions (\texttt{x},\texttt{y}) calculées lors des $N$ mouvements.
-  \item[distance] Pour calculer la  distance entre deux points 
+  \item[distance] Pour calculer la  distance entre deux points
     (\texttt{x1},\texttt{y1})
     et (\texttt{x2},\texttt{y2}).
   \end{description}
