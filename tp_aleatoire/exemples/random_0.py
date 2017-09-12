@@ -39,7 +39,7 @@ if __name__ == "__main__":
         
 
         print("Define the expected random distribution")
-        N          = input("the number value expected ? ")
+        N          = input("Number of values to generate ? ")
         min_value  = input("Minimum value from range ? ")
         max_value  = input("Maximum  value from range ? ")
         
