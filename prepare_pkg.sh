@@ -80,9 +80,18 @@ echo "Prepare tp_derivation"
 echo "*******************\n"
 
 cd tp_derivation
-rm exercices/*.tex
-rm -fr correction
-rm comments.txt
+pdflatex main.tex
+if [ $? -eq 0 ]
+then
+    sleep 4
+    rm *.log
+    rm *.aux
+    rm *.tex
+    rm exemples/*.tex
+    rm exercices/*.tex
+    rm -fr correction
+    rm comments.txt
+fi
 cd -
 
 echo "\n*******************"
@@ -90,9 +99,18 @@ echo "Prepare tp_integration"
 echo "*******************\n"
 
 cd tp_integration
-rm exercices/*.tex
-rm -fr correction
-rm comments.txt
+pdflatex main.tex
+if [ $? -eq 0 ]
+then
+    sleep 4
+    rm *.log
+    rm *.aux
+    rm *.tex
+    rm exemples/*.tex
+    rm exercices/*.tex
+    rm -fr correction
+    rm comments.txt
+fi
 cd -
 
 echo "\n*******************"
@@ -104,3 +122,11 @@ rm exercices/*.tex
 rm -fr correction
 rm comments.txt
 cd -
+
+
+rm -fr documentation
+rm prepare_git.sh
+rm prepare_pkg.sh
+rm unicaen_logo_rvb_noir_V1.pdf
+rm -fr .git/
+rm .gitignore
