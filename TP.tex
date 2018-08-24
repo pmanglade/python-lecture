@@ -49,6 +49,7 @@
 \usepackage{lmodern}
 \usepackage{multicol}
 \usepackage{multirow} % Allow multirow in tabular env
+\usepackage{placeins}
 \usepackage{pgfplots}
 \usepackage{rotating}
 \usepackage{setspace}
@@ -187,7 +188,9 @@ l'algorithmique.
 \pagebreak
 \section{Dérivation}
 \subimport{./tp_derivation/exercices/}{enonce.tex}
+\FloatBarrier
 \pagebreak
+
 \section{Intégration}
 \subimport{./tp_integration/exercices/}{enonce.tex}
 \pagebreak
