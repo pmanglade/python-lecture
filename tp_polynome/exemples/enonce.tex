@@ -28,10 +28,12 @@ l'interpréteur de commandes python.
 
 \begin{enumerate}
 
+
 \item        Déclarez        plusieurs        variables        nommées
   \texttt{a},\texttt{b},\texttt{c},\texttt{d},      \texttt{e}      et
   \texttt{f} puis initialisez les avec  les valeurs suivantes : 5, 13,
-  17, 3.14159, 'bob' et 'bonjour'.\\ Exemple : \texttt{a = 5}
+  17, 3,14159, 'bob' et 'bonjour'.\\ Exemple : \texttt{a = 5}
+
 
 
 \item  Affichez  à l'écran  la  valeur  de  chacune des  variables  en
@@ -72,12 +74,14 @@ de nombreux langages  informatiques, on  peut enregistrer  ces
 instructions  dans un fichier (on parle de programme \emph{source}
 ou \emph{script} ou encore \emph{macro}).
 
+
 Gardez à l'esprit  que toute séquence de caractères sur une ligne
 commençant par le caractère \#  est interprétée comme un commentaire
 et ne sera donc pas exécutée.
 
 \begin{enumerate}
-\item Exécutez  le programme \texttt{script\_0.py} en  passant dans le
+\item Dans le terminal, choisir le répértoire de travail approprié.
+  Exécutez  le programme \texttt{script\_0.py} en  passant dans le
   terminal  la commande  \texttt{python script\_0.py}  ou la  commande
   \texttt{./script\_0.py}, comparez et commentez.
 
@@ -89,40 +93,37 @@ et ne sera donc pas exécutée.
 \item Que  se passe-t-il après  avoir supprimé  la première  ligne du
   programme ?
 
-\item Décryptez la ligne \#12 du programme \texttt{script\_0.py}.
+\item Analysez la ligne \#12 du programme \texttt{script\_0.py}.
 
-\item Que permet de  faire l'instruction \texttt{$\backslash$n} qui se
-  trouve aux lignes 24 et 28 ?
+\item Que se passe t'il lorsque le code \texttt{$\backslash$n} est imprimé ?
 
 \item Détaillez les commandes en  charge de l'affichage des variables
   \texttt{a}, \texttt{b} et \texttt{c}.
 
 
 \end{enumerate}
-\lstinputlisting[language=Python]{script_0.py}
+\begin{figure}  
+  \lstinputlisting{../exemples/script_0.py}
+  \caption{Contenu du fichier \texttt{script\_0.py}}
+  \label{polynome_script_0}
+\end{figure}
+
+
 
 
 
 \subsection{Un peu d'interaction avec votre programme}
 
 
-% Je ne prends pas la liberté de modifier. Mais il me semble que
-% ce qui suit est faux.
-%2017-09-07 FM:
-%Rapidement,  vous   mettrez  à   disposition  vos  programmes   à  des
-%utilisateurs.
 
-Nous  allons donc  introduire  la  notion de  fonction
+
+Nous  allons introduire  la  notion de  fonction
 principale   \texttt{main()}  que   vous   trouverez  dans   l'exemple
 \texttt{conditions.py}.
 
-%2017-09-07 FM:
-%De plus, il sera nécessaire que l'utilisateur
-%interagisse  sans avoir  à intervenir  dans les  algorithmes que  vous
-%aurez mis en place.
-
 
 \begin{enumerate}
+
 
 \item  Ouvrez avec  \texttt{emacs} le  programme \texttt{conditions.py}
   puis repérez le début du programme principal et son utilisation par
@@ -131,10 +132,12 @@ principale   \texttt{main()}  que   vous   trouverez  dans   l'exemple
 \item Exécuter votre programme en passant dans le terminal la commande
   \texttt{python conditions.py} puis commentez.
 
+
 \item Détaillez la fonctionnalité de la fonction \texttt{input()}.
 
 \item De quels types sont les variables \texttt{name}, \texttt{input\_number},
-et \texttt{number} ?
+et \texttt{number} ? Il est possible de demander à l'interpréteur Python cette information grâce à la fonction \texttt{type()}.
+
 
 \item Le premier test conditionnel amorce le bloc d'instructions
   situé entre  les lignes 28  et 33.\\ Expliquez la  différence entre
@@ -149,13 +152,22 @@ et \texttt{number} ?
 
 \end{enumerate}
 
-\lstinputlisting[language=Python]{conditions.py}
+
+\begin{figure}  
+  \lstinputlisting{../exemples/conditions.py}
+  \caption{Contenu du fichier \texttt{conditions.py}}
+  \label{polynome_conditions}
+\end{figure}
+
+
+
 
 \subsection{Un peu de mathématiques}
 
 \begin{enumerate}
 \item Calculez la racine carrée de la valeur absolue de -1024.
   Comment feriez-vous en utilisant python ?
+
 
 \item Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
   des fonctions définies dans ce module.
@@ -168,13 +180,20 @@ et \texttt{number} ?
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
   La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}.
 
+
 \item Ce qui fait la force du langage python est, entre autres, le nombre important de modules disponibles.
-  Découvrez les modules \texttt{time} ou \texttt{random}.
+  Découvrez les modules \texttt{time} ou \texttt{random} à l'aide de la fonction \texttt{help()}.
+
 
 
 \end{enumerate}
 
-\lstinputlisting[language=Python]{scientifique.py}
+
+\begin{figure}  
+  \lstinputlisting{../exemples/scientifique.py}
+  \caption{Contenu du fichier \texttt{scientifique.py}}
+  \label{polynome_scientifique}
+\end{figure}
 
 
 \subsection{Manipuler les chaînes de caractères}
@@ -197,4 +216,10 @@ et \texttt{number} ?
 
 
 \end{enumerate}
-\lstinputlisting[language=Python]{chaine.py}
+
+
+\begin{figure}  
+  \lstinputlisting{../exemples/chaine.py}
+  \caption{Contenu du fichier \texttt{chaine.py}}
+  \label{polynome_chaine}
+\end{figure}

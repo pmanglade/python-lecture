@@ -2,6 +2,7 @@
 
 \subsection{Écrire dans un fichier}
 
+
 Pour s'exercer à écrire des messages textuels dans un fichier, vous étudierez le fichier \texttt{write\_file.py}.
 
 \begin{enumerate}
@@ -13,16 +14,22 @@ Pour s'exercer à écrire des messages textuels dans un fichier, vous étudierez
 
 \item   Écrivez   un  nouveau   programme   \texttt{write\_file\_2.py}
   permettant d'ouvrir  de nouveau le  fichier \texttt{quote\_file.dat}
-  afin d'y ajouter une nouvelle citation.
+  afin d'y ajouter une nouvelle citation. Pour cela, il faut savoir que l'option \texttt{a} (\emph{append}) permet
+  de préciser qu'un fichier est ouvert en écriture ET que les nouvelles données seront écrites après celles déjà présentes. 
 
 \end{enumerate}
 
-\lstinputlisting{write_file.py}
+\begin{figure}  
+  \lstinputlisting{../exemples/write_file.py}
+  \caption{Contenu du fichier \texttt{write\_file.py}}
+  \label{stat_write_file}
+\end{figure}
 
 \subsection{Lire un fichier texte}
 
-Pour  s'exercer à  lire des données à partir d'un  fichier dans uin format textuel,
-vous  étudierez le  fichier \texttt{read\_file.py}.
+
+Pour  s'exercer à  lire des données à partir d'un  fichier dans un format textuel,
+vous  étudierez le  programme \texttt{read\_file.py}.
 
 \begin{enumerate}
 
@@ -39,7 +46,7 @@ vous  étudierez le  fichier \texttt{read\_file.py}.
 % Quels genres de tests t'attends-tu à ce que les étudiants fassent ?
 
 \item Lors de l'affichage de  la variable \texttt{lines}, chaque ligne
-  est encadrée par un caractère \texttt{'} (emph{quote}) et les différentes
+  est encadrée par un caractère \texttt{'} (\emph{quote}) et les différentes
   lignes se trouvent
   séparées par des  virgules. L'ensemble est délimité  par des crochets
   \texttt{[]}.  Chaque  élément séparé d'un autre par une  virgule est accessible
@@ -49,10 +56,17 @@ vous  étudierez le  fichier \texttt{read\_file.py}.
   accéder à l'ensemble des éléments de l'objet \texttt{lines}
 
 \end{enumerate}
-\lstinputlisting{read_file.py}
+
+
+\begin{figure}  
+  \lstinputlisting{../exemples/read_file.py}
+  \caption{Contenu du fichier \texttt{read\_file.py}}
+  \label{stat_read_file}
+\end{figure}
+
+
+
 \subsection{Manipulation des listes}
-
-
 Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \begin{enumerate}
@@ -83,7 +97,7 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \subsection{Les boucles  \texttt{for}}
 
-L'objectif  de cet  exercice est  d'utiliser les  boucles basée sur
+L'objectif  de cet  exercice est  d'utiliser les  boucles basées sur
 l'instruction \texttt{for} afin  de  parcourir  des  ensembles  de
 valeurs  contenues  dans  des listes.
 
