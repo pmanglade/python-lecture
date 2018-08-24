@@ -12,7 +12,7 @@
 \usepackage{cite}
 \usepackage{color}
 \usepackage{enumerate}
-\usepackage{epic} 
+\usepackage{epic}
 \usepackage{eepic}
 \usepackage{eepicemu}
 \usepackage{epsfig}
@@ -22,10 +22,26 @@
 %\usepackage{fourier}
 \usepackage[dvips]{geometry}
 \usepackage{graphicx}
-\usepackage{import} % To use \subimport and import stuff 
+\usepackage{import} % To use \subimport and import stuff
 \usepackage[utf8]{inputenc}
 %\usepackage{kpfonts}
 \usepackage{lastpage}
+\usepackage{listings} % to include code in latex
+\lstset
+{ %Defaults formatting for code included in lstlisting
+    language=Python,
+    basicstyle=\footnotesize,
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=true,
+    tabsize=3,
+    breaklines=true,
+    breakatwhitespace=false,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={à}{{\`a}}1 {À}{{\`A}}1 {é}{{\'e}}1  {è}{{\`e}}1 {É}{{\'E}}1,
+}
+
 \usepackage{lmodern}
 \usepackage{multicol}
 \usepackage{multirow} % Allow multirow in tabular env
@@ -60,6 +76,11 @@
 %\geometry{top=3cm, bottom=3cm, left=2.5 cm, right=2.5cm}
 
 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.9}
 
 
 
@@ -95,6 +116,7 @@
 \linespread{1.1}
 \begin{document}
 
+<<<<<<< HEAD
 
 \begin{titlepage}
   ~\\[-12ex]
@@ -138,39 +160,89 @@
 
 \begin{abstract}
 Les travaux pratiques qui suivent visent à vous aider à mieux appréhender 
+=======
+\setlength{\columnsep}{30pt}
+\setlength{\columnseprule}{1pt}
+%\begin{multicols}{2}
+\noindent
+%\begin{minipage}[t]{0.35\textwidth}
+\begin{minipage}[t]{0.35\textwidth}
+~\\[-2ex]
+% \includegraphics[width=1.8cm]{/home/spetit/Administration/Logos/logo-sciences-couleur-texte_new}
+\includegraphics[scale=0.7]{unicaen_logo_rvb_noir_V1}
+
+\end{minipage}
+%\begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{0.50\textwidth}
+\flushleft{
+\footnotesize{UFR des sciences} \\
+%\tiny{~}\\
+\footnotesize{Licence PCI -- seconde année} \\
+%\tiny{~}\\
+\footnotesize{Initiation aux méthodes numériques}
+}
+\end{minipage}
+%\hfill
+\begin{minipage}[t]{0.12\textwidth}
+\flushleft
+{
+\footnotesize{2017--2018}}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\centerline{\sc\Large Travaux pratiques de programmation}
+{\let\clearpage\relax \section*{Introduction}}
+Les travaux pratiques qui suivent visent à vous aider à mieux appréhender
+>>>>>>> upstream/master
 les méthodes, les raisonnements, et les outils de programmation ;
 ceux-ci étant largement indispensables à la pratique des sciences à
 haut niveau, dans laquelle il est souvent nécessaire
-de créer ses propres outils. 
+de créer ses propres outils.
 
-Pour des raisons d'accessibilités la programmation sera faite en Python ;
-ce langage étant pratiqué au lycée. Le langage lui-même ne sera pas enseigné ; 
+Pour des raisons d'accessibilité, la programmation sera faite en Python ;
+ce langage étant pratiqué au lycée. Le langage lui-même ne sera pas enseigné ;
 il n'est pas le sujet de ce cours.
-À l'aide d'exemples, et par une pratique réitérée, 
-vous serez amenés à en développer une connaissance empirique. 
-Un fort niveau d'engagement personnel est donc nécessaire en séance. 
+À l'aide d'exemples, et par une pratique réitérée,
+vous serez amenés à en développer une connaissance empirique.
+Un fort niveau d'engagement personnel est donc nécessaire en séance.
 
-Chaque TP emploie des notions simples de mathématique à aborder avec 
+Chaque TP emploie des notions simples de mathématiques à aborder avec
 les éléments les plus accessibles de Python. Le tout est conçu pour vous
 permettre de vous concentrer sur l'aspect essentiel de ces TP :
+<<<<<<< HEAD
 l'algorithmique. 
   
 \end{abstract}
 
 
 
+=======
+l'algorithmique.
+>>>>>>> upstream/master
 
 % 1 séances 2 exercices
 %\newcommand{cf}[1]{({\sc cf. :}{\tt #1.})}
 %\subimport{./tp_polynome/}{exo.tex}
+
+\pagebreak
 \section{Premiers pas en Python}
 \subimport{./tp_polynome/exemples/}{enonce.tex}
+\pagebreak
 \subimport{./tp_polynome/exercices/}{enonce.tex}
+<<<<<<< HEAD
 % \subimport{./tp_stat/}{exo.tex}
 \newpage
 \section{Quelques boucles}
+=======
+\pagebreak
+%\subimport{./tp_stat/}{exo.tex}
+\section{Pour aller plus loin}
+>>>>>>> upstream/master
 \subimport{./tp_stat/exemples/}{enonce.tex}
+\pagebreak
 \subimport{./tp_stat/exercices/}{enonce.tex}
+<<<<<<< HEAD
 \newpage
 \subimport{./tp_derivation/exercices/}{enonce.tex}
 \newpage
@@ -185,15 +257,28 @@ l'algorithmique.
 %\subimport{./tp_aleatoire/exercices/}{enonce.tex}
 %\newpage
 
+=======
+\pagebreak
+\section{Dérivation}
+\subimport{./tp_derivation/exercices/}{enonce.tex}
+\pagebreak
+\section{Intégration}
+\subimport{./tp_integration/exercices/}{enonce.tex}
+\pagebreak
+\section{Évaluation de fonctions}
+\subimport{./tp_dl/exercices/}{enonce.tex}
+\pagebreak
+%\subimport{./tp_aleatoire/}{exo.tex}
+\section{Des aléas dans la machine}
+\subimport{./tp_aleatoire/exemples/}{enonce.tex}
+\pagebreak
+\subimport{./tp_aleatoire/exercices/}{enonce.tex}
+\pagebreak
+>>>>>>> upstream/master
 \subimport{./tp_zero/exercices/}{enonce.tex}
 
-
-%\include{tp_derivation/exercices/enonce.tex}
-%\input{tp_derivation/exercices/enonce.tex}
 
 
 
 
 \end{document}
-
-

@@ -18,13 +18,13 @@ for i in range(n):
 print(X)
 
 
-print("\nThird method: using numpy arange list")
+print("\nThird method: using numpy arange function")
 epsilon=0.01
 for x in np.arange(a, b+epsilon, (b-a)/(n-1)):
    print(x)
 
 
-print("\nFourth method: using numpy arange list to create a new list")
+print("\nFourth method: using numpy arange function to create a new list")
 epsilon=0.01
 X=np.arange(a, b+epsilon, (b-a)/(n-1))[:] ### WARNING using X=np.arange(...) without [:] would be a bad idea
 print(X)
@@ -32,4 +32,4 @@ print(X)
 print("\nFifth method : generating a list with an inner loop")
 X = [((b-a)*i) / (n-1) + a for i in range(n)]
 print(X)
-### Many other combinations of the previous examples exists
+### Many other combinations of the previous examples exist

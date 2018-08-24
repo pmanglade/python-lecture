@@ -21,10 +21,10 @@ Les nombres sont supposés être aussi indépendants que possible les uns des au
 difficile de repérer des groupes de nombres qui suivent une certaine règle.
 
 
-\subsubsection{Pourquoi a t on besoin de nombres aléatoires ?}
+\subsubsection{Pourquoi a-t-on besoin de nombres aléatoires ?}
 
 Pour simuler un modèle stochastique, il est nécessaire de disposer d’une source
-de nombres \textit{au hasard} susceptibles de jouer en pratique le rôle
+de nombres tirés \textit{au hasard} susceptibles de jouer en pratique le rôle
 des variables aléatoires qui interviennent dans la définition du modèle.
 
 Voici une liste absolument pas exhaustive des domaines nécessitant une tirage aléatoire.
@@ -37,13 +37,72 @@ Voici une liste absolument pas exhaustive des domaines nécessitant une tirage a
 \end{itemize}
 
 
-\subsubsection{Existe t il différent tirage pseudo-aléatoire ? }
+\subsubsection{Existe-t-il différent tirage pseudo-aléatoire ? }
 
 
 La plupart du temps, le tirage pseudo-aléatoire consiste à produire un nombre
 avec une probabilité uniforme entre 0 et 1.
 
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{random.py}
+\begin{verbatim}
+import random
 
+
+seed(None)
+print(random.random())
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+
+Il est évident de penser que nous aurons besoin de nombres aléatoire non pas
+compris entre 0 et 1 mais plus généralement entre a et b.
+
+Pour y parvenir, il suffit de suivre l'exemple suivant : 
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{random.py}
+\begin{verbatim}
+import random
+seed(None)
+
+a = 3
+b = 7 
+val = ((b-a)*random.random()) + a
+
+print(val)
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+
+Comme nous avons pu l'expérimenter jusqu'à maintenant, Python brille par la multitude de fonctionalités mises à disposition.
+C'est ainsi que l'exemple précédent devient :
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{random.py}
+\begin{verbatim}
+import random
+seed(None)
+
+a = 3
+b = 7 
+
+print(random.uniform(a,b))
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+La nature n'étant pas faite que de phénomènes équi-probables, le physicien aura besoin de générer des nombres aléatoires suivant de multiples distributions  (distribution normale, ....).
+
+
+\subsubsection{Tirage dans une liste existante}
+
+
+Faire un choix équiprobable au hasard dans une liste pré-existante permet entre autre de simuler un jeu de hasard.
 
 
 
@@ -51,8 +110,41 @@ avec une probabilité uniforme entre 0 et 1.
 \begin{center}
   \begin{myterminalbox}[colback=gray!10]{random.py}
 \begin{verbatim}
+import random
+seed(None)
 
-
+list_of_action = ['pierre','feuille','ciseaux']
+print(random.choice(list_of_action))
 \end{verbatim}
   \end{myterminalbox}
 \end{center}
+
+
+
+
+
+\subsection{Pour aller plus loin dans les distributions}
+
+La distribution normale est définie par sa valeur moyenne $\mu $et sa déviation standard $\sigma$. (À noter que pour cette distribution, la valeur la plus probable sera $\mu$)
+
+
+\vskip 2pt
+\begin{center}
+  \begin{myterminalbox}[colback=gray!10]{random.py}
+\begin{verbatim}
+import random
+seed(None)
+
+samples = 100
+mu      = 10
+sigma   = 2 
+
+for i in range(samples):
+    print(random.gauss(mu,sigma))
+\end{verbatim}
+  \end{myterminalbox}
+\end{center}
+
+
+
+Vous pourrez découvrir le module random via la commande \texttt{help(random)}.

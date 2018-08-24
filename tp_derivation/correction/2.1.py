@@ -88,6 +88,7 @@ plt.loglog(listeh, listeErrorF2,label="F2")
 plt.loglog(listeh, listeErrorF3,label="F3")
 plt.legend()
 
+
 plt.show()
 
 
