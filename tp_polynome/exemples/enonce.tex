@@ -25,7 +25,7 @@ Pour cette série de commande, vous commencerez par ouvrir l'interpréteur de co
 \begin{enumerate}
 
 \item Déclarez plusieurs variables nommées \texttt{a},\texttt{b},\texttt{c},\texttt{d}, \texttt{e} et \texttt{f}
-            puis initialisez les avec les valeurs suivantes : 5, 13, 17, 3.14159, 'bob' et 'bonjour'
+            puis initialisez les avec les valeurs suivantes : 5, 13, 17, 3,14159, 'bob' et 'bonjour'
 
 \item Affichez à l'écran la valeur de chacune des variables en utilisant la commande \texttt{print}.
 
@@ -58,33 +58,39 @@ comme tout langage informatique, on peut enregistrer ces
 instructions dans un fichier (programme).
 
 Gardez à l'esprit que tout ligne commençant par \# est une ligne de commentaire qui ne
-sera donc pas executée
+sera donc pas executée par l'interpréteur Python.
+
+%\lstinputlisting{../exemples/script_0.py}
 
 \begin{enumerate}
-\item Éxecuter votre programme en passant dans le terminal la commande \texttt{python script\_0.py} puis commentez.
+\item Dans le terminal, choisir le répértoire de travail approprié. Puis passez dans le terminal la commande \texttt{python script\_0.py}. Ceci execute le programme \texttt{python script\_0.py}. Commentez.
 
 \item Ouvrez avec \texttt{emacs} le programme \texttt{script\_0.py}.
 
 \item La première ligne de votre script (version très simplifiée d'un programme)
-  est ce que l'on nomme le shebang (ou shabang).
+  est ce que l'on nomme le shebang.
 
 \item Que se passe t'il après avoir supprimé la première ligne du programme ?
 
-\item Que permet de faire l'instruction  \texttt{$\backslash$n} ?
+\item Que se passe t'il lorsque le code \texttt{$\backslash$n} est imprimé ?
 
 \item Décryptez la ligne \#12 du programme \texttt{script\_0.py}.
 
 \item Détaillez les commandes en charges de l'affichage des variables \texttt{a}, \texttt{b} et \texttt{c}.
-
-
 \end{enumerate}
+\begin{figure}  
+  \lstinputlisting{../exemples/script_0.py}
+  \caption{Contenu du fichier \texttt{script\_0.py}}
+  \label{polynome_script_0}
+\end{figure}
+
 
 
 \subsection{Un peu d'interaction avec votre programme}
 
 
 Assez rapidement, vous chercherez à proposer vos programmes à des utilisateurs.
-Nous allons donc introduite la notion de fonction principale \texttt{main()} que vous trouverez dans l'exemple
+Nous allons donc introduire la notion de fonction principale \texttt{main()} que vous trouverez dans l'exemple
 \texttt{conditions.py}.
 De plus, il sera nécessaire que l'utilisateur puisse interagir avec une interface sans avoir à intervenir
 dans les algorithmes que vous aurez mis en place.
@@ -93,46 +99,57 @@ dans les algorithmes que vous aurez mis en place.
 \begin{enumerate}
 \item Éxecuter votre programme en passant dans le terminal la commande \texttt{python conditions.py} puis commentez.
 
-\item Repérez le début du programme principale et son utilisation par \texttt{main()}.
+\item Repérez le début du programme principal et son utilisation par \texttt{main()}.
 
 \item Détaillez la fonctionnalité de la fonction \texttt{input()}
 
-\item De quel type sont les variables \texttt{name} et \texttt{number} ?
+\item De quel type sont les variables \texttt{name} et \texttt{number} ? Il est possible de demander à l'interpréteur Python cette information grâce à la fonction \texttt{type()}.
 
 \item Votre première condition et donc premier bloc d'instruction se trouve entre les lignes 28 et 33.\\
   Expliquez la différence entre \texttt{if}, \texttt{elif} et \texttt{else}.
 
-\item Entre les lignes 36 et 43, découvrez les mots cléfs \texttt{and}, \texttt{or} et \texttt{not}.\\
+\item Entre les lignes 36 et 43, découvrez les mots clefs \texttt{and}, \texttt{or} et \texttt{not}.\\
   Proposez une solution pour améliorer ce bloc d'instruction et ainsi prendre en
   compte le dernier cas, ignoré jusqu'à maintenant.
 
 
 \end{enumerate}
 
+\begin{figure}  
+  \lstinputlisting{../exemples/conditions.py}
+  \caption{Contenu du fichier \texttt{conditions.py}}
+  \label{polynome_conditions}
+\end{figure}
+
+
 \subsection{Un peu de mathématique}
 
 \begin{enumerate}
 \item Calculez la racine carrée de la valeur absolue de -1024.
-  Comment feriez vous en utilisant python ?
+  Comment feriez-vous en utilisant Python ? 
 
 \item Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
-  toutes les fonctions définies dans ce module.
+  des fonctions définies dans ce module.
   Pour simplifier, un module est un bout de code que l'on trouve dans un fichier
-  mettant à disposition un ensemble de fonctionnalité autour d'un thème commun.
-  Pour connaitre l'ensemble des possibilités du module \texttt{math}, il faut taper la commande
-  \texttt{help("numpy")} dans l'interpréteur de commande python.
+  mettant à disposition un ensemble de fonctionnalités autour d'un thème commun.
+  Pour connaître l'ensemble des possibilités du module \texttt{numpy}, il faut taper la commande
+  \texttt{help("numpy")} dans l'interpréteur de commande Python.
 
 
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
   La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}
 
-\item Ce qui fait la force du langage python est, entre autre, le nombre important de module.
-  Découvrez les modules \texttt{time} ou \texttt{random}.
+\item Ce qui fait la force du langage Python est, entre autre, le nombre important de modules.
+  Découvrez les modules \texttt{time} ou \texttt{random} à l'aide de la fonction \texttt{help()}.
 
 
 \end{enumerate}
 
+\begin{figure}  
+  \lstinputlisting{../exemples/scientifique.py}
+  \caption{Contenu du fichier \texttt{scientifique.py}}
+  \label{polynome_scientifique}
+\end{figure}
 
 
-
-\subsection{Manipuler les chaînes de caractères}
+%\subsection{Manipuler les chaînes de caractères}
