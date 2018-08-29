@@ -10,29 +10,34 @@ commande Python.
 \item Dans un terminal, tapez la commande \texttt{python} et commentez
   ce que vous voyez à l'écran.
 
-\item Utilisez l'invite de commande  de cette console python comme une
+\item Utilisez l'invite de commande  de cette console Python comme une
   calculatrice puis commentez.
 
 \item Affichez votre premier texte  à l'écran en utilisant la fonction
   print : \\ \texttt{print("Hello World")}
 
-\item Quittez l'interpréteur python en effectuant \texttt{Ctrl+D}
+\item Quittez l'interpréteur Python en effectuant \texttt{Ctrl+D}
 
 \end{enumerate}
+
+\noindent \textbf{Remarque:} C'est la version 2 de Python qui est ainsi utilisée.
+Pour utiliser la version 3 (recommandée) du langage et de son interpréteur,
+on tapera la commande \texttt{python3}.
 
 
 \subsection{Un peu plus qu'une calculatrice}
 
 Pour   cette  série   de   commandes,  vous   commencerez  par   ouvrir
-l'interpréteur de commandes python.
+l'interpréteur de commandes Python.
 
 \begin{enumerate}
 
 
 \item        Déclarez        plusieurs        variables        nommées
-  \texttt{a},\texttt{b},\texttt{c},\texttt{d},      \texttt{e}      et
-  \texttt{f} puis initialisez les avec  les valeurs suivantes : 5, 13,
-  17, 3,14159, 'bob' et 'bonjour'.\\ Exemple : \texttt{a = 5}
+  \texttt{a}, \texttt{b}, \texttt{c}, \texttt{d},      \texttt{e}      et
+  \texttt{f} puis initialisez les avec  les valeurs suivantes : \texttt{5}, \texttt{13},
+  \texttt{17}, \texttt{3.14159} (le séparateur décimal est le point),
+  \texttt{'bob'} et \texttt{"bonjour"}.\\ Exemple : \texttt{a = 5}
 
 
 
@@ -42,10 +47,10 @@ l'interpréteur de commandes python.
 \item  Affichez   le  type  de   chaque  variable  avec   la  commande
   \texttt{type()}.\\ Exemple : \texttt{type(a)}
 
-\item Faites la somme des variables \texttt{a} et \texttt{b} et affectez
+\item Calculez la somme des variables \texttt{a} et \texttt{b} et affectez
   le  résultat  à  une   variable  \texttt{sum}  que vous afficherez.
 
-\item Affectez la valeur 666 à la variable \texttt{a} puis affichez de
+\item Affectez la valeur \texttt{666} à la variable \texttt{a} puis affichez de
   nouveau la valeur de la variable \texttt{sum}.
 
 \item  Faites  le calcul  de  \texttt{a}  divisé par  \texttt{b}  puis
@@ -61,41 +66,46 @@ l'interpréteur de commandes python.
 
 \item  Proposez une  méthode pour  échanger le  contenu des  variables
   \texttt{a}   et   \texttt{b}   (n'utilisez   pas   de   langage   de
-  programmation).   Ensuite réalisez  cette méthode  en utilisant  les
-  commandes python que vous connaissez.
+  programmation)!  Réalisez  ensuite  cette méthode  en utilisant  les
+  commandes Python que vous connaissez.
 
 \end{enumerate}
 
 
 \subsection{Le premier programme Python}
 
-Afin d'exécuter  une suite  d'instructions plus complexe,  comme dans
-de nombreux langages  informatiques, on  peut enregistrer  ces
-instructions  dans un fichier (on parle de programme \emph{source}
-ou \emph{script} ou encore \emph{macro}).
+Afin  d'exécuter   une  suite   potentiellement  longue   et  complexe
+d'instructions, on peut
+préalablement enregistrer ces instructions dans un fichier et demander
+ensuite à l'interpréteur Python de  \og{}digérer\fg{} le contenu de ce
+fichier.   On  parle   d'exécution  d'un   code  \emph{source},   d'un
+\emph{script} ou d'une \emph{macro} Python.
 
+On utilise généralement un programme spécialisé dans l'édition
+de code informatique pour créer et éditer un tel fichier. Dans notre cas,
+on utilisera l'éditeur Emacs (commande \texttt{emacs}).
 
-Gardez à l'esprit  que toute séquence de caractères sur une ligne
-commençant par le caractère \#  est interprétée comme un commentaire
-et ne sera donc pas exécutée.
+Toute séquence de caractères sur une ligne
+commençant par le caractère \verb+#+  est considérée comme un commentaire
+et ne sera donc pas exécutée par l'interpréteur Python.
 
 \begin{enumerate}
 \item Dans le terminal, choisir le répértoire de travail approprié.
   Exécutez  le programme \texttt{script\_0.py} en  passant dans le
-  terminal  la commande  \texttt{python script\_0.py}  ou la  commande
+  terminal  la commande  \texttt{python3 script\_0.py}  ou la  commande
   \texttt{./script\_0.py}, comparez et commentez.
 
 \item Ouvrez avec \texttt{emacs} le programme \texttt{script\_0.py}.
 
-\item La première ligne de  votre script (version très simplifiée d'un
-  programme) est, ce que l'on nomme, le \emph{shebang}.
+\item La première ligne de  votre script (qui est une version
+  très simplifiée d'un programme) est ce que l'on nomme le \emph{shebang}.
 
 \item Que  se passe-t-il après  avoir supprimé  la première  ligne du
   programme ?
 
 \item Analysez la ligne \#12 du programme \texttt{script\_0.py}.
 
-\item Que se passe t'il lorsque le code \texttt{$\backslash$n} est imprimé ?
+\item Que se passe-t'il lorsque le code \texttt{$\backslash$n} est imprimé ?
 
 \item Détaillez les commandes en  charge de l'affichage des variables
   \texttt{a}, \texttt{b} et \texttt{c}.
@@ -166,7 +176,7 @@ et \texttt{number} ? Il est possible de demander à l'interpréteur Python cette
 
 \begin{enumerate}
 \item Calculez la racine carrée de la valeur absolue de -1024.
-  Comment feriez-vous en utilisant python ?
+  Comment feriez-vous en utilisant Python ?
 
 
 \item Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
@@ -174,14 +184,14 @@ et \texttt{number} ? Il est possible de demander à l'interpréteur Python cette
   Pour simplifier, un module est un bout de code que l'on trouve dans un fichier
   mettant à disposition un ensemble de fonctionnalités autour d'un thème commun.
   Pour connaître l'ensemble des possibilités du module \texttt{numpy}, il faut taper la commande
-  \texttt{help("numpy")} dans l'interpréteur de commandes python.
+  \texttt{help("numpy")} dans l'interpréteur de commandes Python.
 
 
 \item Ouvrez le programme \texttt{scientifique.py} et lisez les commandes successives.
   La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}.
 
 
-\item Ce qui fait la force du langage python est, entre autres, le nombre important de modules disponibles.
+\item Une force du langage Python est, entre autres, de disposer d'un nombre important de modules spécialisés.
   Découvrez les modules \texttt{time} ou \texttt{random} à l'aide de la fonction \texttt{help()}.
 
 
@@ -201,16 +211,16 @@ et \texttt{number} ? Il est possible de demander à l'interpréteur Python cette
 
 \begin{enumerate}
 
-\item Ouvrez avec  \texttt{emacs} le  programme \texttt{chaine.py} puis
+\item Editer le  fichier \texttt{chaine.py} puis,
   suite à l'analyse du programme, définissez le type de chaque variable.
 
 \item Expliquez ce que fait la ligne 23 de votre programme.
 
-\item Comparez le nombre d'éléments constituant les variables \texttt{list\_of\_word} et  \texttt{sentence}.
+\item Comparez le nombre d'éléments constituant les variables \texttt{list\_of\_words} et  \texttt{sentence}.
 
 \item Détaillez les fonctionalités des méthodes \texttt{split()}, \texttt{replace()} et \texttt{count()}.
 
-\item Proposez une solution pour accéder au cinquième élément de la variable \texttt{list\_of\_word}.
+\item Proposez une solution pour accéder au cinquième élément de la variable \texttt{list\_of\_words}.
 
 \item Comparez les deux méthodes d'affichage ligne~33 et ligne~37 puis faites un choix.
 
