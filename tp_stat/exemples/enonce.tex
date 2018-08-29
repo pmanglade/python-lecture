@@ -46,12 +46,14 @@ vous  étudierez le  programme \texttt{read\_file.py}.
 % Quels genres de tests t'attends-tu à ce que les étudiants fassent ?
 
 \item Lors de l'affichage de  la variable \texttt{lines}, chaque ligne
-  est encadrée par un caractère \texttt{'} (\emph{quote}) et les différentes
+  est encadrée par les caractères \texttt{'} (\emph{quote}) et les différentes
   lignes se trouvent
   séparées par des  virgules. L'ensemble est délimité  par des crochets
   \texttt{[]}.  Chaque  élément séparé d'un autre par une  virgule est accessible
   indépendamment.  Cet objet est de  type \texttt{list}, c'est un type
-  de  variable \emph{container}  qui  peut  lui-même  contenir   plusieurs  variables.
+  de  variable \emph{container}  qui  peut  contenir   plusieurs  variables accessibles
+  au moyen d'un indice. Cette variable se comporte comme un tableau unidimensionnel
+  composé de cases juxtaposées dans lesquelles on peut stocker d'autres variables.
   Commentez  les lignes  49 et  50 ; puis proposez  deux méthodes  pour
   accéder à l'ensemble des éléments de l'objet \texttt{lines}
 
@@ -75,14 +77,14 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
   éléments de l'objet \texttt{my\_list\_of\_heroes}.  %%
 \item  Créez deux  \texttt{list} afin  de séparer  les héros  dotés de
   pouvoirs de celui doté d'un compte en banque.  %%
-\item  Utilisez  la liste  vide  \texttt{[]}  pour vider  la  variable
+\item  Utilisez  la liste  vide  \texttt{[]}  pour \og{}vider\fg\  la  variable
   \texttt{my\_list\_of\_heroes},
   puis  vérifiez que  cette liste
   est effectivement vide.  %%
 \item Que fait la commande de la ligne 21 ?  %%
 \item  Afin de  déterminer la  position  d'un élément  connu dans  une
   liste, utilisez la commande \texttt{index(valeur)}.  Retrouvez ainsi
-  la position de \textit{Daredevil}.
+  la position de la chaîne \textit{"Daredevil"}.
 
 \item En vous aidant  du programme \texttt{exo\_list.py}, expliquez la
   différence entre \texttt{del} et \texttt{remove}
@@ -150,14 +152,14 @@ valeurs  contenues  dans  des listes.
 
 L'objectif de  cet exercice  est d'utiliser une  boucle basée sur l'instruction
 \texttt{while}
-afin  de  répéter  une  action tant  qu'une  condition  est  vérifiée.
+afin  de  répéter  une  action tant  qu'une  condition demeure  vérifiée.
 Inspirez-vous de  l'exemple \texttt{boucle\_while.py}  pour créer  un
 programme.
 
 \begin{enumerate}
 \item Demandez à  un utilisateur de trouver un  nombre mystère compris
   entre 0 et 1000  tant qu'il ne trouve pas la  valeur exacte qui sera
-  définie dans le programme.
+  définie arbitrairement dans le programme.
 
 \item  Après  chaque essai,  comparez  le  nombre proposé  au  nombre
   mystère et informez l'utilisateur s'il est plus grand ou plus petit.

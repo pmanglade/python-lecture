@@ -15,7 +15,7 @@ def main():
     debug = True
     
 
-    print("You will calculate value(s) for x to solve a*x^2+b*x+c=0")
+    print("Compute the root(s) x of the a*x^2+b*x+c=0 equation")
 
     input_param_a = input("Please, give me a value for a : ")
     input_param_b = input("Please, give me a value for b : ")
@@ -41,7 +41,7 @@ def main():
         print("x2 = %f"%x2)
         
     elif delta == 0:
-        print("Only one root")
+        print("Only one real root")
         x1= (-b)/(2*a)
         print("x1 = %f"%x1)
     

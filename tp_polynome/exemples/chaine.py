@@ -22,19 +22,19 @@ def main():
 
     sentence = begin_sentence + middle_sentence + end_sentence
 
-    new_sentence = sentence.replace("personne","buse")
+    new_sentence = sentence.replace("personne", "buse")
     print(new_sentence)
 
 
-    list_of_word = sentence.split()
-    print(list_of_word)
+    list_of_words = sentence.split()
+    print(list_of_words)
 
     tmp_word = "mille"
-    print("\nThere's %d times the word '%s'.\n"%(sentence.count(tmp_word),tmp_word))
+    print("\nThere's %d times the word '%s'.\n"%(sentence.count(tmp_word), tmp_word))
     # Ancienne methode d'affichage
 
     tmp_sentence = "There's {} times the word {!r}."
-    print(tmp_sentence.format(sentence.count(tmp_word),tmp_word))
+    print(tmp_sentence.format(sentence.count(tmp_word), tmp_word))
     # Methode moderne d'affichage
 
 
