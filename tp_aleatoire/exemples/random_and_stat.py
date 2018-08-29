@@ -27,31 +27,31 @@ if __name__ == "__main__":
         print("* Welcome in random_0  *")
         print("************************\n")
 
-        #random.seed(1)
-        random.seed(None)
+    #random.seed(1)
+    random.seed(None)
 
 
         
-        print("Define the expected random distribution")
-        input_N          = input("Number of values to generate ? ")
-        input_min_value  = input("Minimum value (a) ? ")
-        input_max_value  = input("Maximum value (b) ? ")
+    print("Define the expected random distribution")
+    input_N          = input("Number of values to generate ? ")
+    input_min_value  = input("Minimum value (a) ? ")
+    input_max_value  = input("Maximum value (b) ? ")
+    
 
-
-        N =int(input_N)
-        min_value =int(input_min_value)
-        max_value =int(input_max_value)
+    N =int(input_N)
+    min_value =int(input_min_value)
+    max_value =int(input_max_value)
                         
         
-        data      = bunch_of_random_integer(int(min_value),int(max_value),int(N))
-        tmp_value = 0
+    data      = bunch_of_random_integer(int(min_value),int(max_value),int(N))
+    tmp_value = 0
         
-        for element in data:
-            tmp_value = tmp_value + element
-
+    for element in data:
+        tmp_value = tmp_value + element
             
-        # Display
-        plt.hist(data,N, facecolor='g')
-        plt.show()
+            
+    # Display
+    plt.hist(data,N, facecolor='g')
+    plt.show()
     
         

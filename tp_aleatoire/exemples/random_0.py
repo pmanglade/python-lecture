@@ -35,26 +35,26 @@ if __name__ == "__main__":
         print("* Welcome in random_0  *")
         print("************************\n")
 
-        random.seed(1)
+    random.seed(1)
 
 
-        print("Define the expected random distribution")
+    print("Define the expected random distribution")
 
-        in_N          = input("Number of values to generate ? ")
-        in_min_value  = input("Minimum value from range ? ")
-        in_max_value  = input("Maximum  value from range ? ")
+    in_N          = input("Number of values to generate ? ")
+    in_min_value  = input("Minimum value from range ? ")
+    in_max_value  = input("Maximum  value from range ? ")
 
 
 
-        data = bunch_of_random_integer(int(in_min_value),int(in_max_value),int(in_N))
+    data = bunch_of_random_integer(int(in_min_value),int(in_max_value),int(in_N))
 
-        # Display
-        plt.hist(data,20, facecolor='g', alpha=0.75)
-        plt.show()
-
-        data = []
-        data = bunch_of_random_real(int(in_min_value),int(in_max_value),int(in_N))
-
-        # Display
-        plt.hist(data,20, facecolor='r', alpha=0.75)
-        plt.show()
+    # Display
+    plt.hist(data,20, facecolor='g', alpha=0.75)
+    plt.show()
+    
+    data = []
+    data = bunch_of_random_real(int(in_min_value),int(in_max_value),int(in_N))
+    
+    # Display
+    plt.hist(data,20, facecolor='r', alpha=0.75)
+    plt.show()

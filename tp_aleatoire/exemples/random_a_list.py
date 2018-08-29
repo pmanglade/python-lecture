@@ -22,14 +22,14 @@ if __name__ == "__main__":
 
 
 
-        list_of_particles = ['electron', 'muon', 'tau', 'up', 'down', 'charm', 'strange', 'top', 'bottom']
+    list_of_particles = ['electron', 'muon', 'tau', 'up', 'down', 'charm', 'strange', 'top', 'bottom']
 
 
-        # shuffle the list
-        random.shuffle(list_of_particles)
+    # shuffle the list
+    random.shuffle(list_of_particles)
 
 
-        answer = input("Would you like select randomly a particle ? (Y or N)\n")
-
-        # choose an element in the list
-        random.choice(list_of_particles)
+    answer = input("Would you like select randomly a particle ? (Y or N)\n")
+    
+    # choose an element in the list
+    random.choice(list_of_particles)
