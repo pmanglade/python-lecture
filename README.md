@@ -5,7 +5,7 @@
 Ce document contient le code source du support pédagogique des travaux
 pratiques d'Introduction au  Calcul Scientifique, enseignement proposé
 au troisième  semestre (L2) de la  Licence « Sciences, technologies,  santé »
-parcours  Physique  pour  les   parcours  standard  (pour  la  mineure
+parcours  Physique  pour  les   parcours  standard  (mineure
 Ingénierie)  et  CUPGE  à  l'Université  de  Caen
 Normandie (http://www.unicaen.fr/).
 
