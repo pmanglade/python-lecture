@@ -1,0 +1,272 @@
+%%\section{Exemples}
+
+\subsection{Découverte de l'interpréteur python}
+
+Pour ces quelques questions introductives, utiliser l'interpréteur de
+commande Python.
+
+\begin{enumerate}
+
+\item Dans un terminal, taper la commande \texttt{python3}. Lire ce qui s'affiche.
+
+\item Utiliser l'invite de commande  de cette console Python comme une
+  calculatrice. Entrer par exemples \verb-2+2- ou \verb+4*3+.
+
+\item Affichez votre premier texte  à l'écran en utilisant la fonction
+  print : \\ \texttt{print("Hello World")}
+
+\item Quittez l'interpréteur Python en effectuant \texttt{Ctrl+D}
+
+\end{enumerate}
+
+\noindent \textbf{Remarque:} C'est la version 3 de Python que nous utiliserons.
+Pour utiliser la version 2 (non recommandée pour cet enseignement) du langage et de son interpréteur,
+on tapera la commande \texttt{python2}.
+
+
+\subsection{Un peu plus qu'une calculatrice}
+
+Pour   cette  série   de   commandes, commencer  par   ouvrir
+l'interpréteur de commandes Python.
+
+\begin{enumerate}
+
+
+\item        Déclarer        plusieurs        variables        nommées
+  \texttt{a}, \texttt{b}, \texttt{c}, \texttt{d},      \texttt{e}      et
+  \texttt{f} en les initialisant avec les valeurs suivantes : \texttt{5}, \texttt{13},
+  \texttt{17}, \texttt{3.14159} (le séparateur décimal est le point),
+  \texttt{'bob'} et \texttt{"bonjour"}.\\ Exemple : \texttt{a = 5}
+
+
+
+\item  Affichez  à l'écran  la  valeur  de  chacune des  variables  en
+  utilisant la commande \texttt{print}. Remarquer que chaque variable
+  persiste dans la mémoire de l'ordinateur. D'une ligne sur l'autre
+  elle peuvent être réutilisées. 
+
+\item  Afficher   le  type  de   chaque  variable  avec   la  commande
+  \texttt{type()}.\\ Exemple : \texttt{type(a)}
+
+\item Calculer la somme des variables \texttt{a} et \texttt{b} et affecter
+  le  résultat  à  une   variable  \texttt{sum}. Faire afficher celle-ci.
+
+\item Affecter la valeur \texttt{666} à la variable \texttt{a} puis afficher de
+  nouveau la valeur de la variable \texttt{sum}.
+
+\item  Faire  le calcul  de  \texttt{a}  divisé par  \texttt{b}.
+
+\item  Faire  le calcul  de  \texttt{a}  divisé par  \texttt{d}.
+
+\item  Faire  la  différence  de \texttt{f}  et  de  \texttt{c}.
+
+\item Que donne la somme des variables \texttt{f} et \texttt{e} ?
+
+%\item  Proposez une  méthode pour  échanger le  contenu des  variables
+%  \texttt{a}   et   \texttt{b}   (n'utilisez   pas   de   langage   de
+%  programmation)!  Réalisez  ensuite  cette méthode  en utilisant  les
+%  commandes Python que vous connaissez.
+\item 
+
+\end{enumerate}
+
+Remarques : pour faire des opérations nous avons utilisés
+ce qui s'appelle en programmation des opérateurs
+(\verb_+_, \verb+*+, \verb+/+\ldots).
+L'opérateur le plus important d'un langage est l'opérateur d'affectation \verb+=+.
+Il permet de mettre de l'information dans une case de mémoire de l'ordinateur (une variable).
+Attention à ne pas le confondre avec le symbole $=$ utilisé en mathématiques qui traduit
+la similitude, l'égalité, ou encore l'équivalence de deux expressions. 
+
+
+
+\subsection{Premier exercice}
+Chaque variable dans un programme Python est une sorte de case
+dans la mémoire de la machine. En utilisant le nom de la variable
+on peut accéder à la case, y mettre de l'information (par exemple un
+nombre), ou utiliser l'information qui y est contenue.
+\begin{enumerate}
+\item Déclarer deux variables \verb+a+ et \verb+b+ et
+  leur affecter, par exemple les valeurs respectives 1, et 2.
+\item Considérer ces deux cases de mémoire \verb+a+ et \verb+b+.
+  À l'aide de ce qui précède trouver
+  une manière d'échanger leurs contenus.
+\item La méthode utilisée aurait-elle fonctionnée à l'identique
+  si les contenus initiaux avaient été
+  différents ? Le tester en affectant
+  d'autres valeurs aux variables \verb+a+ et \verb+b+ puis en
+  appliquant à nouveau exactement les mêmes instructions que
+  précédemment, et en vérifiant ensuite l'inversion ou non.
+\item Si votre méthode ne fonctionnait pas pour d'autres
+  contenus initiaux, recommencer l'exercice.
+  
+\item Refaire le même exercice mais en partant cette fois de trois
+  variables \verb+a+, \verb+b+, et \verb+c+, dont les contenus
+  seront échangés de sorte que \verb+b+ prenne la valeur dans \verb+a+,
+  \verb+c+ celle dans \verb+b+\ldots
+\end{enumerate}
+
+\subsection{Premier programme Python}
+
+Afin  d'exécuter   une  suite   potentiellement  longue   et  complexe
+d'instructions, on peut
+préalablement enregistrer ces instructions dans un fichier et demander
+ensuite à l'interpréteur Python de  \og{}digérer\fg{} le contenu de ce
+fichier.   On  parle   d'exécution  d'un   code  \emph{source},   d'un
+\emph{script} ou d'une \emph{macro} Python.
+
+On utilise généralement un programme spécialisé dans l'édition
+de code informatique pour créer et éditer un tel fichier
+(Environnement de Développement Intégré). Dans notre cas,
+on utilisera simplement un éditeur de texte Emacs
+(commande \texttt{emacs})\footnote{Attention à ne
+  pas confondre éditeur de texte et traitement de texte.
+  Le premier écrit du texte dans un format brut (ASCII, UTF-8\ldots)
+  dans un fichier ; le second sert à \emph{mettre en page} du
+  texte et écrit donc beaucoup d'autres informations que
+  le texte dans les fichiers qu'il produit. Un code python mis en
+  page avec libreOffice Writer ne pourra pas être interprété
+  directement par Python.}.
+
+
+Toute séquence de caractères sur une ligne
+commençant par le caractère \verb+#+  est considérée comme un commentaire
+et ne sera donc pas exécutée par l'interpréteur Python.
+
+\begin{enumerate}
+\item Dans le terminal, choisir le répertoire de travail approprié.
+  Exécuter  le programme \texttt{script\_0.py} en  passant dans le
+  terminal  la commande  \texttt{python3 script\_0.py}  ou la  commande
+  \texttt{./script\_0.py}, comparer les résultats obtenus.\\
+  NB : La commande \verb-chmod +x script_0.py- vous sera
+  certainement utile. 
+
+\item Ouvrir avec \texttt{emacs} le programme \texttt{script\_0.py}.
+
+\item La première ligne de  votre script (qui est une version
+  très simplifiée d'un programme) est ce que l'on nomme le \emph{shebang}.
+
+\item Que  se passe-t-il après  avoir supprimé  la première  ligne du
+  programme ?
+
+\item Analyser la ligne 10 du programme \texttt{script\_0.py}.
+
+\item Que se passe-t-il lorsque le code \texttt{$\backslash$n} est imprimé ?
+
+\item Détailler les commandes en  charge de l'affichage des variables
+  \texttt{a}, \texttt{b} et \texttt{c}.
+
+
+\end{enumerate}
+\begin{figure}  
+  \lstinputlisting{../exemples/script_0.py}
+  \caption{Contenu du fichier \texttt{script\_0.py}}
+  \label{polynome_script_0}
+\end{figure}
+
+
+
+
+
+\subsection{Un peu d'interaction avec votre programme}
+
+
+
+
+Nous  allons introduire  la  notion de  fonction
+principale   \texttt{main()}  que   vous   trouverez  dans   l'exemple
+\texttt{conditions.py}.
+
+
+\begin{enumerate}
+
+\item Ouvrir avec  \texttt{emacs} le  programme \texttt{conditions.py}
+  et l'executer.
+\item Ajouter des instructions \verb+print+
+  pour afficher des messages de votre choix avant et après
+  l'instruction \verb+main()+. Executer.
+  En déduire l'ordre dans lequel sont executées les instructions de
+  ce programme. 
+\item Expliquer la fonctionnalité de la fonction \texttt{input()}.
+\item De quels types sont les variables \texttt{name},
+  \texttt{input\_number},
+  et \texttt{number} ?
+  Il est possible de demander à l'interpréteur Python cette
+  information grâce à la fonction \texttt{type()}.
+
+
+\item Le premier test conditionnel amorce le bloc d'instructions
+  situé entre  les lignes 22  et 29.\\ Expliquer la  différence entre
+  \texttt{if}, \texttt{elif} et \texttt{else}.
+
+%2017-09-07 FM: !!! pas de or no not !!!
+\item  Entre   les  lignes  32   et  39,  découvrez  le   mot-clef
+  \texttt{and}. D'autres mots-clefs existent pour
+  exprimer une condition  : \texttt{or}  et \texttt{not}.\\
+  Proposer une manière de prendre en compte les cas non traité
+  correctement jusqu'ici dans la dernière série de tests.
+\end{enumerate}
+
+
+\begin{figure}  
+  \lstinputlisting{../exemples/conditions.py}
+  \caption{Contenu du fichier \texttt{conditions.py}}
+  \label{polynome_conditions}
+\end{figure}
+
+
+
+\subsection{Un peu de mathématiques}
+
+\begin{enumerate}
+\item Calculer la racine carrée de la valeur absolue de -1024.
+  Comment faire en utilisant Python ?
+  Il \textit{suffit} d'importer le module \texttt{numpy} et d'utiliser ensuite
+  des fonctions définies dans ce module.
+  
+  Pour simplifier, un module est un bout de code que l'on trouve dans un fichier
+  mettant à disposition un ensemble de fonctionnalités autour d'un thème commun.
+  Pour connaître l'ensemble des possibilités du module \texttt{numpy}, il faut taper la commande
+  \texttt{help("numpy")} dans l'interpréteur de commandes Python.
+
+\item Ouvrir le programme \texttt{scientifique.py} et lire les commandes successives.
+  La ligne 6 permet d'importer l'ensemble des fonctionnalités du module \texttt{numpy}.
+
+\item Une force du langage Python est de disposer d'un nombre important de modules spécialisés.
+  Découvrir par exemple les modules \texttt{time} ou \texttt{random} à l'aide de la fonction \texttt{help()}.
+\end{enumerate}
+
+
+\begin{figure}  
+  \lstinputlisting{../exemples/scientifique.py}
+  \caption{Contenu du fichier \texttt{scientifique.py}}
+  \label{polynome_scientifique}
+\end{figure}
+
+
+\subsection{Manipuler les chaînes de caractères}
+
+
+\begin{enumerate}
+
+\item Editer le  fichier \texttt{chaine.py} puis,
+  suite à l'analyse du programme, définir le type de chaque variable.
+
+\item Expliquer ce que fait la ligne 20 du programme.
+
+\item Comparer le nombre d'éléments constituant les variables
+  \texttt{list\_of\_words} et  \texttt{sentence} ; sachant que la fonction \verb+len()+
+  appliquée à une variable renvoie le nombre d'élément la constituant.
+  
+\item Détailler les fonctionalités des méthodes \texttt{split()}, \texttt{replace()} et \texttt{count()}.
+
+\item Proposer une solution pour accéder au cinquième élément de la variable \texttt{list\_of\_words}.
+
+\end{enumerate}
+
+
+\begin{figure}  
+  \lstinputlisting{../exemples/chaine.py}
+  \caption{Contenu du fichier \texttt{chaine.py}}
+  \label{polynome_chaine}
+\end{figure}

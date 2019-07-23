@@ -6,8 +6,6 @@
 from numpy import *
 #import numpy as np
 
-
-
 print("***************************")
 print("* Welcome in scientifique *")
 print("***************************\n")

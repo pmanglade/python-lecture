@@ -1,17 +1,21 @@
 %%\section{Exercices}
 
+Cette section propose de mettre en pratique certaines
+connaissances acquise à la section précédente.
 
-\subsection{Résolution de polynômes du second degré}
+À partir d'un état donné, les trois coefficients d'un polynôme
+du second degrés, il faudra écrire un programme manipulant
+cet état pour faire afficher la ou les racines de ce
+polynôme.
 
-Cet exercice  consiste à écrire un programme qui résoud une  équation du second degré  de la
-forme  $a.x^2+b.x+c =  0$.   Les variables  \texttt{a}, \texttt{b}  et
-\texttt{c}  sont  les  coefficients   de  l'équation  avec  \texttt{a}
-non nulle ; \texttt{x} est l'inconnue à déterminer.
+Pour rappel, soit  $f(x) = a.x^2+b.x+c$, où $a$, $b$, et $c$ sont les 
+ coefficients   de  l'équation  avec  $a$
+ non nul. La résolution de l'équation $f(x) = 0$
+ nécessite le calcul du
+ discriminant $\Delta =  b^2-4ac$.
 
-Pour rappel,  la résolution de cette  équation passe par le  calcul du
-discriminant $\Delta =  b^2-4ac$.\\ Par la suite, si  le 
+ Si  le 
 discriminant est :
-
 \begin{description}
   %%
 \item[positif], alors il existe deux solutions réelles :
@@ -33,25 +37,29 @@ discriminant est :
 %%
 \end{description}
 
+\subsection{Programmation de la résolution}
 
-Dans votre code vous suivrez ces étapes pour déterminer le nombre et les valeur des solutions de l'équation :
+
+
+Écrire votre code en suivant ces étapes pour déterminer le
+nombre et les valeur des solutions de l'équation :
 \begin{enumerate}
 %%
 
-\item Faites intervenir un utilisateur auquel vous demanderez d'entrer
+\item Faire intervenir un utilisateur auquel sera demandé d'entrer
   les valeurs des paramètres \texttt{a}, \texttt{b} et \texttt{c}.
 %%
-\item Affichez chacune des variables pour vérification.
+\item Afficher chacune des variables pour vérification.
 %%
-\item  Une fois  les  valeurs affectées à chaque variable, calculez  le
-  discriminant.\\ Pensez à importer les modules nécessaires !
+\item  Une fois  les  valeurs affectées à chaque variable, calculer  le
+  discriminant.\\ Penser à importer les modules nécessaires !
 %%
-\item  Testez le  résultat du  discriminant  puis, en  fonction de  cette
-  valeur, informez, par l'affichage d'un  message à l'écran, du nombre
+\item  Tester le  résultat du  discriminant  puis, en  fonction de  cette
+  valeur, aficher un  message à l'écran informant du nombre
   de solutions existantes.
 %%
-\item Calculez  les racines de l'équation et affichez  le résultat.
+\item Calculer  les racines de l'équation et afficher le résultat.
   %%
-\item Vérifiez \emph{manuellement} les résultats fournis par votre programme.
+\item Vérifier \emph{manuellement} les résultats fournis par le programme.
 
 \end{enumerate}

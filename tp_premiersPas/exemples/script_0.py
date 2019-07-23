@@ -7,10 +7,7 @@
 print("*********************************")
 print("* Welcome in this Python script *")
 print("*********************************\n")
-
-
 print("The script's name is: {} \n" .format( __file__))
-
 
 a = 42
 b = 3.14
@@ -20,16 +17,12 @@ d = True
 print (a)
 print (b)
 print (c)
-print (d)
 print ("\n\n")
+print (d)
 
-print ("Value a is equal to: {:f}".format(a))
-print ("Value b is equal to: {:d}".format(d))  # Pour afficher un nombre reel, utilisez {:f}
-print ("Sentence from The Hitchhiker's Guide to the Galaxy : \n {:s}".format(c))
+print ("Value a is equal to: {}".format(a))
+print ("Value b is equal to: {}".format(d)) 
+print ("Sentence from The Hitchhiker's Guide to the Galaxy : \n {}".format(c))
 
 
 
-# Note
-# :d for decimal
-# :f for float
-# :s for string
