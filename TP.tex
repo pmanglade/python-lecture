@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{dsfont}
 \usepackage{enumerate}
+\usepackage{enumitem}
 \usepackage{epic}
 \usepackage{eepic}
 \usepackage{eepicemu}
@@ -24,6 +25,7 @@
 \usepackage{gensymb}
 \usepackage[dvips]{geometry}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{import} % To use \subimport and import stuff
 \usepackage[utf8]{inputenc}
 %\usepackage{kpfonts}
@@ -197,17 +199,13 @@
 \pagebreak
 
 
-\section{Écriture et lecture de données}
-\subimport{./tp_io/exercices/}{enonce.tex}
-\pagebreak
+
 
 %\subimport{./tp_stat/}{exo.tex}
 %\section{Pour aller plus loin}
 %\subimport{./tp_stat/exemples/}{enonce.tex}
 %\pagebreak
-\section{Statistiques}
-\subimport{./tp_stat/exercices/}{enonce.tex}
-\pagebreak
+
 
 \section{Dérivation}
 \subimport{./tp_derivation/exercices/}{enonce.tex}
@@ -222,15 +220,26 @@
 \subimport{./tp_dl/exercices/}{enonce.tex}
 \pagebreak
 
+% Recherche des zéros d'une fonction
+\subimport{./tp_zero/exercices/}{enonce.tex}
+\pagebreak
+\section{Écriture et lecture de données [Facultatif]}
+\subimport{./tp_io/exercices/}{enonce.tex}
+\pagebreak
+\section{Statistiques[Facultatif]} %Nécessite d'avoir fait tp_io
+\subimport{./tp_stat/exercices/}{enonce.tex}
+\pagebreak
+
+
 %\subimport{./tp_aleatoire/}{exo.tex}
-\section{Des aléas dans la machine}
+\section{Des aléas dans la machine [Facultatif]}
 \subimport{./tp_aleatoire/exemples/}{enonce.tex}
 \pagebreak
 
 \subimport{./tp_aleatoire/exercices/}{enonce.tex}
 \pagebreak
 
-\subimport{./tp_zero/exercices/}{enonce.tex}
+
 
 
 

@@ -1,14 +1,30 @@
 %%\section{Exemples}
 
 
+En calcul scientifique il est fréquent de travailler avec un grand nombre
+(plusieurs milliards par exemple) de variables. Il est alors impossible de
+leur donner des noms individuels, puis
+de les manipuler avec des instructions utilisant de tels noms.
 
+En Python les outils de base pour gérer de grand nombre de variable
+sont les listes (\verb+list+), et les boucles \verb+for+ ou \verb+while+.
+
+Et comme il convient de toujours vérifier les résultats que fourni un code, et
+que vérifier une à une les valeurs d'un grand nombre de variables est
+souvent délicat, cette section servira également d'introduction au tracé de
+graphiques avec Python.
 
 \subsection{Manipulation des listes}
 Cet exercice consiste à parcourir des objets de type \texttt{list}.
 
 \begin{enumerate}
-\item  Ouvrez   le  programme  \texttt{exo\_list.py}  et   faites  les
-  modifications  nécessaires pour  afficher  les premier  et  dernier
+\item Trouvez dans le code du programme \texttt{exo\_list.py} un objet
+  de type liste.
+\item Testez la fonction \verb+len()+ sur un tel objet. Que fait-elle ?
+\item Soit \verb+L+ un objet de type liste, testez ce que retourne
+  les syntaxes \verb+L[0]+, \verb+L[1]+, \verb+L[len(L)-1]+, \verb+L[len(L)]]+. 
+\item  Dans le programme, faites  les
+  modifications  nécessaires pour  afficher  les premier et  dernier
   éléments de l'objet \texttt{my\_list\_of\_heroes}.  %%
 \item  Créez deux  \texttt{list} afin  de séparer  les héros  dotés de
   pouvoirs de celui doté d'un compte en banque.  %%
@@ -16,7 +32,7 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
   \texttt{my\_list\_of\_heroes},
   puis  vérifiez que  cette liste
   est effectivement vide.  %%
-\item Que fait la commande de la ligne 21 ?  %%
+\item Que fait la commande de la ligne 20 ?  %%
 \item  Afin de  déterminer la  position  d'un élément  connu dans  une
   liste, utilisez la commande \texttt{index(valeur)}.  Retrouvez ainsi
   la position de la chaîne \textit{"Daredevil"}.
@@ -27,10 +43,12 @@ Cet exercice consiste à parcourir des objets de type \texttt{list}.
 \item Jusqu'à maintenant l'objet de type \texttt{list} utilisé compte quelques
   éléments. Dès lors que vous  devrez gérer un grand nombre d'éléments,
   il faudra  automatiser le parcours  de vos ensembles.   Décrivez les
-  lignes 33 et 34 du programme.
+  lignes 25 et 26 du programme.
 \end{enumerate}
-\lstinputlisting{exo_list.py}
-
+\begin{figure}  
+  \lstinputlisting{../exemples/exo_list.py}
+  \caption{Contenu du fichier \texttt{exo\_list.py}}
+\end{figure}
 
 \subsection{Les boucles  \texttt{for}}
 
@@ -38,14 +56,12 @@ L'objectif  de cet  exercice est  d'utiliser les  boucles basées sur
 l'instruction \texttt{for} afin  de  parcourir  des  ensembles  de
 valeurs  contenues  dans  des listes.
 
-
-
 \begin{enumerate}
 \item Vous  étudierez le programme \texttt{boucle\_for.py}.   Les mots
   clefs \texttt{for} et \texttt{in} séparent \texttt{heros}, qui prend
   successivement    les    différentes    valeurs    contenues    dans
-  \texttt{my\_list\_of\_heroes}.  Détaillez la  différence entre la
-  boucle commençant à la ligne 22 et la boucle commençant à ligne 35.
+  \texttt{my\_list\_of\_heroes}.  Détaillez la  différence entre les
+  boucles commençant aux lignes 20 et 30.
 
 \item La boucle que vous avez  utilisée jusqu'à présent se base sur une
   liste déjà existante.  Toutefois,  il est utile d'effectuer $N$
@@ -56,11 +72,25 @@ valeurs  contenues  dans  des listes.
   \begin{itemize}
   \item[$\ast$]  Créez un  nouveau  programme \texttt{boucle\_for\_2.py}  pour
     mettre en \oe{}uvre cette boucle.
-  \item[$\ast$] Calculez la factoriellle de \texttt{N}\footnote{factorielle de
-    $N$, notée $N!$~=~$1 \times 2 \times... \times N-1 \times N$ et $1! = 0! = 1$}.
-  \end{itemize}
+  \item Testez et expliquez les instructions suivantes.
+\begin{verbatim}
+N = 6
+j=0
+L=[]
+for i in range(6):
+  j=j+i
+  L.append(j)
+\end{verbatim}
 
-\lstinputlisting{boucle_for.py}
+  \item[$\ast$] Calculez la factorielle de \texttt{N}.
+    Rappel : factorielle de
+      $N$, notée $N!=1 \times 2 \times... \times N-1 \times N = (N-1)! \times N $ et $1! = 0! = 1$.
+    \item Calculez les 10 premiers termes de la suite de Fibonacci sachant que $F_0=0$, $F_1=1$, et $F_n =F_{n-1}+F_{n-2}$. 
+  \end{itemize}
+\begin{figure}  
+  \lstinputlisting{../exemples/boucle_for.py}
+  \caption{Contenu du fichier \texttt{boucle\_for.py}}
+\end{figure}
 
 \item    Créez   un    nouveau   programme    que   vous    appellerez
   \texttt{boucle\_for\_3.py}.
@@ -72,10 +102,7 @@ valeurs  contenues  dans  des listes.
   \item[$\ast$] Pour chaque valeur \texttt{x} de l'ensemble des entiers de 0
     à \texttt{N} calculez soit la  valeur $2\times x+1$ pour produire
     des nombres impairs, soit $2\times x$ pour des nombres pairs.
-  \item[$\ast$]    Sauvegardez     votre    résultat    dans     un    fichier
-    en mode textuel (\texttt{ASCII}\footnote{American  Standard  Code  for  Information
-      Interchange}).
-% Un fichier ascii ou un fichier texte de base ?
+  \item[$\ast$]    Sauvegardez     votre    résultat    dans     un    fichier.
   \end{itemize}
 
 \end{enumerate}
@@ -104,7 +131,11 @@ programme.
 
 \end{enumerate}
 %%
-\lstinputlisting{boucle_while.py}
+
+\begin{figure}  
+  \lstinputlisting{../exemples/boucle_while.py}
+  \caption{Contenu du fichier \texttt{boucle\_while.py}}
+\end{figure}
 
 
 \subsection{Vos premiers graphiques avec matplotlib}
@@ -114,6 +145,8 @@ d'utilisation du  module \texttt{matplotlib}. À partir  de cet exemple,
 créez  un programme  pour  tracer  la fonction  $f(x)=\sin  x$ avec  x
 compris entre 0 et 7.
 
+Une liste de codes simples pour modifier l'affichage des courbes
+à l'adresse :\\ \url{https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html}.
 Pour vous exercer, modifiez les paramètres suivants :
 
 \begin{enumerate}
@@ -128,28 +161,30 @@ Pour vous exercer, modifiez les paramètres suivants :
 
 
 \end{enumerate}
-\lstinputlisting{plot.py}
+\begin{figure}  
+  \lstinputlisting{../exemples/plot.py}
+  \caption{Contenu du fichier \texttt{plot.py}}
+\end{figure}
+% \subsection{Pour aller plus loin avec matplotlib {\sc [Facultatif]}}
 
-\subsection{Pour aller plus loin avec matplotlib {\sc [Facultatif]}}
+% Vous aurez à écrire un programme afin  de tracer la carte de France et
+% ses principaux cours d'eau.  Vous allez :
 
-Vous aurez à écrire un programme afin  de tracer la carte de France et
-ses principaux cours d'eau.  Vous allez :
+% \begin{enumerate}
+% \item Lire les fichiers \texttt{map.dat} et \texttt{river.dat}. Chaque
+%   colonne  de  ces fichiers  permet  de  remplir  des objets  de  type
+%   \texttt{list} que  nous nommerons  \texttt{map\_x}, \texttt{map\_y},
+%   \texttt{river\_x} et \texttt{river\_y}.
+% \item Choisir la forme des symboles représentant les points à tracer.
 
-\begin{enumerate}
-\item Lire les fichiers \texttt{map.dat} et \texttt{river.dat}. Chaque
-  colonne  de  ces fichiers  permet  de  remplir  des objets  de  type
-  \texttt{list} que  nous nommerons  \texttt{map\_x}, \texttt{map\_y},
-  \texttt{river\_x} et \texttt{river\_y}.
-\item Choisir la forme des symboles représentant les points à tracer.
+% \item Sur un même graphique,  tracer les contours $map\_y = f(map\_x)$
+%   et $river\_y = f(river\_x)$.
 
-\item Sur un même graphique,  tracer les contours $map\_y = f(map\_x)$
-  et $river\_y = f(river\_x)$.
-
-\item Utiliser les options adéquates  pour tracer en noir les contours
-  de la carte et en bleu les cours d'eau.
+% \item Utiliser les options adéquates  pour tracer en noir les contours
+%   de la carte et en bleu les cours d'eau.
 
 
-\end{enumerate}
+% \end{enumerate}
 
 
 

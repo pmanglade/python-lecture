@@ -5,40 +5,76 @@ dérivation numérique.
 
 \subsection{Précision}
 Cet exercice vise à étudier les erreurs commises lors de l'emploi d'une
-méthode de dérivation numérique.
+méthode de dérivation numérique. La méthode décrite ici est
+la plus simple des méthodes dites par \emph{différences finies}. 
 \begin{enumerate}
   %%
 \item Écrire une fonction capable de calculer la dérivée d'une fonction
   (de  $\mathbb{R}  \longrightarrow  \mathbb{R}$)   en  un  point  $x$
   quelconque en utilisant la formule :
-  $$f'(x) \simeq \frac{f(x+h)-f(x-h)}{2h}\,;$$  où $h$ est un  paramètre qui
+  \begin{equation}
+    f'(x) \simeq D^f(x) = \frac{f(x+h)-f(x-h)}{2h}\,; \label{eqDiffFinies}
+  \end{equation}
+  où $h$ est un  paramètre qui
   pourra   être   choisi   lors   de   l'appel   de   cette   fonction
   \cf{function.py}.  %%
-\item Utiliser cette fonction  pour calculer $\frac{d\cos(x)}{dx}$ sur
-  100 points répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
-  Ensuite tracer la  fonction $\cos(x)$ et les points  calculés sur un
+\item Utiliser cette fonction  pour calculer
+  $D^{\cos} (x)\approx \frac{d\cos(x)}{dx}$ sur
+  $n=100$ points $x_i$ répartis uniformément sur $[0\,;\,\,2\pi]$ \cf{mesh.py}.
+  Ensuite tracer la  fonction $\cos(x)$ et les points de $D^{\cos} (x)$
+  calculés sur un
   graphique \cf{plot.py}.  %%
-\item   Pour ce même lot de 100   points,  calculer   les  valeurs   de
+\item  Pour ce même lot de 100 points,  calculer   les  valeurs   de
   $\frac{d\cos(x)}{dx}   =   -\sin(x)$   puis  faire   la   différence
-  $\varepsilon$ entre dérivée numérique et fonction analytique %%
+  entre dérivée numérique et dérivée analytique :
+  $$\varepsilon(x) = D^{\cos}(x)+\sin(x)$$%%
 \cf{loop.py}.
-\item Calculer  la moyenne  de la valeur  absolue de  cette différence
-  $\bar{\varepsilon}$.  %%
-\item Avec  une échelle  log/log, tracer  l'évolution de  cette différence
-  $\bar{\varepsilon}$         en        fonction         de        $h$
-  ($\bar{\varepsilon}=f(h)$).\\ Les valeurs choisies pour $h$ suivront
+\item Calculer la moyenne
+  de la valeur  absolue de  cette différence
+  $\bar{\varepsilon} = \frac{1}{n}\sum_n |\varepsilon(x_i)|$.
+\item Avec  une échelle  log/log \cf{plot.py},
+  tracer  l'évolution de  cette différence
+  $\bar{\varepsilon}$         en        fonction         de la
+  valeur choisie pour $h$ lors de la dérivation par différences finies. 
+  On aura donc une fonction calculant $\bar{\varepsilon}(h)$.
+
+  Les calculs décrits précédemment 
+  devront donc être fait pour un (grand) ensemble de valeur de $h$ : ${h_i}$ :
+  penser à programmer des fonctions afin de réutiliser les instructions.
+  
+  Les valeurs choisies pour $h$ suivront
   une  suite  géométrique  de  raison  $2^\frac{1}{2}$  et  de  valeur
   initiale  $10^{-6}$ \cf{loop.py}.   On  utilisera  les 25  premières
   valeurs.  Qu'observe-t-on ?  Comment  choisir la meilleure valeur de
   $h$ pour dériver numériquement ?
-\item  Tracer la  dérivée numérique  (pour une  valeur de  $h$ choisie
-  arbitrairement)   et    la   dérivée   analytique   sur    un   même
+\end{enumerate}
+
+Les questions précédentes nous ont permis de mettre en évidence
+les erreurs liées à l'utilisation de nombre à vrigule \emph{flottante}
+pour faire des calculs numériques. Si la précision des calculs en machine
+avait été infinie, on aurait observé que :
+$\lim_{h\rightarrow 0}\bar{\varepsilon}(h) = 0$.
+
+Dans les questions qui suivent nous allons reprendre l'analyse de la fonction
+$D_{\cos} (x)$
+afin de montrer que les erreurs commises sont parfaitement analysables
+à l'aide de développement limités.
+
+\begin{enumerate}[resume]
+\item  Tracer la  dérivée numérique $D^{\cos} (x)$
+  (pour une  valeur de  $h$ choisie
+  arbitrairement, par exemple $h=0,001$)
+  et    la   dérivée   analytique  de $\cos(x)$  sur    un   même
   graphique. Peut-on observer facilement la différence ?
 \item  Tracer   la  différence   entre  dérivée  numérique   et  calcul
   analytique.
 \item Comparer la forme de  la fonction obtenue avec $-\alpha \sin(x)$
-  en choisissant de manière appropriée $\alpha$.  Expliquer ce qui est
-  observé à partir du développement limité de $\cos(x)$ autour de $0$.
+  en choisissant de manière appropriée $\alpha$.
+\item Écrire la dérivée à l'ordre 3 de $\cos(x)$.
+  Ensuite, expliquer ce qui est
+  observé en utilisant les développement limités à l'ordre 5 autour de $x$
+  de $f(x\pm h)$ et en insérant ces expressions dans la formule de différences
+  finies (éq.~\ref{eqDiffFinies}). 
 \end{enumerate}
 
 \subsection{Autres formules de dérivation}
@@ -48,21 +84,33 @@ section vise à en programmer quelques-unes et à les comparer.
 \begin{enumerate}
 \item Programmer les fonctions de dérivation utilisant les formules suivantes :
   \begin{eqnarray*}
-f'(x) &=& \frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}\,; \\
-f'(x) &=& \frac{f(x+3h)-9f(x+2h)+45f(x+h)-45f(x-h)+9f(x-2h)-f(x-3h)}{60h}.
+ D^f_2(x) &=& \frac{-f(x+2h)+8f(x+h)-8f(x-h)+f(x-2h)}{12h}\,; \\
+  D^f_3(x)&=&\frac{f(x+3h)-9f(x+2h)+45f(x+h)-45f(x-h)+9f(x-2h)-f(x-3h)}{60h}.
   \end{eqnarray*}
 Les coefficients de ces fonctions sont calculés de manière à annuler de plus en
-plus de termes du développement limité de la fonction $f$ (voir le cours en L3 de Physique).
-\item Des formules non-symétriques existent également. En voici quelques-unes :
+plus de termes du développement limité de la fonction $f$ (l'obtention des ces formules
+sera étudié en cours de
+calcul scientifique 2).
+\item Des formules non-symétriques autour de $x$ existent également. En voici quelques-unes :
    \begin{eqnarray*}
-f'(x) &=& \frac{f(x+h)-f(x)}{h}\,;\\
-f'(x) &=& \frac{-3f(x)+4f(x+h) -f(x+2h)}{2h}\,;\\
-f'(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}.
+D_d^f(x) &=& \frac{f(x+h)-f(x)}{h}\,;\\
+D_{d1}^f(x) &=& \frac{-3f(x)+4f(x+h) -f(x+2h)}{2h}\,;\\
+D_{d2}^f(x) &=& \frac{-15f(x)+16f(x+h) -f(x+4h)}{12h}.
   \end{eqnarray*}
  Programmer les fonctions de dérivation correspondantes. Ces fonctions peuvent être utilisées avec $h>0$ ou $h<0$.
-\item  À nombres  d'évaluations de  la fonction  $f$ égaux,  comparer la
+\item  {\sc [facultatif]} À nombre  d'évaluations de  la fonction  $f$ égaux,  comparer la
   précision moyenne de chacune de  ces méthodes sur un graphique (pour
-  des valeurs de $h$ comprises entre $0,001$ et $1$).
+  des valeurs de $h$ comprises entre $0,001$ et $1$). Pour cela on suivra à chaque fois le plan de l'exercice du
+  début de cette section :
+  \begin{enumerate}
+  \item choisir une fonction à dériver ;
+  \item choisir un intervalle et son échantillonnage ;    
+  \item pour chaque fonction de dérivation définir et calculr  
+    $\bar{\varepsilon}(h)/M$, où $M$ est le nombre d'évaluations de
+    la fonction $f$ utilisées pour le calcul de la dérivée de $f$ en
+    un point.
+  \item Tracer l'évolution des fonctions précédentes en fonction de $h$. 
+    \end{enumerate}
 \end{enumerate}
 
 
@@ -83,38 +131,34 @@ $$f'(x)=  \frac{f(x+h)+f(x-h)-2f(x)}{h^2}.$$  Comparer l'évolution  de
   comparaison \og{} sur papier \fg{} des deux méthodes.
 \end{enumerate}
 
-\subsection{Dérivées d'une série de points régulière \sc{[Facultatif]}}
 
-Ces méthodes de dérivation numérique  peuvent être utiles pour dériver
-des fonctions dont la forme analytique est complexe et pour lesquelles
-on dispose juste d'une série de points (un échantillon).
-À titre d'exercice nous allons
-générer une  telle série de points  dans un fichier, puis  calculer la
-dérivée.
 
-\begin{enumerate}
-\item Écrire un programme générant  un fichier contenant deux colonnes
-  \cf{file.py}. Dans  la première  on trouvera les  valeurs de  $x$ et
-  dans la seconde celles de $y=f(x)$ ; où $f$ sera une fonction de votre
-  choix. Générer  cent points ($x$,$y$) sur un  intervalle $[a\,;\,b]$  de votre
-  choix.
-\item Écrire un autre programme capable de relire ce fichier.
-\item  Combien de  valeurs de  la  dérivée peut-on  calculer avec  une
-  formule de dérivation centrée ?
-\item  Écrire  une fonction  capable  de  calculer  la dérivée  de  la
-  fonction échantillonnée dans le fichier pour chacun des points.
-\end{enumerate}
+% \subsection{Dérivées d'une série de points régulière \sc{[Facultatif]}}
 
-\subsection{Dérivées de séries de points irrégulières \sc{[Facultatif]}}
+% Ces méthodes de dérivation numérique  peuvent être utiles pour dériver
+% des fonctions dont la forme analytique est complexe et pour lesquelles
+% on dispose juste d'une série de points (un échantillon).
+% À titre d'exercice nous allons
+% générer une  telle série de points  dans un fichier, puis  calculer la
+% dérivée.
 
-Reproduire le même  travail, mais cette fois avec une  série de points
-distribués  de manière  irrégulière sur  l'intervalle $[a\,;\,b]$.  Il
-faudra donc  calculer à chaque  fois de nouveaux coefficients  pour la
-dérivation.
+% \begin{enumerate}
+% \item Écrire un programme générant  un fichier contenant deux colonnes
+%   \cf{file.py}. Dans  la première  on trouvera les  valeurs de  $x$ et
+%   dans la seconde celles de $y=f(x)$ ; où $f$ sera une fonction de votre
+%   choix. Générer  cent points ($x$,$y$) sur un  intervalle $[a\,;\,b]$  de votre
+%   choix.
+% \item Écrire un autre programme capable de relire ce fichier.
+% \item  Combien de  valeurs de  la  dérivée peut-on  calculer avec  une
+%   formule de dérivation centrée ?
+% \item  Écrire  une fonction  capable  de  calculer  la dérivée  de  la
+%   fonction échantillonnée dans le fichier pour chacun des points.
+% \end{enumerate}
 
-\begin{figure}
-\lstinputlisting{../exemples/file.py}\caption{file.py}
-\end{figure}
+
+%\begin{figure}
+%\lstinputlisting{../exemples/file.py}\caption{file.py}
+%\end{figure}
 
 \begin{figure}
 \lstinputlisting{../exemples/function.py}\caption{function.py}
