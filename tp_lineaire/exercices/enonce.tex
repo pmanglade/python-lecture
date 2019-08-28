@@ -1,0 +1,161 @@
+%%
+
+D'après Wikipedia \og{}L’algèbre linéaire est la branche des mathématiques
+qui s'intéresse aux espaces vectoriels et aux transformations linéaires,
+formalisation générale des théories des systèmes d'équations linéaires.\fg{}
+C'est aussi l'un des domaines clefs du calcul scientifique car nombre de
+problèmes peuvent être simulés/résolus grâce à la représentation de
+grandeur physique dans des espaces multidimensionnels
+(souvent des milliars de dimensions).
+
+Ces aspects de simulation de physique en calcul scientifique sont
+toutefois hors de la portée de ce cours. Ici nous nous contenterons
+d'utiliser une méthode de résolution élémentaires appliquée à
+des systèmes d'équations. L'objectif étant essentiellement d'apprendre
+à bien manipuler les listes et boucles vues précédemment.
+
+\subsection{Petit système d'équations}
+\begin{enumerate}
+  \item Soit $b=(11,5,13)$, \[a=\left(
+        \begin{array}{ccc}
+          3 & 2 & -1 \\
+          1 & 2 & -1 \\
+          2 & 4 & 5 
+          \end{array}
+        \right), \]
+      et $x = (x_0, x_1, x_2)$, écrire le système d'équation correspondant à
+      $$ b=ax.$$
+  
+\item En procédant à des combinaisons bien choisies de lignes résoudre
+  manuellement le système d'équations suivant :
+  \[
+    \left\{
+      \begin{array}{rcl}
+        11 & = & 3x_0 + 2x_1 -x_2 \\
+        5  & = & x_0 + 2x_1 -x_2 \\
+        17 & = & 2x_0+4x_1 + 5x_2
+      \end{array}
+    \right.
+  \]
+  De bons choix permettent de supprimer plusieurs inconnues d'un seul coup.
+\item Représentation en machine du système d'équation :
+  \begin{enumerate}
+  \item Écrire un programme \verb+lineaire1.py+
+  \item Y déclarer une liste \verb+b=[11,5,17]+.
+  \item Y déclarer une liste de liste \verb+a=[[3,2,-1],[1,2,-1],[2,4,5]]+.
+  \item À quoi correspondent les chiffres de la liste imprimées en faisant
+    \verb+print(a[0])+, en faisant \verb+print(a[1])+ ?
+  \item Trouver comment faire imprimer le second élément de \verb+a[2]+.
+  \item À l'aide d'une boucle \verb+for+ remplacer les éléments \verb+a[0][i]+
+    par ceux obtenues en calculant \verb+a[0][i] - a[1][i]+. De même remplacer
+    \verb+b[0]+ par \verb+b[0]-b[1]+.
+  \item Faire imprimer \verb+a+ et \verb+b+ par le programme. Expliciter en terme
+    de combinaison de lignes du sytème précédent l'opération réalisée. 
+  \end{enumerate}
+\item Résolution en machine du sytème :
+   \begin{enumerate}
+   \item Continuer le programme. Cette fois programmer le calcul de la différence
+     entre la ligne 3 et 2 fois la ligne 2 du système. Le résultat viendra prendre la
+     place de la ligne 3.
+   \item Soit $a'$ la matrice et $b'$ le vecteur obtenus suite à ces deux combinaisons de lignes.
+     Constater que $x_0$ et $x_2$ peuvent être calculés aisément puisque $b'=a'x$.
+   \item Les faire calculer par le programme.
+   \item En utilisant les valeurs de \verb+a[1]+, \verb+b[1]+, et les deux éléments de solution
+     déjà trouvés, programmer le calcul de $x_1$.
+   \item Insérer les trois valeurs trouvées dans une liste \verb+x+ et les faire imprimer par le programme.
+     
+  \item Que se passe-t-il si on ré-exécute le même programme en ajoutant au début
+     (après avoir remplis \verb+b+) \verb+b[2] = 24+ ? Les valeurs trouvées pour $x_1$, $x_2$, et $x_3$
+     sont-elles solutions du système d'équations suivant :
+     \[
+       \left\{
+         \begin{array}{rcl}
+           11 & = & 3x_0 + 2x_1 -x_2 \\
+           5  & = & x_0 + 2x_1 -x_2 \\
+           24 & = & 2x_0+4x_1 + 5x_2
+         \end{array}
+       \right. \,?
+     \]    
+  
+   \item Que se passe-t-il si on ré-exécute le même programme en ajoutant au début
+     (après avoir remplis \verb+a+) \verb+a[1][2] = 1+ ? Les valeurs trouvées pour $x_1$, $x_2$, et $x_3$
+     sont-elles solutions du système d'équations suivant :
+     \[
+       \left\{
+         \begin{array}{rcl}
+           11 & = & 3x_0 + 2x_1 -x_2 \\
+           5  & = & x_0 + 2x_1 +x_2 \\
+           17 & = & 2x_0+4x_1 + 5x_2
+         \end{array}
+       \right. \,?
+     \]    
+     
+   \end{enumerate}
+ \end{enumerate}
+
+ \subsection{Pivot de Gauss simplifié}
+ Dans la section précédente nous avons programmé une résolution
+ analytique d'un système d'équation et surtout souligné ---
+ ce que l'on n'ignorait pas --- le fait
+ qu'une telle résolution est dépendante des coefficients de $a$.
+ Le programme \verb+lineaire1.py+ est donc de peu d'utilité puisque
+ adapté uniquement à calculer les solutions d'un système déjà résolu.
+
+ Pour obtenir un programme utile, il nous faut une méthode fonctionnant
+ indépendamment (ou presque) des coefficients de $a$. Cet algorithme
+ est une version simplifiée du pivot de Gauss.
+
+ Notons $a_{ij}$ les éléments de $a$. Si pour toute les lignes $i$ ($i>0$)
+ on remplace la ligne par elle-même moins $a_{i0}/a_{00}$ fois la ligne zéro,
+ on obtient une matrice $a'$ de la forme :
+ \[
+   a' = \left(
+     \begin{array}{ccc}
+       a_{00} & a_{01} & a_{02} \\
+       0 & a'_{11} & a'_{12} \\
+       0 & a'_{21} & a'_{22}       
+     \end{array}
+   \right).
+ \]
+
+ On peut réitérer ce processus en retirant à toutes les lignes $i$ ($i>1$)
+ $a_{i1}/a_{01}$ fois la ligne 1.
+
+ La matrice $a''$ obtenue aura alors la forme suivante :
+  \[
+   a'' = \left(
+     \begin{array}{ccc}
+       a_{00} & a_{01} & a_{02} \\
+       0 & a'_{11} & a'_{12} \\
+       0 & 0 & a''_{22}        
+     \end{array}
+   \right).
+ \]
+
+ Dans le cas de notre matrice 3x3 nous disposons alors d'une forme triangulaire et il est facile d'obtenir
+ les solutions du système d'équation $b''=a''x$.
+
+ Tel que décris ici l'algorithme est celui d'un pivot de Gauss simplifié essentiellement
+ car il est limité à un système de trois
+ équations à trois inconnus et parce qu'il ne gère pas le cas où un coefficient nul serait sur la diagonal de la matrice. 
+
+ \begin{enumerate}
+ \item Programmer chacune des étapes de l'algorithme précédent dans un fichier nommé \verb+lineaire2.py+.
+ \item Vérifier que le programme obtenu trouve effectivement les solutions du système
+   d'équation pour différentes valeurs de $a$ et $b$.
+ \item {\sc[Facultatif :]} Modifier le programme de sorte qu'il puisse
+   fonctionner pour des systèmes avec $n$ équations et inconnues.
+ \item {\sc[Facultatif :]} Pour rendre plus efficace et polyvalent notre programme il suffit de lui ajouter
+   une étape avant chaque modification des lignes :
+
+   Avant la ième modification
+   des lignes, trouver parmi les lignes de numéro $l\geq i$ celle dont $|a_{li}|$ est le plus grand ; échanger
+   les lignes $l$ et $i$.
+
+   Cela permet d'éviter les divisions par zéro
+   lorsqu'il existe une unique solution au système. 
+ \end{enumerate}
+
+
+
+\pagebreak

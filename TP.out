@@ -13,32 +13,35 @@
 \BOOKMARK [2][-]{subsection.3.2}{Les boucles for}{section.3}% 13
 \BOOKMARK [2][-]{subsection.3.3}{Les boucles while}{section.3}% 14
 \BOOKMARK [2][-]{subsection.3.4}{Vos premiers graphiques avec matplotlib}{section.3}% 15
-\BOOKMARK [1][-]{section.4}{D\351rivation}{}% 16
-\BOOKMARK [2][-]{subsection.4.1}{Pr\351cision}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.2}{Autres formules de d\351rivation}{section.4}% 18
-\BOOKMARK [2][-]{subsection.4.3}{Ordres sup\351rieurs [Facultatif]}{section.4}% 19
-\BOOKMARK [1][-]{section.5}{Int\351gration}{}% 20
-\BOOKMARK [2][-]{subsection.5.1}{M\351thode des rectangles}{section.5}% 21
-\BOOKMARK [2][-]{subsection.5.2}{Intervalle de confiance}{section.5}% 22
-\BOOKMARK [2][-]{subsection.5.3}{M\351thodes d'ordre plus \351lev\351 [Facultatif]}{section.5}% 23
-\BOOKMARK [1][-]{section.6}{\311valuation de fonctions}{}% 24
-\BOOKMARK [2][-]{subsection.6.1}{Tangente inverse}{section.6}% 25
-\BOOKMARK [2][-]{subsection.6.2}{Cosinus}{section.6}% 26
-\BOOKMARK [2][-]{subsection.6.3}{Exponentielle Facultatif}{section.6}% 27
-\BOOKMARK [1][-]{section.7}{Recherche de z\351ro}{}% 28
-\BOOKMARK [2][-]{subsection.7.1}{Dichotomie}{section.7}% 29
-\BOOKMARK [2][-]{subsection.7.2}{Newton}{section.7}% 30
-\BOOKMARK [2][-]{subsection.7.3}{S\351cante}{section.7}% 31
-\BOOKMARK [2][-]{subsection.7.4}{Du z\351ro \340 l'extremum}{section.7}% 32
-\BOOKMARK [1][-]{section.8}{\311criture et lecture de donn\351es [Facultatif]}{}% 33
-\BOOKMARK [2][-]{subsection.8.1}{\311crire dans un fichier}{section.8}% 34
-\BOOKMARK [2][-]{subsection.8.2}{Lire un fichier texte}{section.8}% 35
-\BOOKMARK [1][-]{section.9}{Statistiques[Facultatif]}{}% 36
-\BOOKMARK [2][-]{subsection.9.1}{Construire un histogramme}{section.9}% 37
-\BOOKMARK [2][-]{subsection.9.2}{Statistiques \351l\351mentaires sur un fichier de donn\351es}{section.9}% 38
-\BOOKMARK [1][-]{section.10}{Des al\351as dans la machine [Facultatif]}{}% 39
-\BOOKMARK [2][-]{subsection.10.1}{M\352me chance pour tous}{section.10}% 40
-\BOOKMARK [2][-]{subsection.10.2}{Description du tirage al\351atoire}{section.10}% 41
-\BOOKMARK [2][-]{subsection.10.3}{L'al\351atoire \340 la base de la simulation Monte-Carlo}{section.10}% 42
-\BOOKMARK [2][-]{subsection.10.4}{Tout est question de distribution}{section.10}% 43
-\BOOKMARK [2][-]{subsection.10.5}{Le mouvement brownien}{section.10}% 44
+\BOOKMARK [1][-]{section.4}{Alg\350bre lin\351aire}{}% 16
+\BOOKMARK [2][-]{subsection.4.1}{Petit syst\350me d'\351quations}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.2}{Pivot de Gauss simplifi\351}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{D\351rivation}{}% 19
+\BOOKMARK [2][-]{subsection.5.1}{Pr\351cision}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.2}{Autres formules de d\351rivation}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.3}{Ordres sup\351rieurs [Facultatif]}{section.5}% 22
+\BOOKMARK [1][-]{section.6}{Int\351gration}{}% 23
+\BOOKMARK [2][-]{subsection.6.1}{M\351thode des rectangles}{section.6}% 24
+\BOOKMARK [2][-]{subsection.6.2}{Intervalle de confiance}{section.6}% 25
+\BOOKMARK [2][-]{subsection.6.3}{M\351thodes d'ordre plus \351lev\351 [Facultatif]}{section.6}% 26
+\BOOKMARK [1][-]{section.7}{\311valuation de fonctions}{}% 27
+\BOOKMARK [2][-]{subsection.7.1}{Tangente inverse}{section.7}% 28
+\BOOKMARK [2][-]{subsection.7.2}{Cosinus}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.3}{Exponentielle Facultatif}{section.7}% 30
+\BOOKMARK [1][-]{section.8}{Recherche de z\351ro}{}% 31
+\BOOKMARK [2][-]{subsection.8.1}{Dichotomie}{section.8}% 32
+\BOOKMARK [2][-]{subsection.8.2}{Newton}{section.8}% 33
+\BOOKMARK [2][-]{subsection.8.3}{S\351cante}{section.8}% 34
+\BOOKMARK [2][-]{subsection.8.4}{Du z\351ro \340 l'extremum}{section.8}% 35
+\BOOKMARK [1][-]{section.9}{\311criture et lecture de donn\351es [Facultatif]}{}% 36
+\BOOKMARK [2][-]{subsection.9.1}{\311crire dans un fichier}{section.9}% 37
+\BOOKMARK [2][-]{subsection.9.2}{Lire un fichier texte}{section.9}% 38
+\BOOKMARK [1][-]{section.10}{Statistiques[Facultatif]}{}% 39
+\BOOKMARK [2][-]{subsection.10.1}{Construire un histogramme}{section.10}% 40
+\BOOKMARK [2][-]{subsection.10.2}{Statistiques \351l\351mentaires sur un fichier de donn\351es}{section.10}% 41
+\BOOKMARK [1][-]{section.11}{Des al\351as dans la machine [Facultatif]}{}% 42
+\BOOKMARK [2][-]{subsection.11.1}{M\352me chance pour tous}{section.11}% 43
+\BOOKMARK [2][-]{subsection.11.2}{Description du tirage al\351atoire}{section.11}% 44
+\BOOKMARK [2][-]{subsection.11.3}{L'al\351atoire \340 la base de la simulation Monte-Carlo}{section.11}% 45
+\BOOKMARK [2][-]{subsection.11.4}{Tout est question de distribution}{section.11}% 46
+\BOOKMARK [2][-]{subsection.11.5}{Le mouvement brownien}{section.11}% 47
